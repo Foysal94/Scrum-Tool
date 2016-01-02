@@ -30,4 +30,6 @@ gulp.task 'coffee-js', ->
           .pipe(coffee(***REMOVED***bare: true***REMOVED***).on 'error', (gutil) -> gutil.log )
            .pipe gulp.dest paths.webroot + 'js/'
            
-           
+gulp.task 'watch', ['sass-css', 'coffee-js'], ->
+    gulp.watch paths.scss, ['sass-css']
+    gulp.watch paths.coffee, ['coffee-js']

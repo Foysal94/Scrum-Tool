@@ -1,0 +1,29 @@
+body ***REMOVED***
+  padding-top: 50px;
+  padding-bottom: 20px; ***REMOVED***
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content ***REMOVED***
+  padding-left: 15px;
+  padding-right: 15px; ***REMOVED***
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input, select, textarea ***REMOVED***
+  max-width: 280px; ***REMOVED***
+
+/* Carousel */
+.carousel-caption ***REMOVED***
+  z-index: 10 !important; ***REMOVED***
+  .carousel-caption p ***REMOVED***
+    font-size: 20px;
+    line-height: 1.4; ***REMOVED***
+
+@media (min-width: 768px) ***REMOVED***
+  .carousel-caption ***REMOVED***
+    z-index: 10 !important; ***REMOVED*** ***REMOVED***
+
+.navbar, .navbar-inverse, .navbar-fixed-top ***REMOVED***
+  background: #353535;
+  color: red;
+  height: 80px; ***REMOVED***

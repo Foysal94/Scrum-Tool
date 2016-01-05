@@ -59,6 +59,9 @@ body ***REMOVED***
 * ***REMOVED***
   box-sizing: border-box; ***REMOVED***
 
+#boardFormSubmit ***REMOVED***
+  text-decoration: none; ***REMOVED***
+
 .button ***REMOVED***
   display: inline-block;
   font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
@@ -185,5 +188,5 @@ body ***REMOVED***
   background: #353535;
   margin-top: 30px; ***REMOVED***
 
-#submitBoardName ***REMOVED***
+#boardFormSubmit ***REMOVED***
   margin-top: 35px; ***REMOVED***

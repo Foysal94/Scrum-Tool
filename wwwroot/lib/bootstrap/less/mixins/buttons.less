@@ -1,0 +1,68 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @border) ***REMOVED***
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:focus,
+  &.focus ***REMOVED***
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 25%);
+  ***REMOVED***
+  &:hover ***REMOVED***
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+  ***REMOVED***
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& ***REMOVED***
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus ***REMOVED***
+      color: @color;
+      background-color: darken(@background, 17%);
+          border-color: darken(@border, 25%);
+***REMOVED***
+  ***REMOVED***
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& ***REMOVED***
+    background-image: none;
+  ***REMOVED***
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ***REMOVED***
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active ***REMOVED***
+      background-color: @background;
+          border-color: @border;
+***REMOVED***
+  ***REMOVED***
+
+  .badge ***REMOVED***
+    color: @background;
+    background-color: @color;
+  ***REMOVED***
+***REMOVED***
+
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) ***REMOVED***
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+***REMOVED***

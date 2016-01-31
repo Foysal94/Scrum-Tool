@@ -1,0 +1,194 @@
+//
+// Responsive: Utility classes
+// --------------------------------------------------
+
+
+// IE10 in Windows (Phone) 8
+//
+// Support for responsive views via media queries is kind of borked in IE10, for
+// Surface/desktop in split view and for Windows Phone 8. This particular fix
+// must be accompanied by a snippet of JavaScript to sniff the user agent and
+// apply some conditional CSS to *only* the Surface/desktop Windows 8. Look at
+// our Getting Started page for more information on this bug.
+//
+// For more information, see the following:
+//
+// Issue: https://github.com/twbs/bootstrap/issues/10497
+// Docs: http://getbootstrap.com/getting-started/#support-ie10-width
+// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+
+@-ms-viewport ***REMOVED***
+  width: device-width;
+***REMOVED***
+
+
+// Visibility utilities
+// Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg ***REMOVED***
+  .responsive-invisibility();
+***REMOVED***
+
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block ***REMOVED***
+  display: none !important;
+***REMOVED***
+
+.visible-xs ***REMOVED***
+  @media (max-width: @screen-xs-max) ***REMOVED***
+    .responsive-visibility();
+  ***REMOVED***
+***REMOVED***
+.visible-xs-block ***REMOVED***
+  @media (max-width: @screen-xs-max) ***REMOVED***
+    display: block !important;
+  ***REMOVED***
+***REMOVED***
+.visible-xs-inline ***REMOVED***
+  @media (max-width: @screen-xs-max) ***REMOVED***
+    display: inline !important;
+  ***REMOVED***
+***REMOVED***
+.visible-xs-inline-block ***REMOVED***
+  @media (max-width: @screen-xs-max) ***REMOVED***
+    display: inline-block !important;
+  ***REMOVED***
+***REMOVED***
+
+.visible-sm ***REMOVED***
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) ***REMOVED***
+    .responsive-visibility();
+  ***REMOVED***
+***REMOVED***
+.visible-sm-block ***REMOVED***
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) ***REMOVED***
+    display: block !important;
+  ***REMOVED***
+***REMOVED***
+.visible-sm-inline ***REMOVED***
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) ***REMOVED***
+    display: inline !important;
+  ***REMOVED***
+***REMOVED***
+.visible-sm-inline-block ***REMOVED***
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) ***REMOVED***
+    display: inline-block !important;
+  ***REMOVED***
+***REMOVED***
+
+.visible-md ***REMOVED***
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) ***REMOVED***
+    .responsive-visibility();
+  ***REMOVED***
+***REMOVED***
+.visible-md-block ***REMOVED***
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) ***REMOVED***
+    display: block !important;
+  ***REMOVED***
+***REMOVED***
+.visible-md-inline ***REMOVED***
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) ***REMOVED***
+    display: inline !important;
+  ***REMOVED***
+***REMOVED***
+.visible-md-inline-block ***REMOVED***
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) ***REMOVED***
+    display: inline-block !important;
+  ***REMOVED***
+***REMOVED***
+
+.visible-lg ***REMOVED***
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    .responsive-visibility();
+  ***REMOVED***
+***REMOVED***
+.visible-lg-block ***REMOVED***
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    display: block !important;
+  ***REMOVED***
+***REMOVED***
+.visible-lg-inline ***REMOVED***
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    display: inline !important;
+  ***REMOVED***
+***REMOVED***
+.visible-lg-inline-block ***REMOVED***
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    display: inline-block !important;
+  ***REMOVED***
+***REMOVED***
+
+.hidden-xs ***REMOVED***
+  @media (max-width: @screen-xs-max) ***REMOVED***
+    .responsive-invisibility();
+  ***REMOVED***
+***REMOVED***
+.hidden-sm ***REMOVED***
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) ***REMOVED***
+    .responsive-invisibility();
+  ***REMOVED***
+***REMOVED***
+.hidden-md ***REMOVED***
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) ***REMOVED***
+    .responsive-invisibility();
+  ***REMOVED***
+***REMOVED***
+.hidden-lg ***REMOVED***
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    .responsive-invisibility();
+  ***REMOVED***
+***REMOVED***
+
+
+// Print utilities
+//
+// Media queries are placed on the inside to be mixin-friendly.
+
+// Note: Deprecated .visible-print as of v3.2.0
+.visible-print ***REMOVED***
+  .responsive-invisibility();
+
+  @media print ***REMOVED***
+    .responsive-visibility();
+  ***REMOVED***
+***REMOVED***
+.visible-print-block ***REMOVED***
+  display: none !important;
+
+  @media print ***REMOVED***
+    display: block !important;
+  ***REMOVED***
+***REMOVED***
+.visible-print-inline ***REMOVED***
+  display: none !important;
+
+  @media print ***REMOVED***
+    display: inline !important;
+  ***REMOVED***
+***REMOVED***
+.visible-print-inline-block ***REMOVED***
+  display: none !important;
+
+  @media print ***REMOVED***
+    display: inline-block !important;
+  ***REMOVED***
+***REMOVED***
+
+.hidden-print ***REMOVED***
+  @media print ***REMOVED***
+    .responsive-invisibility();
+  ***REMOVED***
+***REMOVED***

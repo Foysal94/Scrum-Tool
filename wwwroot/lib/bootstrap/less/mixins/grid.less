@@ -1,0 +1,122 @@
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+.container-fixed(@gutter: @grid-gutter-width) ***REMOVED***
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+  &:extend(.clearfix all);
+***REMOVED***
+
+// Creates a wrapper for a series of columns
+.make-row(@gutter: @grid-gutter-width) ***REMOVED***
+  margin-left:  ceil((@gutter / -2));
+  margin-right: floor((@gutter / -2));
+  &:extend(.clearfix all);
+***REMOVED***
+
+// Generate the extra small columns
+.make-xs-column(@columns; @gutter: @grid-gutter-width) ***REMOVED***
+  position: relative;
+  float: left;
+  width: percentage((@columns / @grid-columns));
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+***REMOVED***
+.make-xs-column-offset(@columns) ***REMOVED***
+  margin-left: percentage((@columns / @grid-columns));
+***REMOVED***
+.make-xs-column-push(@columns) ***REMOVED***
+  left: percentage((@columns / @grid-columns));
+***REMOVED***
+.make-xs-column-pull(@columns) ***REMOVED***
+  right: percentage((@columns / @grid-columns));
+***REMOVED***
+
+// Generate the small columns
+.make-sm-column(@columns; @gutter: @grid-gutter-width) ***REMOVED***
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @screen-sm-min) ***REMOVED***
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-sm-column-offset(@columns) ***REMOVED***
+  @media (min-width: @screen-sm-min) ***REMOVED***
+    margin-left: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-sm-column-push(@columns) ***REMOVED***
+  @media (min-width: @screen-sm-min) ***REMOVED***
+    left: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-sm-column-pull(@columns) ***REMOVED***
+  @media (min-width: @screen-sm-min) ***REMOVED***
+    right: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+
+// Generate the medium columns
+.make-md-column(@columns; @gutter: @grid-gutter-width) ***REMOVED***
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @screen-md-min) ***REMOVED***
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-md-column-offset(@columns) ***REMOVED***
+  @media (min-width: @screen-md-min) ***REMOVED***
+    margin-left: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-md-column-push(@columns) ***REMOVED***
+  @media (min-width: @screen-md-min) ***REMOVED***
+    left: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-md-column-pull(@columns) ***REMOVED***
+  @media (min-width: @screen-md-min) ***REMOVED***
+    right: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+
+// Generate the large columns
+.make-lg-column(@columns; @gutter: @grid-gutter-width) ***REMOVED***
+  position: relative;
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-lg-column-offset(@columns) ***REMOVED***
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    margin-left: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-lg-column-push(@columns) ***REMOVED***
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    left: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***
+.make-lg-column-pull(@columns) ***REMOVED***
+  @media (min-width: @screen-lg-min) ***REMOVED***
+    right: percentage((@columns / @grid-columns));
+  ***REMOVED***
+***REMOVED***

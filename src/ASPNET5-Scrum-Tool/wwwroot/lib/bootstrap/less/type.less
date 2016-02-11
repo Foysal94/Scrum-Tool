@@ -1,0 +1,302 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 ***REMOVED***
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
+  color: @headings-color;
+
+  small,
+  .small ***REMOVED***
+    font-weight: normal;
+    line-height: 1;
+    color: @headings-small-color;
+  ***REMOVED***
+***REMOVED***
+
+h1, .h1,
+h2, .h2,
+h3, .h3 ***REMOVED***
+  margin-top: @line-height-computed;
+  margin-bottom: (@line-height-computed / 2);
+
+  small,
+  .small ***REMOVED***
+    font-size: 65%;
+  ***REMOVED***
+***REMOVED***
+h4, .h4,
+h5, .h5,
+h6, .h6 ***REMOVED***
+  margin-top: (@line-height-computed / 2);
+  margin-bottom: (@line-height-computed / 2);
+
+  small,
+  .small ***REMOVED***
+    font-size: 75%;
+  ***REMOVED***
+***REMOVED***
+
+h1, .h1 ***REMOVED*** font-size: @font-size-h1; ***REMOVED***
+h2, .h2 ***REMOVED*** font-size: @font-size-h2; ***REMOVED***
+h3, .h3 ***REMOVED*** font-size: @font-size-h3; ***REMOVED***
+h4, .h4 ***REMOVED*** font-size: @font-size-h4; ***REMOVED***
+h5, .h5 ***REMOVED*** font-size: @font-size-h5; ***REMOVED***
+h6, .h6 ***REMOVED*** font-size: @font-size-h6; ***REMOVED***
+
+
+// Body text
+// -------------------------
+
+p ***REMOVED***
+  margin: 0 0 (@line-height-computed / 2);
+***REMOVED***
+
+.lead ***REMOVED***
+  margin-bottom: @line-height-computed;
+  font-size: floor((@font-size-base * 1.15));
+  font-weight: 300;
+  line-height: 1.4;
+
+  @media (min-width: @screen-sm-min) ***REMOVED***
+    font-size: (@font-size-base * 1.5);
+  ***REMOVED***
+***REMOVED***
+
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small ***REMOVED***
+  font-size: floor((100% * @font-size-small / @font-size-base));
+***REMOVED***
+
+mark,
+.mark ***REMOVED***
+  background-color: @state-warning-bg;
+  padding: .2em;
+***REMOVED***
+
+// Alignment
+.text-left   ***REMOVED*** text-align: left; ***REMOVED***
+.text-right  ***REMOVED*** text-align: right; ***REMOVED***
+.text-center ***REMOVED*** text-align: center; ***REMOVED***
+.text-justify***REMOVED*** text-align: justify; ***REMOVED***
+.text-nowrap ***REMOVED*** white-space: nowrap; ***REMOVED***
+
+// Transformation
+.text-lowercase  ***REMOVED*** text-transform: lowercase; ***REMOVED***
+.text-uppercase  ***REMOVED*** text-transform: uppercase; ***REMOVED***
+.text-capitalize ***REMOVED*** text-transform: capitalize; ***REMOVED***
+
+// Contextual colors
+.text-muted ***REMOVED***
+  color: @text-muted;
+***REMOVED***
+.text-primary ***REMOVED***
+  .text-emphasis-variant(@brand-primary);
+***REMOVED***
+.text-success ***REMOVED***
+  .text-emphasis-variant(@state-success-text);
+***REMOVED***
+.text-info ***REMOVED***
+  .text-emphasis-variant(@state-info-text);
+***REMOVED***
+.text-warning ***REMOVED***
+  .text-emphasis-variant(@state-warning-text);
+***REMOVED***
+.text-danger ***REMOVED***
+  .text-emphasis-variant(@state-danger-text);
+***REMOVED***
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary ***REMOVED***
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  color: #fff;
+  .bg-variant(@brand-primary);
+***REMOVED***
+.bg-success ***REMOVED***
+  .bg-variant(@state-success-bg);
+***REMOVED***
+.bg-info ***REMOVED***
+  .bg-variant(@state-info-bg);
+***REMOVED***
+.bg-warning ***REMOVED***
+  .bg-variant(@state-warning-bg);
+***REMOVED***
+.bg-danger ***REMOVED***
+  .bg-variant(@state-danger-bg);
+***REMOVED***
+
+
+// Page header
+// -------------------------
+
+.page-header ***REMOVED***
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
+***REMOVED***
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol ***REMOVED***
+  margin-top: 0;
+  margin-bottom: (@line-height-computed / 2);
+  ul,
+  ol ***REMOVED***
+    margin-bottom: 0;
+  ***REMOVED***
+***REMOVED***
+
+// List options
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled ***REMOVED***
+  padding-left: 0;
+  list-style: none;
+***REMOVED***
+
+// Inline turns list items into inline-block
+.list-inline ***REMOVED***
+  .list-unstyled();
+  margin-left: -5px;
+
+  > li ***REMOVED***
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  ***REMOVED***
+***REMOVED***
+
+// Description Lists
+dl ***REMOVED***
+  margin-top: 0; // Remove browser default
+  margin-bottom: @line-height-computed;
+***REMOVED***
+dt,
+dd ***REMOVED***
+  line-height: @line-height-base;
+***REMOVED***
+dt ***REMOVED***
+  font-weight: bold;
+***REMOVED***
+dd ***REMOVED***
+  margin-left: 0; // Undo browser default
+***REMOVED***
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal ***REMOVED***
+  dd ***REMOVED***
+    &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+  ***REMOVED***
+
+  @media (min-width: @grid-float-breakpoint) ***REMOVED***
+    dt ***REMOVED***
+      float: left;
+      width: (@dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      .text-overflow();
+***REMOVED***
+    dd ***REMOVED***
+      margin-left: @dl-horizontal-offset;
+***REMOVED***
+  ***REMOVED***
+***REMOVED***
+
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] ***REMOVED***
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+***REMOVED***
+.initialism ***REMOVED***
+  font-size: 90%;
+  .text-uppercase();
+***REMOVED***
+
+// Blockquotes
+blockquote ***REMOVED***
+  padding: (@line-height-computed / 2) @line-height-computed;
+  margin: 0 0 @line-height-computed;
+  font-size: @blockquote-font-size;
+  border-left: 5px solid @blockquote-border-color;
+
+  p,
+  ul,
+  ol ***REMOVED***
+    &:last-child ***REMOVED***
+      margin-bottom: 0;
+***REMOVED***
+  ***REMOVED***
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small ***REMOVED***
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: @line-height-base;
+    color: @blockquote-small-color;
+
+    &:before ***REMOVED***
+      content: '\2014 \00A0'; // em dash, nbsp
+***REMOVED***
+  ***REMOVED***
+***REMOVED***
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right ***REMOVED***
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small ***REMOVED***
+    &:before ***REMOVED*** content: ''; ***REMOVED***
+    &:after ***REMOVED***
+      content: '\00A0 \2014'; // nbsp, em dash
+***REMOVED***
+  ***REMOVED***
+***REMOVED***
+
+// Addresses
+address ***REMOVED***
+  margin-bottom: @line-height-computed;
+  font-style: normal;
+  line-height: @line-height-base;
+***REMOVED***

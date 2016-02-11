@@ -1,0 +1,166 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn ***REMOVED***
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: @btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+  .user-select(none);
+
+  &,
+  &:active,
+  &.active ***REMOVED***
+    &:focus,
+    &.focus ***REMOVED***
+      .tab-focus();
+***REMOVED***
+  ***REMOVED***
+
+  &:hover,
+  &:focus,
+  &.focus ***REMOVED***
+    color: @btn-default-color;
+    text-decoration: none;
+  ***REMOVED***
+
+  &:active,
+  &.active ***REMOVED***
+    outline: 0;
+    background-image: none;
+    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  ***REMOVED***
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ***REMOVED***
+    cursor: @cursor-disabled;
+    .opacity(.65);
+    .box-shadow(none);
+  ***REMOVED***
+
+  a& ***REMOVED***
+    &.disabled,
+    fieldset[disabled] & ***REMOVED***
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+***REMOVED***
+  ***REMOVED***
+***REMOVED***
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default ***REMOVED***
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+***REMOVED***
+.btn-primary ***REMOVED***
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+***REMOVED***
+// Success appears as green
+.btn-success ***REMOVED***
+  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+***REMOVED***
+// Info appears as blue-green
+.btn-info ***REMOVED***
+  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+***REMOVED***
+// Warning appears as orange
+.btn-warning ***REMOVED***
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+***REMOVED***
+// Danger and error appear as red
+.btn-danger ***REMOVED***
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+***REMOVED***
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link ***REMOVED***
+  color: @link-color;
+  font-weight: normal;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & ***REMOVED***
+    background-color: transparent;
+    .box-shadow(none);
+  ***REMOVED***
+  &,
+  &:hover,
+  &:focus,
+  &:active ***REMOVED***
+    border-color: transparent;
+  ***REMOVED***
+  &:hover,
+  &:focus ***REMOVED***
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+    background-color: transparent;
+  ***REMOVED***
+  &[disabled],
+  fieldset[disabled] & ***REMOVED***
+    &:hover,
+    &:focus ***REMOVED***
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+***REMOVED***
+  ***REMOVED***
+***REMOVED***
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg ***REMOVED***
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
+***REMOVED***
+.btn-sm ***REMOVED***
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+***REMOVED***
+.btn-xs ***REMOVED***
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+***REMOVED***
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block ***REMOVED***
+  display: block;
+  width: 100%;
+***REMOVED***
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block ***REMOVED***
+  margin-top: 5px;
+***REMOVED***
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] ***REMOVED***
+  &.btn-block ***REMOVED***
+    width: 100%;
+  ***REMOVED***
+***REMOVED***

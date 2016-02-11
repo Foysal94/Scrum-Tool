@@ -1,0 +1,25 @@
+***REMOVED***
+  "iisSettings": ***REMOVED***
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": ***REMOVED***
+      "applicationUrl": "http://localhost:50425/",
+      "sslPort": 0
+***REMOVED***
+  ***REMOVED***,
+  "profiles": ***REMOVED***
+    "IIS Express": ***REMOVED***
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": ***REMOVED***
+        "Hosting:Environment": "Development"
+  ***REMOVED***
+***REMOVED***,
+    "web": ***REMOVED***
+      "commandName": "web",
+      "environmentVariables": ***REMOVED***
+        "Hosting:Environment": "Development"
+  ***REMOVED***
+***REMOVED***
+  ***REMOVED***
+***REMOVED***

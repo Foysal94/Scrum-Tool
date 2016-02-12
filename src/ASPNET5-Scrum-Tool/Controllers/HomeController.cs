@@ -13,6 +13,13 @@ using Microsoft.AspNet.Mvc;
             return View();
 ***REMOVED***
 
+        [HttpGet]
+        public IActionResult GoToBoardPage()
+***REMOVED***
+            string boardName = "";
+            return RedirectToAction("Index", "Board", boardName);
+***REMOVED***
+
         public IActionResult Error()
 ***REMOVED***
             return View();

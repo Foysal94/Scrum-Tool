@@ -2,6 +2,7 @@
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
+***REMOVED***
 using Microsoft.AspNet.Mvc;
 
 ***REMOVED***.Controllers
@@ -10,14 +11,15 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
         public IActionResult Index()
 ***REMOVED***
-            return View();
+            var Board = new BoardModel();
+            return View(Board);
 ***REMOVED***
 
-        
-        public IActionResult GoToBoardPage([FromBody] string Name)
+        [HttpGet]
+        public IActionResult SumbitBoardForm(BoardModel model)
 ***REMOVED***
-            //string Name = "Hello";
-            return RedirectToAction("Show", "Board", new ***REMOVED*** boardName = Name***REMOVED***);
+            
+            return RedirectToAction("Show", "Board", new ***REMOVED*** BoardName = model.BoardName***REMOVED*** );
 ***REMOVED***
 
         public IActionResult Error()

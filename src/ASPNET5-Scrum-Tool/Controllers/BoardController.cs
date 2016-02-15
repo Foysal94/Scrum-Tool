@@ -7,14 +7,16 @@ using Microsoft.AspNet.Mvc;
 
 ***REMOVED***.Controllers
 ***REMOVED***
+    [Route("[controller]")]
     public class BoardController : Controller
 ***REMOVED***
         Logger<BoardController> logger;
 
-        [Route("***REMOVED***boardName***REMOVED***")]
-        public IActionResult Show(string boardName)
+        
+        [Route("***REMOVED***BoardName***REMOVED***")]
+        public IActionResult Show(string BoardName)
 ***REMOVED***
-            ViewData["Title"] = boardName;
+            ViewData["Title"] = BoardName;
             return View();
 ***REMOVED***
 

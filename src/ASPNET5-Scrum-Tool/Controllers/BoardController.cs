@@ -11,9 +11,10 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
         Logger<BoardController> logger;
 
-        public IActionResult Index(string pBoardName)
+        [Route("***REMOVED***boardName***REMOVED***")]
+        public IActionResult Show(string boardName)
 ***REMOVED***
-            ViewData["Title"] = pBoardName;
+            ViewData["Title"] = boardName;
             return View();
 ***REMOVED***
 

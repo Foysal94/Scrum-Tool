@@ -9,7 +9,7 @@ OnWelcomeButtonClick = function() ***REMOVED***
 ***REMOVED***;
 
 FormBoardSumbit = function() ***REMOVED***
-  return $('#boardFormSubmit').on('click', function(event) ***REMOVED***
+  return $('.boardFormSubmit').on('click', function(event) ***REMOVED***
     var boardName;
     boardName = $.trim($('#boardName').val());
     if (boardName.length < 1) ***REMOVED***

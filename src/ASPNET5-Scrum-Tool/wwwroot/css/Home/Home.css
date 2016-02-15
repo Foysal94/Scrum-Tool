@@ -59,10 +59,10 @@ body ***REMOVED***
 * ***REMOVED***
   box-sizing: border-box; ***REMOVED***
 
-#boardFormSubmit ***REMOVED***
+.boardFormSubmit ***REMOVED***
   text-decoration: none; ***REMOVED***
 
-.button ***REMOVED***
+.boardFormSubmit ***REMOVED***
   display: inline-block;
   font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -73,7 +73,7 @@ body ***REMOVED***
   border: none;
   color: white;
   transition: .2s; ***REMOVED***
-  .button:before, .button:after ***REMOVED***
+  .boardFormSubmit:before, .boardFormSubmit:after ***REMOVED***
     position: absolute;
     top: 0;
     bottom: 0;
@@ -86,15 +86,15 @@ body ***REMOVED***
     font-size: 1.2em;
     text-align: center;
     transition: .2s; ***REMOVED***
-  .button:before ***REMOVED***
+  .boardFormSubmit:before ***REMOVED***
     background: fadeout(#000, 90%); ***REMOVED***
-  .button:hover ***REMOVED***
+  .boardFormSubmit:hover ***REMOVED***
     background: #0079a5; ***REMOVED***
-  .button:active, .button:focus ***REMOVED***
+  .boardFormSubmit:active, .boardFormSubmit:focus ***REMOVED***
     background: #002e3f;
     outline: none; ***REMOVED***
 
-.button ***REMOVED***
+.boardFormSubmit ***REMOVED***
   min-width: 15em; ***REMOVED***
 
 .arrow ***REMOVED***

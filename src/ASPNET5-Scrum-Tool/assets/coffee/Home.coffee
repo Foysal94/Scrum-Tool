@@ -3,7 +3,7 @@ OnWelcomeButtonClick = () ->
         $('#InitalButton').animate ***REMOVED***'left': '-1000px'***REMOVED***, 'slow'
         
 FormBoardSumbit = ->
-    $('#boardFormSubmit').on 'click', (event) ->
+    $('.boardFormSubmit').on 'click', (event) ->
       boardName = $.trim $('#boardName').val()
       if boardName.length < 1
         alert 'Error, a boardName must be supplied'

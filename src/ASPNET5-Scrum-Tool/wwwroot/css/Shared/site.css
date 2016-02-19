@@ -7,6 +7,18 @@
   padding-left: 15px;
   width: 100%; ***REMOVED***
 
+.navbar, .navbar-inverse, .navbar-fixed-top ***REMOVED***
+  height: 80px; ***REMOVED***
+
+.navbar-brand ***REMOVED***
+  position: absolute;
+  left: 1px;
+  bottom: 60px; ***REMOVED***
+  .navbar-brand h1 ***REMOVED***
+    margin-left: 30px;
+    font-size: 70px;
+    color: #D24D57; ***REMOVED***
+
 /* Global Button Styles */
 a.animated-button:link, a.animated-button:visited ***REMOVED***
   position: relative;
@@ -142,15 +154,3 @@ input, select, textarea ***REMOVED***
 @media (min-width: 768px) ***REMOVED***
   .carousel-caption ***REMOVED***
     z-index: 10 !important; ***REMOVED*** ***REMOVED***
-
-.navbar, .navbar-inverse, .navbar-fixed-top ***REMOVED***
-  height: 80px; ***REMOVED***
-
-.navbar-brand ***REMOVED***
-  position: absolute;
-  left: 1px;
-  bottom: 60px; ***REMOVED***
-  .navbar-brand h1 ***REMOVED***
-    margin-left: 30px;
-    font-size: 70px;
-    color: #D24D57; ***REMOVED***

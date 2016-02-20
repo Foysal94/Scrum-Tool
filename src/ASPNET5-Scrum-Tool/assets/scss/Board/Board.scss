@@ -1,5 +1,8 @@
 @import '../Shared/base';
 
+$panel-body-color: #808080;
+$task-font-color: #000000;
+
 .row ***REMOVED***
     margin-top: 4%;
     width: 100%;
@@ -9,18 +12,43 @@
   /*border-right: 3px solid #f00*/
   float:left;
   width: 20%;
-  min-height: 25%;
+  
 ***REMOVED***
 
-.panel-heading ***REMOVED***
+.panel-default ***REMOVED***
+
+   .panel-heading, .Task ***REMOVED***
+       cursor: pointer;
+   ***REMOVED***
+    
+  .panel-heading ***REMOVED***
     text-align: center;
+    background-color: $logo-color;
+***REMOVED***
+    
+  .panel-body ***REMOVED***
+      background-color: $panel-body-color;
+      min-height: 30%;
+
+      .Task:hover, .Task:visited, .Task:link ***REMOVED***
+            text-decoration: none;
+            color: $task-font-color;
+            background-color: #a3c2c2;
+  ***REMOVED***
+
+
+  ***REMOVED***
+    
 ***REMOVED***
 
-.panel-body ***REMOVED***
-    color: red;
-***REMOVED***
+.Task ***REMOVED***
+    
+    color: $task-font-color;
+    display: block;
+    margin: 20px 0;
+    border: 3px solid $logo-color;
+    border-radius: 15px;
+    padding: 20px 8px;
 
-.AddTask ***REMOVED***
-    cursor: pointer;
 ***REMOVED***
 

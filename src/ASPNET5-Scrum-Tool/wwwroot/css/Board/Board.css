@@ -5,14 +5,27 @@
 .BoardColumn ***REMOVED***
   /*border-right: 3px solid #f00*/
   float: left;
-  width: 20%;
-  min-height: 25%; ***REMOVED***
+  width: 20%; ***REMOVED***
 
-.panel-heading ***REMOVED***
-  text-align: center; ***REMOVED***
-
-.panel-body ***REMOVED***
-  color: red; ***REMOVED***
-
-.AddTask ***REMOVED***
+.panel-default .panel-heading, .panel-default .Task ***REMOVED***
   cursor: pointer; ***REMOVED***
+
+.panel-default .panel-heading ***REMOVED***
+  text-align: center;
+  background-color: #D24D57; ***REMOVED***
+
+.panel-default .panel-body ***REMOVED***
+  background-color: #808080;
+  min-height: 30%; ***REMOVED***
+  .panel-default .panel-body .Task:hover, .panel-default .panel-body .Task:visited, .panel-default .panel-body .Task:link ***REMOVED***
+    text-decoration: none;
+    color: #000000;
+    background-color: #a3c2c2; ***REMOVED***
+
+.Task ***REMOVED***
+  color: #000000;
+  display: block;
+  margin: 20px 0;
+  border: 3px solid #D24D57;
+  border-radius: 15px;
+  padding: 20px 8px; ***REMOVED***

@@ -1,10 +1,17 @@
-var AjaxTest, ChangeHTML;
+var AjaxTest, ChangeHTML, GetBoardName;
+
+GetBoardName = function() ***REMOVED***
+  var BoardName;
+  return BoardName = $('.BoardNameHeading').text();
+***REMOVED***;
 
 AjaxTest = function() ***REMOVED***
   return $('.AddTask').on('click', function(event) ***REMOVED***
+    var BoardName;
     event.preventDefault();
+    BoardName = GetBoardName();
     return $.ajax(***REMOVED***
-      url: '@Url.Action("Show","Board")',
+      url: '/Board/' + BoardName,
       type: 'GET',
       dataType: 'HTML',
       success: ChangeHTML

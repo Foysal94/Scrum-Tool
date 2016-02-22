@@ -2,20 +2,32 @@ var BoardName, ColumnNameForm, PanelTitleClick, SumbitColumnForm;
 
 BoardName = $('.BoardNameHeading').text();
 
-ColumnNameForm = "<form class='ColumnTitleForm' asp-controller='Board' asp-action='ChangeColumnName' method='POST'> <input asp-for='ColumnName' class='NewColumnName'> <input type='submit' value='Continue' class='ColumnTitleSumbit'> </form>";
+ColumnNameForm = "<form class='ColumnTitleForm' asp-controller='Board' asp-action='ChangeColumnName' method='POST'> <input class='PreviousColumnName' type='hidden'  style='display: none;' /> <input asp-for='ColumnName' class='NewColumnName'> <input type='submit' value='Continue' class='ColumnTitleSumbit'> </form>";
 
 PanelTitleClick = function() ***REMOVED***
   return $('.panel-heading').on('click', function() ***REMOVED***
-    var column, columnID;
-    column = $(this).parent();
-    columnID = $(column).attr('id');
+    var initalColumnName, selectedColumn, selectedColumnID;
+    selectedColumn = $(this).parent();
+    selectedColumnID = $(selectedColumn).attr('id');
+    initalColumnName = $(this).find('.panel-title').text();
     return $.ajax(***REMOVED***
-      url: '/Board/' + BoardName,
+      url: '/Board/Show',
       type: 'GET',
       dataType: 'HTML',
       success: function() ***REMOVED***
-        column.find('.panel-title').remove();
-        return column.find('.panel-heading').append(ColumnNameForm);
+        var DoesFormExist, oldBoardName, panelHeading;
+        DoesFormExist = $('#MainColumn').find('.ColumnTitleForm');
+        if (DoesFormExist.length !== 0) ***REMOVED***
+          panelHeading = DoesFormExist.parent();
+          oldBoardName = $('.PreviousColumnName').val();
+          DoesFormExist.remove();
+          panelHeading.append("<h3 class='panel-title'></h3>");
+          panelHeading.find('.panel-title').text(oldBoardName);
+***REMOVED***
+        selectedColumn.find('.panel-title').remove();
+        selectedColumn.find('.panel-heading').append(ColumnNameForm);
+        $('.PreviousColumnName').val(initalColumnName);
+        return $('.NewColumnName').val(initalColumnName);
   ***REMOVED***
 ***REMOVED***);
   ***REMOVED***);

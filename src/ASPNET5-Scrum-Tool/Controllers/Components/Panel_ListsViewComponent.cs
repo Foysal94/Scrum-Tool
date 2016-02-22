@@ -6,11 +6,13 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
     public class Panel_ListsViewComponent : ViewComponent
 ***REMOVED***
-        
+        private int m_ColumnID = 0;
 
         public IViewComponentResult Invoke(ColumnModel model)
 ***REMOVED***
-            ViewData["ColumnNumber"] = model.ColumnNumber;
+            m_ColumnID++;
+            
+            ViewData["ColumnID"] = m_ColumnID;
             return View(model);
 ***REMOVED***
 

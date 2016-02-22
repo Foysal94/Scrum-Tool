@@ -30,11 +30,6 @@ using Microsoft.AspNet.Mvc;
             return View(m_Board);
 ***REMOVED***
 
-        public IActionResult Create()
-***REMOVED***
-            return View();
-***REMOVED***
-
         [HttpPost]
         public IActionResult ChangeColumnName(string name)
 ***REMOVED***

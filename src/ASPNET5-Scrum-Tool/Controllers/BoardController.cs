@@ -31,10 +31,12 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
 
         [HttpPost]
-        public IActionResult ChangeColumnName(string name)
+        public Json ChangeColumnName(ColumnModel newColumnData)
 ***REMOVED***
-            
-            return View("Show");
+            string name = newColumnData.ColumnName;
+            int columnID = newColumnData.ColumnNumber;
+            m_Board.ColumnList[columnID].ColumnName = name;
+            return View("Show", m_Board);
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***

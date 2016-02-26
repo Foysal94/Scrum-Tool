@@ -21,5 +21,7 @@ using Microsoft.AspNet.Mvc;
             m_name = p_Name;
             m_columnNumber = p_ColumnNumber;
 ***REMOVED***
+
+        public ColumnModel() ***REMOVED*** ***REMOVED***
 ***REMOVED***
 ***REMOVED***

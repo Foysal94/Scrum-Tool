@@ -5,6 +5,7 @@
 ***REMOVED***
 using Microsoft.AspNet.Mvc;
 ***REMOVED***
+using Newtonsoft.Json;
 
 ***REMOVED***.Controllers
 ***REMOVED***
@@ -31,10 +32,21 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
 
         [HttpPost]
-        public IActionResult ChangeColumnName(string name)
+        public JsonResult ChangeColumnName(ColumnModel model)
 ***REMOVED***
-            
-            return View("Show");
+           // ColumnModel column = JsonConvert.DeserializeObject<ColumnModel>(newColumnData);
+            // Update column name in the board model, the board model stores a list of columns
+            m_Board.ColumnList[model.ColumnNumber].ColumnName = model.ColumnName;
+
+            //var json = JsonConvert.SerializeObject(m_Board.ColumnList[column.ColumnNumber]);
+
+            return Json(model.ColumnName);
+***REMOVED***
+
+        [HttpPost]
+        public IActionResult AddColumn()
+***REMOVED***
+            return ViewComponent("Panel_Lists");
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***

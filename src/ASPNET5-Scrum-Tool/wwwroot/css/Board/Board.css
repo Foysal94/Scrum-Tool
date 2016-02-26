@@ -1,23 +1,22 @@
-.panel-default .panel-heading, .panel-default .Task, .panel-default .AddTask ***REMOVED***
-  cursor: pointer; ***REMOVED***
-
-.panel-default .panel-heading ***REMOVED***
-  background-color: #D24D57; ***REMOVED***
-  .panel-default .panel-heading .panel-title ***REMOVED***
+.panel-default ***REMOVED***
+  margin-right: 20px; ***REMOVED***
+  .panel-default .panel-heading, .panel-default .Task, .panel-default .AddTask ***REMOVED***
+    cursor: pointer; ***REMOVED***
+  .panel-default .panel-heading ***REMOVED***
+    background-color: #D24D57;
     text-align: center; ***REMOVED***
-
-.panel-default .panel-body ***REMOVED***
-  background-color: #808080;
-  min-height: 30%; ***REMOVED***
-  .panel-default .panel-body .Task:hover, .panel-default .panel-body .Task:visited, .panel-default .panel-body .Task:link ***REMOVED***
-    text-decoration: none;
-    color: #000000; ***REMOVED***
-  .panel-default .panel-body .AddTask:hover, .panel-default .panel-body .AddTask:visited, .panel-default .panel-body .AddTask:link ***REMOVED***
-    text-decoration: none; ***REMOVED***
+  .panel-default .panel-body ***REMOVED***
+    background-color: #808080;
+    min-height: 30%; ***REMOVED***
+    .panel-default .panel-body .Task:hover, .panel-default .panel-body .Task:visited, .panel-default .panel-body .Task:link ***REMOVED***
+      text-decoration: none;
+      color: #000000; ***REMOVED***
+    .panel-default .panel-body .AddTask:hover, .panel-default .panel-body .AddTask:visited, .panel-default .panel-body .AddTask:link ***REMOVED***
+      text-decoration: none; ***REMOVED***
 
 .AddTask, .Task ***REMOVED***
   display: block;
-  margin: 20px 0;
+  margin-bottom: 20px;
   border: 3px solid #D24D57;
   border-radius: 15px;
   padding: 20px 8px;
@@ -40,3 +39,13 @@
 
 .NewColumnName ***REMOVED***
   width: 100%; ***REMOVED***
+
+#AddColumnButton ***REMOVED***
+  font-size: 50px;
+  cursor: pointer;
+  color: #D24D57;
+  display: inline-block;
+  margin-top: 10%; ***REMOVED***
+  #AddColumnButton:hover, #AddColumnButton:visited ***REMOVED***
+    text-decoration: none;
+    color: #D24D57; ***REMOVED***

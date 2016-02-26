@@ -4,15 +4,15 @@ $task-font-color: #000000;
 
 .panel-default ***REMOVED***
 
+    margin-right:20px;
+
    .panel-heading, .Task, .AddTask ***REMOVED***
        cursor: pointer;
    ***REMOVED***
     
   .panel-heading ***REMOVED***
          background-color: $logo-color;
-        .panel-title ***REMOVED***
-            text-align: center;
-***REMOVED***
+         text-align: center;
 ***REMOVED***
     
   .panel-body ***REMOVED***
@@ -22,9 +22,6 @@ $task-font-color: #000000;
       .Task:hover, .Task:visited, .Task:link ***REMOVED***
             text-decoration: none;
             color: $task-font-color;
-
-           
-            
   ***REMOVED***
 
       .AddTask:hover, .AddTask:visited, .AddTask:link ***REMOVED***
@@ -38,14 +35,11 @@ $task-font-color: #000000;
 
  .AddTask, .Task ***REMOVED***
      display: block;
-    margin: 20px 0;
+    margin-bottom:20px;
     border: 3px solid $logo-color;
     border-radius: 15px;
     padding: 20px 8px;
     color: $task-font-color;
-
- 
-    
  ***REMOVED***
 
 .AddTask:hover, .Task:hover ***REMOVED***

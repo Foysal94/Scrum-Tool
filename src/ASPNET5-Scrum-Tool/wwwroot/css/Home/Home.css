@@ -1,0 +1,136 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,700");
+* ***REMOVED***
+  box-sizing: border-box; ***REMOVED***
+
+.boardFormSubmit ***REMOVED***
+  text-decoration: none; ***REMOVED***
+
+.boardFormSubmit ***REMOVED***
+  display: inline-block;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  padding: .8em 1.4em;
+  padding-right: 4.7em;
+  background: #009ED8;
+  border: none;
+  color: white;
+  transition: .2s; ***REMOVED***
+  .boardFormSubmit:before, .boardFormSubmit:after ***REMOVED***
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    width: 2.8em;
+    content: "\00a0";
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    transition: .2s; ***REMOVED***
+  .boardFormSubmit:before ***REMOVED***
+    background: fadeout(#000, 90%); ***REMOVED***
+  .boardFormSubmit:hover ***REMOVED***
+    background: #0079a5; ***REMOVED***
+  .boardFormSubmit:active, .boardFormSubmit:focus ***REMOVED***
+    background: #002e3f;
+    outline: none; ***REMOVED***
+
+.boardFormSubmit ***REMOVED***
+  min-width: 15em; ***REMOVED***
+
+.arrow ***REMOVED***
+  background: #FE5F55; ***REMOVED***
+  .arrow:hover ***REMOVED***
+    background: #fe2f22; ***REMOVED***
+  .arrow:active, .arrow:focus ***REMOVED***
+    background: #b90c01; ***REMOVED***
+  .arrow:after ***REMOVED***
+    content: "\F054"; ***REMOVED***
+  .arrow:hover:after ***REMOVED***
+    -webkit-animation: bounceright .3s alternate ease infinite;
+    animation: bounceright .3s alternate ease infinite; ***REMOVED***
+
+.phone ***REMOVED***
+  background: #139675; ***REMOVED***
+  .phone:hover ***REMOVED***
+    background: #0d6952; ***REMOVED***
+  .phone:active, .phone:focus ***REMOVED***
+    background: #083b2e; ***REMOVED***
+  .phone:after ***REMOVED***
+    content: "\F095"; ***REMOVED***
+  .phone:hover:after ***REMOVED***
+    -webkit-animation: wiggle .05s alternate ease infinite;
+    animation: wiggle .05s alternate ease infinite; ***REMOVED***
+
+.email ***REMOVED***
+  background: #C673B3; ***REMOVED***
+  .email:hover ***REMOVED***
+    background: #b74f9f; ***REMOVED***
+  .email:active, .email:focus ***REMOVED***
+    background: #963d82; ***REMOVED***
+  .email:after ***REMOVED***
+    content: "\F0E0"; ***REMOVED***
+  .email:hover:after ***REMOVED***
+    -webkit-animation: none;
+    -webkit-transform: skew(-20deg);
+    animation: none;
+    transform: skew(-20deg);
+    text-indent: .1em; ***REMOVED***
+
+.search:after ***REMOVED***
+  content: "\f002"; ***REMOVED***
+
+.search:hover:after ***REMOVED***
+  -webkit-animation: none;
+  -webkit-transform: scale(1.4);
+  animation: none;
+  transform: scale(1.4); ***REMOVED***
+
+@-webkit-keyframes bounceright ***REMOVED***
+  from ***REMOVED***
+    -webkit-transform: translateX(0); ***REMOVED***
+  to ***REMOVED***
+    -webkit-transform: translateX(3px); ***REMOVED*** ***REMOVED***
+
+@-webkit-keyframes wiggle ***REMOVED***
+  from ***REMOVED***
+    -webkit-transform: rotate(0deg); ***REMOVED***
+  to ***REMOVED***
+    -webkit-transform: rotate(30deg); ***REMOVED*** ***REMOVED***
+
+@keyframes bounceright ***REMOVED***
+  from ***REMOVED***
+    transform: translateX(0); ***REMOVED***
+  to ***REMOVED***
+    transform: translateX(3px); ***REMOVED*** ***REMOVED***
+
+@keyframes wiggle ***REMOVED***
+  from ***REMOVED***
+    transform: rotate(0deg); ***REMOVED***
+  to ***REMOVED***
+    transform: rotate(30deg); ***REMOVED*** ***REMOVED***
+
+#InitalButton ***REMOVED***
+  position: relative;
+  margin-top: 10%; ***REMOVED***
+
+#titleScreen ***REMOVED***
+  text-align: center;
+  font-size: 30px;
+  color: #ff6666; ***REMOVED***
+  #titleScreen h1 ***REMOVED***
+    font-size: 100px;
+    margin-bottom: 50px; ***REMOVED***
+
+#boardName ***REMOVED***
+  border-bottom-color: #ff6666;
+  border-bottom-width: 3px;
+  border-style: none none dashed;
+  background: #353535;
+  margin-top: 30px; ***REMOVED***
+
+#boardFormSubmit ***REMOVED***
+  margin-top: 35px; ***REMOVED***

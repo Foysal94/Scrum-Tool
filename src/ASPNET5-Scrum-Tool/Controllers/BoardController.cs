@@ -23,7 +23,7 @@ using Newtonsoft.Json;
             m_Board.ColumnList.Add(new ColumnModel("Something2", 2));
 ***REMOVED***
         
-        [Route("***REMOVED***p_BoardName***REMOVED***")]
+        [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
         public IActionResult Show(string p_BoardName)
 ***REMOVED***
             m_Board.BoardName = p_BoardName;
@@ -31,31 +31,29 @@ using Newtonsoft.Json;
             return View(m_Board);
 ***REMOVED***
 
+
+        [Route("[Action]")]
         [HttpPost]
-<<<<<<< HEAD
         public JsonResult ChangeColumnName(ColumnModel model)
 ***REMOVED***
-           // ColumnModel column = JsonConvert.DeserializeObject<ColumnModel>(newColumnData);
+            //ColumnModel column = JsonConvert.DeserializeObject<ColumnModel>(newColumnData);
             // Update column name in the board model, the board model stores a list of columns
-            m_Board.ColumnList[model.ColumnNumber].ColumnName = model.ColumnName;
+            m_Board.ColumnList[model.ColumnNumber].ColumnName = model.ColumnName; 
 
-            //var json = JsonConvert.SerializeObject(m_Board.ColumnList[column.ColumnNumber]);
+           // var json = JsonConvert.SerializeObject( m_Board.ColumnList[model.ColumnNumber]);
 
             return Json(model.ColumnName);
 ***REMOVED***
 
+        [Route("[Action]")]
         [HttpPost]
-        public IActionResult AddColumn()
+        public ViewComponentResult AddColumn(ColumnModel model)
 ***REMOVED***
-            return ViewComponent("Panel_Lists");
-=======
-        public Json ChangeColumnName(ColumnModel newColumnData)
+            ColumnModel tempColumn = new ColumnModel(model.ColumnName,model.ColumnNumber);
+            m_Board.ColumnList.Add(tempColumn);
+            return ViewComponent("Panel_Lists", tempColumn);
 ***REMOVED***
-            string name = newColumnData.ColumnName;
-            int columnID = newColumnData.ColumnNumber;
-            m_Board.ColumnList[columnID].ColumnName = name;
-            return View("Show", m_Board);
->>>>>>> c8c888e56b2a28245cec67001eaddd58941f837d
-***REMOVED***
+
+        
 ***REMOVED***
 ***REMOVED***

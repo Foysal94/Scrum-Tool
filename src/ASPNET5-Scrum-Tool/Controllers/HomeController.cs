@@ -15,7 +15,7 @@ using Microsoft.AspNet.Mvc;
             return View(Board);
 ***REMOVED***
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult SumbitBoardForm(BoardModel model)
 ***REMOVED***
             

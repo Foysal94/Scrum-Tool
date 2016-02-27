@@ -12,7 +12,7 @@ using Newtonsoft.Json;
     [Route("[controller]")]
     public class BoardController : Controller
 ***REMOVED***
-        Logger<BoardController> logger;
+        //Logger<BoardController> logger;
         private BoardModel m_Board;
 
         public BoardController()
@@ -21,6 +21,10 @@ using Newtonsoft.Json;
             m_Board.ColumnList = new List<ColumnModel>();
             m_Board.ColumnList.Add(new ColumnModel("Something1", 1));
             m_Board.ColumnList.Add(new ColumnModel("Something2", 2));
+            m_Board.ColumnList[1].TasksList.Add(new TaskModel(m_Board.ColumnList[1], 1));
+            m_Board.ColumnList[1].TasksList.Add(new TaskModel(m_Board.ColumnList[1], 2));
+            m_Board.ColumnList[1].TasksList.Add(new TaskModel(m_Board.ColumnList[1], 3));
+            m_Board.ColumnList[1].TasksList.Add(new TaskModel(m_Board.ColumnList[1], 4));
 ***REMOVED***
         
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]

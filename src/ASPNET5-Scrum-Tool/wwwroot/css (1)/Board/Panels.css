@@ -24,36 +24,3 @@
 
 .AddTask:hover, .Task:hover ***REMOVED***
   background-color: #a3c2c2 !important; ***REMOVED***
-
-.ColumnTitleSubmit, .TaskFormSubmit ***REMOVED***
-  display: block;
-  color: #000000; ***REMOVED***
-
-.NewColumnName, .TaskContent ***REMOVED***
-  width: 100%;
-  color: #000000; ***REMOVED***
-
-.row ***REMOVED***
-  margin-top: 1%;
-  width: 100%; ***REMOVED***
-
-.BoardColumn ***REMOVED***
-  /*border-right: 3px solid #f00*/
-  float: left;
-  width: 20%; ***REMOVED***
-
-.ColumnTitleSumbit ***REMOVED***
-  display: block; ***REMOVED***
-
-.NewColumnName ***REMOVED***
-  width: 100%; ***REMOVED***
-
-#AddColumnButton ***REMOVED***
-  font-size: 50px;
-  cursor: pointer;
-  color: #D24D57;
-  display: inline-block;
-  margin-top: 10%; ***REMOVED***
-  #AddColumnButton:hover, #AddColumnButton:visited ***REMOVED***
-    text-decoration: none;
-    color: #D24D57; ***REMOVED***

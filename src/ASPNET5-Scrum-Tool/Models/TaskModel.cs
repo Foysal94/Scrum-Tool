@@ -15,13 +15,18 @@
         public ColumnModel ParentColumn ***REMOVED*** get ***REMOVED***return m_ParentColumn;***REMOVED*** set ***REMOVED*** m_ParentColumn = value; ***REMOVED*** ***REMOVED***
         public DateTime DueDate ***REMOVED*** get ***REMOVED*** return m_DueDate; ***REMOVED***set ***REMOVED*** m_DueDate = value; ***REMOVED*** ***REMOVED***
         public string TaskContent ***REMOVED*** get ***REMOVED***return m_TaskContent;***REMOVED*** set ***REMOVED*** m_TaskContent = value; ***REMOVED*** ***REMOVED***
-        public int ID ***REMOVED*** get ***REMOVED***return m_ID;***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
+        public int TaskID ***REMOVED*** get ***REMOVED***return m_ID;***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
 
-        public TaskModel(ColumnModel p_column, int p_ID)
+        public TaskModel(ColumnModel p_column , int p_ID, string p_TaskContent)
 ***REMOVED***
             m_ParentColumn = p_column;
             m_ID = p_ID;
-            m_TaskContent ="sadasdasjkfaskbfasfgasbtgasbfgaskjbfkasnf sabfasjkngfajsd asjfaskfbsadasd  asbfaskdsabdkasd";
+            m_TaskContent = p_TaskContent;
+***REMOVED***
+
+        public TaskModel()
+***REMOVED***
+            
 ***REMOVED***
 
 ***REMOVED***

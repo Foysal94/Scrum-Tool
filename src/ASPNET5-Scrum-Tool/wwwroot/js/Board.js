@@ -113,11 +113,11 @@ AddTaskForm = function() ***REMOVED***
 ***REMOVED***;
 
 SubmitTaskForm = function() ***REMOVED***
-  return $('.panel-body').on('click', '.TaskFormSubmit', function(event) ***REMOVED***
-    var selectedColumn, taskContent, taskID;
+  return $('#MainColumn').on('click', '.TaskFormSubmit', function(event) ***REMOVED***
+    var selectedColumnID, taskContent, taskID;
     event.preventDefault();
-    selectedColumn = $('.TaskContent').parent().parent();
-    taskContent = $('.TaskContent').val();
+    selectedColumnID = $('.TaskContent').parent().parent().attr('id');
+    taskContent = $('.TaskContent').val().trim();
     taskID = $('.TaskContent').prev().attr('id');
     if (typeof TaskID !== "undefined" && TaskID !== null) ***REMOVED***
       taskID === 0;
@@ -126,13 +126,13 @@ SubmitTaskForm = function() ***REMOVED***
       url: '/Board/AddNewTask',
       type: 'POST',
       data: ***REMOVED***
-        ParentColumn: selectedColumn,
+        ParentColumnID: selectedColumnID,
         TaskID: taskID,
         TaskContent: taskContent
   ***REMOVED***,
       success: function(data) ***REMOVED***
-        alert("Hit the success part");
-        return $('#AddColumnButton').before(data);
+        $('.TaskContent').replaceWith(data);
+        return $('.TaskFormSubmit').replaceWith('<a class="AddTask"> Add a task.... </a>');
   ***REMOVED***,
       error: function(error) ***REMOVED***
         return alert("no good " + JSON.stringify(error));

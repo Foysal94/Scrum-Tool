@@ -7,6 +7,7 @@ Project("***REMOVED***2150E333-8FDC-42A3-9474-1A3956D46DE8***REMOVED***") = "src
 EndProject
 Project("***REMOVED***2150E333-8FDC-42A3-9474-1A3956D46DE8***REMOVED***") = "Solution Items", "Solution Items", "***REMOVED***72F8BEC7-2F15-4495-847D-F150747B107C***REMOVED***"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		global.json = global.json
 	EndProjectSection
 EndProject

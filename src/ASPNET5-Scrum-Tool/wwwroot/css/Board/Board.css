@@ -8,22 +8,32 @@
   .panel-default .panel-body ***REMOVED***
     background-color: #808080;
     min-height: 30%; ***REMOVED***
-    .panel-default .panel-body .Task:hover, .panel-default .panel-body .Task:visited, .panel-default .panel-body .Task:link ***REMOVED***
-      text-decoration: none;
-      color: #000000; ***REMOVED***
     .panel-default .panel-body .AddTask:hover, .panel-default .panel-body .AddTask:visited, .panel-default .panel-body .AddTask:link ***REMOVED***
       text-decoration: none; ***REMOVED***
 
-.AddTask, .Task ***REMOVED***
+.Task ***REMOVED***
   display: block;
   margin-bottom: 20px;
   border: 3px solid #D24D57;
   border-radius: 15px;
-  padding: 20px 8px;
-  color: #000000; ***REMOVED***
-
-.AddTask:hover, .Task:hover ***REMOVED***
-  background-color: #a3c2c2 !important; ***REMOVED***
+  padding: 8px 8px;
+  width: 100%;
+  color: #000000;
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ ***REMOVED***
+  .Task:hover, .Task:visited, .Task:link ***REMOVED***
+    text-decoration: none;
+    color: #000000; ***REMOVED***
+  .Task:hover ***REMOVED***
+    background-color: #a3c2c2 !important; ***REMOVED***
 
 .ColumnTitleSubmit, .TaskFormSubmit ***REMOVED***
   display: block;

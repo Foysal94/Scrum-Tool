@@ -1,5 +1,6 @@
 ﻿***REMOVED***
 ***REMOVED***
+using System.ComponentModel.DataAnnotations;
 ***REMOVED***
 ***REMOVED***
 
@@ -15,6 +16,8 @@
         public int ParentColumnID ***REMOVED*** get ***REMOVED***return m_ParentColumnID;***REMOVED*** set ***REMOVED*** m_ParentColumnID = value; ***REMOVED*** ***REMOVED***
         public DateTime DueDate ***REMOVED*** get ***REMOVED*** return m_DueDate; ***REMOVED***set ***REMOVED*** m_DueDate = value; ***REMOVED*** ***REMOVED***
         public string TaskContent ***REMOVED*** get ***REMOVED***return m_TaskContent;***REMOVED*** set ***REMOVED*** m_TaskContent = value; ***REMOVED*** ***REMOVED***
+
+        [Key]
         public int TaskID ***REMOVED*** get ***REMOVED***return m_ID;***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
 
         public TaskModel(int p_columnID , int p_ID, string p_TaskContent)

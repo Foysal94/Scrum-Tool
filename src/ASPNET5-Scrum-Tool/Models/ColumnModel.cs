@@ -14,7 +14,9 @@ using Microsoft.AspNet.Mvc;
         private int m_ID;
         private List<TaskModel> m_TasksList;   
 
+        [Key]
         public int ColumnID ***REMOVED*** get ***REMOVED*** return m_ID; ***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
+
         public string ColumnName ***REMOVED*** get ***REMOVED*** return m_name;***REMOVED*** set ***REMOVED*** m_name = value; ***REMOVED*** ***REMOVED***
         public List<TaskModel> TasksList ***REMOVED*** get ***REMOVED***return m_TasksList;***REMOVED*** set ***REMOVED*** m_TasksList = value; ***REMOVED*** ***REMOVED***
 

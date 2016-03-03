@@ -14,7 +14,7 @@ using Newtonsoft.Json;
     public class BoardController : Controller
 ***REMOVED***
         //Logger<BoardController> logger;
-        private BoardModel m_Board;
+        public BoardModel m_Board;
 
         public BoardController()
 ***REMOVED***

@@ -14,8 +14,8 @@ $task-font-color: #000000;
 
     margin-right:20px;
 
-   .panel-heading, .Task, .AddTask ***REMOVED***
-       cursor: pointer;
+   .panel-heading ***REMOVED***
+       cursor:pointer;
    ***REMOVED***
     
   .panel-heading ***REMOVED***
@@ -26,14 +26,13 @@ $task-font-color: #000000;
   .panel-body ***REMOVED***
       background-color: $panel-body-color;
       min-height: 30%;
-
-      .AddTask:hover, .AddTask:visited, .AddTask:link ***REMOVED***
-           text-decoration: none;
-  ***REMOVED***
-
-
   ***REMOVED***
     
+***REMOVED***
+
+.ui-draggable-dragging
+***REMOVED***
+    cursor: grabbing !important;
 ***REMOVED***
 
  .Task ***REMOVED***
@@ -54,6 +53,7 @@ $task-font-color: #000000;
 
     &:hover ***REMOVED***
         background-color: #a3c2c2 !important;
+        cursor:pointer;
 ***REMOVED***
 
     .EditPen ***REMOVED***
@@ -62,7 +62,11 @@ $task-font-color: #000000;
         left:100%;
         bottom:100%;
         margin: 0 0 -48px -29px; //Change these numbers to move the pen about in the corner
-        
+        cursor:pointer;
 ***REMOVED***
    
  ***REMOVED***
+
+.AddTask:hover, .AddTask:visited, .AddTask:link ***REMOVED***
+       text-decoration: none;
+***REMOVED***

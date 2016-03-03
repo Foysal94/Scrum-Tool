@@ -23,9 +23,9 @@ using Newtonsoft.Json;
             m_Board.ColumnList.Add(new ColumnModel("Something1", 0));
             m_Board.ColumnList.Add(new ColumnModel("Something2", 1));
             m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 0, "Task 1 "));
-            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 0, "Task 2 "));
-            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 0, "Task 3 "));
-            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 0, "Task 4 "));
+            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 1, "Task 2 "));
+            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 2, "Task 3 "));
+            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 3, "Task 4 "));
 ***REMOVED***
         
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
@@ -54,7 +54,7 @@ using Newtonsoft.Json;
         [HttpPost]
         public ViewComponentResult AddColumn(ColumnModel model)
 ***REMOVED***
-            ColumnModel tempColumn = new ColumnModel(model.ColumnName,model.ColumnID );
+            ColumnModel tempColumn = new ColumnModel(model.ColumnName,model.ColumnID + 1 );
             m_Board.ColumnList.Add(tempColumn);
             return ViewComponent("Panel_Lists", tempColumn);
 ***REMOVED***
@@ -63,7 +63,7 @@ using Newtonsoft.Json;
         [HttpPost]
         public ViewComponentResult AddNewTask(TaskModel model)
 ***REMOVED***
-            TaskModel tempTask = new TaskModel(model.ParentColumnID,model.TaskID , model.TaskContent); // Adding one for a new task
+            TaskModel tempTask = new TaskModel(model.ParentColumnID,model.TaskID + 1 , model.TaskContent); // Adding one for a new task
             
             m_Board.ColumnList[model.ParentColumnID ].TasksList.Add(tempTask); // -1 or else it will be out of range. List starts from 0 but website columns start from 1
             return ViewComponent("Task", tempTask);

@@ -12,7 +12,6 @@ TaskForm = "
 
 TaskDragOptions = ***REMOVED***
                     appendto: "BoardColumn"
-                    cursor: "pointer"
                     delay: 300
                     snap: "BoardColumn"                                                                                                        
                     revert:true
@@ -39,7 +38,9 @@ BoardDropOptions = ***REMOVED***
                                 data: ***REMOVED***ParentColumnID: currentColumnID, TaskID : taskID, TaskContent: taskContent, NewColumnID: newColumnID ***REMOVED***
                                 success: (data) ->
                                       $(selectedTask).remove()
-                                      $(column).find('.AddTask').before data
+                                      $(column).find('.AddTask').before () ->
+                                            $(data).draggable TaskDragOptions
+                                            
                                 error : (error) ->
                                      alert "no good "+JSON.stringify(error);
                         
@@ -79,7 +80,7 @@ PanelTitleClick = () ->
                    
 
 SubmitColumnForm = () ->
-    $('.panel-heading').on 'click', 'input.ColumnTitleSubmit', (event) ->
+    $('#MainColumn').on 'click', 'input.ColumnTitleSubmit', (event) ->
         event.preventDefault();
 
         columnName = $('.NewColumnName').val().trim()
@@ -139,7 +140,7 @@ SubmitTaskForm = () ->
           selectedColumnID = $('.TaskContent').parent().parent().attr('id')
           taskContent = $('.TaskContent').val().trim()
           taskID = $('.TaskContent').prev().attr('id')
-          taskID == 0 if TaskID?
+          taskID = 0 if taskID == null or taskID == undefined
           
           $.ajax
             url: '/Board/AddNewTask'

@@ -13,7 +13,7 @@ using System.ComponentModel.DataAnnotations;
         private string m_TaskContent;
         private int m_ID;
 
-        public int ParentColumnID ***REMOVED*** get ***REMOVED***return m_ParentColumnID;***REMOVED*** set ***REMOVED*** m_ParentColumnID = value; ***REMOVED*** ***REMOVED***
+        public int ColumnID ***REMOVED*** get ***REMOVED***return m_ParentColumnID;***REMOVED*** set ***REMOVED*** m_ParentColumnID = value; ***REMOVED*** ***REMOVED***
         public DateTime DueDate ***REMOVED*** get ***REMOVED*** return m_DueDate; ***REMOVED***set ***REMOVED*** m_DueDate = value; ***REMOVED*** ***REMOVED***
         public string TaskContent ***REMOVED*** get ***REMOVED***return m_TaskContent;***REMOVED*** set ***REMOVED*** m_TaskContent = value; ***REMOVED*** ***REMOVED***
 

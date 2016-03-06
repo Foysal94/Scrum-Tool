@@ -31,8 +31,8 @@ using Newtonsoft.Json;
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
         public IActionResult Show(string p_BoardName)
 ***REMOVED***
-            m_Board.BoardName = p_BoardName;
-            ViewData["BoardName"] = m_Board.BoardName;
+            m_Board.Name = p_BoardName;
+            ViewData["BoardName"] = m_Board.Name;
             return View(m_Board);
 ***REMOVED***
 
@@ -63,12 +63,12 @@ using Newtonsoft.Json;
         [HttpPost]
         public ViewComponentResult AddNewTask(TaskModel model)
 ***REMOVED***
-            TaskModel tempTask = new TaskModel(model.ParentColumnID,model.ID, model.TaskContent); // Adding one for a new task
+            TaskModel tempTask = new TaskModel(model.ColumnID,model.ID, model.TaskContent); // Adding one for a new task
             if (tempTask.ID != 0)
 ***REMOVED***
                 tempTask.ID++;
 ***REMOVED***
-            m_Board.ColumnList[model.ParentColumnID ].TasksList.Add(tempTask); // -1 or else it will be out of range. List starts from 0 but website columns start from 1
+            m_Board.ColumnList[model.ColumnID ].TasksList.Add(tempTask); // -1 or else it will be out of range. List starts from 0 but website columns start from 1
             return ViewComponent("Task", tempTask);
 ***REMOVED***
 
@@ -77,13 +77,13 @@ using Newtonsoft.Json;
         public ViewComponentResult MovedTask(TaskModel model, string NewColumnID)
 ***REMOVED***
             // Remove the task from its old column
-            int oldColumnID = model.ParentColumnID;
+            int oldColumnID = model.ColumnID;
             int newColumnID = int.Parse(NewColumnID);
             //Board.ColumnList[oldColumnID ].TasksList.RemoveAt(model.TaskID);
 
             // Update task parent column
             TaskModel tempTask = model;
-            tempTask.ParentColumnID = newColumnID;
+            tempTask.ColumnID = newColumnID;
             m_Board.ColumnList[newColumnID ].TasksList.Add(tempTask);
 
             return ViewComponent("Task", tempTask);

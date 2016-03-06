@@ -19,7 +19,7 @@ using Microsoft.AspNet.Mvc;
         public IActionResult SumbitBoardForm(BoardModel model)
 ***REMOVED***
             
-            return RedirectToAction("Show", "Board", new ***REMOVED*** p_BoardName = model.BoardName***REMOVED*** );
+            return RedirectToAction("Show", "Board", new ***REMOVED*** p_BoardName = model.Name***REMOVED*** );
 ***REMOVED***
 
         public IActionResult Error()

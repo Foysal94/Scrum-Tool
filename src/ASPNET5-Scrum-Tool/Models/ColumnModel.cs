@@ -20,7 +20,7 @@ using Microsoft.AspNet.Mvc;
         public int ID ***REMOVED*** get ***REMOVED*** return m_ID; ***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
         public string Name ***REMOVED*** get ***REMOVED*** return m_name;***REMOVED*** set ***REMOVED*** m_name = value; ***REMOVED*** ***REMOVED***
         public List<TaskModel> TasksList ***REMOVED*** get ***REMOVED***return m_TasksList;***REMOVED*** set ***REMOVED*** m_TasksList = value; ***REMOVED*** ***REMOVED***
-        public int ParentBoardID ***REMOVED*** get ***REMOVED*** return m_ParentBoardID; ***REMOVED*** set ***REMOVED*** m_ParentBoardID = value; ***REMOVED*** ***REMOVED***
+        public int BoardID ***REMOVED*** get ***REMOVED*** return m_ParentBoardID; ***REMOVED*** set ***REMOVED*** m_ParentBoardID = value; ***REMOVED*** ***REMOVED***
 
 
 

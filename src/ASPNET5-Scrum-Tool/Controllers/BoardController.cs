@@ -22,10 +22,10 @@ using Newtonsoft.Json;
             m_Board.ColumnList = new List<ColumnModel>();
             m_Board.ColumnList.Add(new ColumnModel("Something1", 0));
             m_Board.ColumnList.Add(new ColumnModel("Something2", 1));
-            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 0, "Task 1 "));
-            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 1, "Task 2 "));
-            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 2, "Task 3 "));
-            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ColumnID, 3, "Task 4 "));
+            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ID, 0, "Task 1 "));
+            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ID, 1, "Task 2 "));
+            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ID, 2, "Task 3 "));
+            m_Board.ColumnList[0].TasksList.Add(new TaskModel(m_Board.ColumnList[0].ID, 3, "Task 4 "));
 ***REMOVED***
         
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
@@ -43,18 +43,18 @@ using Newtonsoft.Json;
 ***REMOVED***
             //ColumnModel column = JsonConvert.DeserializeObject<ColumnModel>(newColumnData);
             // Update column name in the board model, the board model stores a list of columns
-            m_Board.ColumnList[model.ColumnID].ColumnName = model.ColumnName; 
+            m_Board.ColumnList[model.ID].Name = model.Name; 
 
            // var json = JsonConvert.SerializeObject( m_Board.ColumnList[model.ColumnNumber]);
 
-            return Json(model.ColumnName);
+            return Json(model.Name);
 ***REMOVED***
 
         [Route("[Action]")]
         [HttpPost]
         public ViewComponentResult AddColumn(ColumnModel model)
 ***REMOVED***
-            ColumnModel tempColumn = new ColumnModel(model.ColumnName,model.ColumnID + 1 );
+            ColumnModel tempColumn = new ColumnModel(model.Name,model.ID + 1 );
             m_Board.ColumnList.Add(tempColumn);
             return ViewComponent("Panel_Lists", tempColumn);
 ***REMOVED***
@@ -63,10 +63,10 @@ using Newtonsoft.Json;
         [HttpPost]
         public ViewComponentResult AddNewTask(TaskModel model)
 ***REMOVED***
-            TaskModel tempTask = new TaskModel(model.ParentColumnID,model.TaskID, model.TaskContent); // Adding one for a new task
-            if (tempTask.TaskID != 0)
+            TaskModel tempTask = new TaskModel(model.ParentColumnID,model.ID, model.TaskContent); // Adding one for a new task
+            if (tempTask.ID != 0)
 ***REMOVED***
-                tempTask.TaskID++;
+                tempTask.ID++;
 ***REMOVED***
             m_Board.ColumnList[model.ParentColumnID ].TasksList.Add(tempTask); // -1 or else it will be out of range. List starts from 0 but website columns start from 1
             return ViewComponent("Task", tempTask);

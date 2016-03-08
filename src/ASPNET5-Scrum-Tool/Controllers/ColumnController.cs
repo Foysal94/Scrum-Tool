@@ -11,15 +11,23 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
     [Route("[Controller]")]
     public class ColumnController : Controller
-***REMOVED***   
+***REMOVED***
+        private ScrumToolDB m_context;
+
+        public ColumnController(ScrumToolDB p_context)
+***REMOVED***
+            m_context = p_context;
+***REMOVED***
+
         /*
         [Route("[Action]")]
         [HttpPost]
-        public JsonResult ChangeColumnName(ColumnModel model)
+        public JsonResult ChangeColumnName(ColumnModel model, string p_BoardName)
 ***REMOVED***
             //ColumnModel column = JsonConvert.DeserializeObject<ColumnModel>(newColumnData);
+           // m_context.Boards.find
             // Update column name in the board model, the board model stores a list of columns
-            ColumnList[model.ColumnID].ColumnName = model.ColumnName;
+            m_context.BoardsColumnList[model.ID].ColumnName = model.Name;
 
             // var json = JsonConvert.SerializeObject( m_Board.ColumnList[model.ColumnNumber]);
 

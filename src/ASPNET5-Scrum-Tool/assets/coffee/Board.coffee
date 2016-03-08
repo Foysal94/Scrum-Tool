@@ -84,12 +84,12 @@ SubmitColumnForm = () ->
         event.preventDefault();
 
         columnName = $('.NewColumnName').val().trim()
-        columnNumber = $(this).parent().parent().attr 'id'
+        columnID = $(this).parent().parent().attr 'id'
         
         $.ajax
             url: '/Board/ChangeColumnName',
             type: 'POST',
-            data: ***REMOVED***ColumnName: columnName, ColumnNumber: columnNumber ***REMOVED***,
+            data: ***REMOVED***Name: columnName, ID: columnID, p_BoardName: BoardName ***REMOVED***,
             dataType: 'json',
             success: (data) ->              
                      #alert 'data is' + data

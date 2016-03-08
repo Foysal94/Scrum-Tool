@@ -10,7 +10,7 @@ using Microsoft.AspNet.Mvc;
     public class TaskViewComponent : ViewComponent
 ***REMOVED***
        
-        public IViewComponentResult Invoke(TaskModel model)
+        public IViewComponentResult Invoke(Tasks model)
 ***REMOVED***
             return View(model);
 ***REMOVED***

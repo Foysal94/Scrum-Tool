@@ -8,7 +8,7 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
         private int m_ColumnID = 0;
 
-        public IViewComponentResult Invoke(ColumnModel model)
+        public IViewComponentResult Invoke(Columns model)
 ***REMOVED***
             m_ColumnID++;
             

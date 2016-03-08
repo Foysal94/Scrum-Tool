@@ -15,10 +15,10 @@ using Newtonsoft.Json;
 ***REMOVED***
         //Logger<BoardController> logger;
         public Boards m_Board;
-
-        public BoardController()
+        private ScrumToolDB m_context;
+        public BoardController(ScrumToolDB p_context)
 ***REMOVED***
-
+            m_context = p_context;
 ***REMOVED***
         
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]

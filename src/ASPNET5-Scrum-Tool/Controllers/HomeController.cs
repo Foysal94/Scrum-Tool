@@ -36,7 +36,7 @@ using Microsoft.Data.Entity;
                 if (boardModel.Name == model.Name)
 ***REMOVED***
                     found = true;
-                    break;
+                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardName = model.Name ***REMOVED***);
 ***REMOVED***
 ***REMOVED***
 

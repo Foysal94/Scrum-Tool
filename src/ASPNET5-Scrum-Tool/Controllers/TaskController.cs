@@ -3,51 +3,52 @@
 ***REMOVED***
 ***REMOVED***
 using Microsoft.AspNet.Mvc;
-
+***REMOVED***
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 ***REMOVED***.Controllers
 ***REMOVED***
     public class TaskController : Controller
 ***REMOVED***
-        // GET: /<controller>/
-        public IActionResult Index()
+        private ScrumToolDB m_context;
+        public TaskController(ScrumToolDB p_context)
 ***REMOVED***
-            return View();
+            m_context = p_context;
 ***REMOVED***
 
-        /*
-           [Route("[Action]")]
+
+        [Route("[Action]")]
         [HttpPost]
-        public ViewComponentResult AddNewTask(TaskModel model)
+        public ViewComponentResult AddNewTask(Tasks model)
 ***REMOVED***
-            TaskModel tempTask = new TaskModel(model.ColumnID,model.ID, model.TaskContent); // Adding one for a new task
-            if (tempTask.ID != 0)
-***REMOVED***
-                tempTask.ID++;
-***REMOVED***
-            m_Board.ColumnList[model.ColumnID ].TasksList.Add(tempTask); // -1 or else it will be out of range. List starts from 0 but website columns start from 1
+            Tasks tempTask = new Tasks(model.ID + 1,model.BoardID, model.ColumnName, model.TaskContent); // Adding one to the ID because the model has the last task ID.
+            m_context.Tasks.Add(tempTask);
+
             return ViewComponent("Task", tempTask);
 ***REMOVED***
 
         [Route("[Action]")]
         [HttpPost]
-        public ViewComponentResult MovedTask(TaskModel model, string NewColumnID)
+        public ViewComponentResult MovedTask(string p_ColumnName, int p_TaskID)
 ***REMOVED***
-            // Remove the task from its old column
-            int oldColumnID = model.ColumnID;
-            int newColumnID = int.Parse(NewColumnID);
-            //Board.ColumnList[oldColumnID ].TasksList.RemoveAt(model.TaskID);
-
-            // Update task parent column
-            TaskModel tempTask = model;
-            tempTask.ColumnID = newColumnID;
-            m_Board.ColumnList[newColumnID ].TasksList.Add(tempTask);
+            var tasks = m_context.Tasks.ToList();
+            Tasks tempTask = null;
+            foreach (Tasks t in tasks)
+***REMOVED***
+                if (t.ID == p_TaskID)
+***REMOVED***
+                    t.ColumnName = p_ColumnName;
+                    tempTask = t;
+                    m_context.SaveChanges();
+                    
+                    break;
+***REMOVED***
+***REMOVED***
 
             return ViewComponent("Task", tempTask);
 
 
 ***REMOVED***
-        */
+        
 ***REMOVED***
 ***REMOVED***

@@ -36,11 +36,11 @@ using Microsoft.Data.Entity;
                 if (boardModel.Name == model.Name)
 ***REMOVED***
                     found = true;
-                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardName = model.Name ***REMOVED***);
+                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardName = model.Name, p_model = model ***REMOVED***);
 ***REMOVED***
 ***REMOVED***
 
-            return RedirectToAction("Index", "Board", new ***REMOVED*** p_BoardName = model.Name***REMOVED*** );
+            return RedirectToAction("Create", "Board", new ***REMOVED*** p_BoardName = model.Name, p_model = model***REMOVED*** );
 ***REMOVED***
 
 

@@ -30,19 +30,19 @@ using Microsoft.Data.Entity;
 ***REMOVED***
             var query = from board in m_context.Boards where board.Name.Equals(model.Name) select board;
             var boards = m_context.Boards.ToList();
-            bool found = false;
             foreach (var boardModel in boards)
 ***REMOVED***
                 if (boardModel.Name == model.Name)
 ***REMOVED***
-                    TempData["board"] = boardModel;
-                    found = true;
-                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardName = model.Name***REMOVED***);
+                    TempData["BoardName"] = boardModel.Name;
+                    TempData["BoardID"] = boardModel.ID;
+                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardID = boardModel.ID***REMOVED***);
 ***REMOVED***
 ***REMOVED***
-            model.ID = boards.Count + 1;
-            TempData["board"] = model;
-            return RedirectToAction("Create", "Board", new ***REMOVED*** p_BoardName = model.Name***REMOVED*** );
+            //model.ID = boards.Count + 1;
+            TempData["BoardName"] = model.Name;
+            //TempData["BoardID"] = model.ID;
+            return RedirectToAction("Create", "Board" );
 ***REMOVED***
         
 

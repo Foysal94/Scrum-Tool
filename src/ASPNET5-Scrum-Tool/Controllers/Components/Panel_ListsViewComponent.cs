@@ -1,4 +1,5 @@
 ﻿***REMOVED***
+***REMOVED***
 using Microsoft.AspNet.Mvc;
 ***REMOVED***
 
@@ -6,13 +7,26 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
     public class Panel_ListsViewComponent : ViewComponent
 ***REMOVED***
-        private int m_ColumnID = 0;
+        private ScrumToolDB m_context;
+
+        public Panel_ListsViewComponent(ScrumToolDB p_context)
+***REMOVED***
+            m_context = p_context;
+***REMOVED***
 
         public IViewComponentResult Invoke(Columns model)
 ***REMOVED***
-            m_ColumnID++;
+            var TaskList = m_context.Tasks.ToList();
+
+            foreach (Tasks t in TaskList)
+***REMOVED***
+                if (t.ColumnName == model.Name && t.BoardID == model.BoardID)
+***REMOVED***
+                    model.TasksList.Add(t);
+                    t.ParentColumn = model;
+***REMOVED***
+***REMOVED***
             
-            ViewData["ColumnID"] = m_ColumnID;
             return View(model);
             
 ***REMOVED***

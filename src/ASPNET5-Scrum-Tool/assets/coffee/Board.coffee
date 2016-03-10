@@ -102,12 +102,13 @@ SubmitColumnForm = () ->
 AddColumn = () ->
     $('#AddColumnButton').on 'click', (event) ->
         event.preventDefault()
-        newColumnDataID = $('#MainColumn').children().last().prev().attr('id')
+        
         newColumnName = 'Something' 
         $.ajax
             url:'/Column/AddColumn',
             type: 'POST',
-            data: ***REMOVED***Name: newColumnName, ID: newColumnDataID, BoardID: m_BoardID ***REMOVED***,
+            data: ***REMOVED***Name: newColumnName, BoardID: m_BoardID ***REMOVED***,
+            dataType: 'json',
             success: (data) ->
                 $('#AddColumnButton').before () ->
                     $(data).droppable BoardDropOptions

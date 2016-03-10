@@ -18,6 +18,7 @@ using Newtonsoft.Json;
         private ScrumToolDB m_context;
         public BoardController(ScrumToolDB p_context)
 ***REMOVED***
+            m_Board = null;
             m_context = p_context;
 ***REMOVED***
         
@@ -29,20 +30,45 @@ using Newtonsoft.Json;
             return View(m_Board);
 ***REMOVED***
 
-        [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
-        public IActionResult Load(string p_BoardName)
+        [Route("[Action]/***REMOVED***p_BoardID***REMOVED***")]
+        public IActionResult Load(int p_BoardID)
 ***REMOVED***
-            Boards board = (Boards)TempData["board"];
-            return View("Show", board);
+            var boardList = m_context.Boards.ToList();
+
+            foreach (Boards b in boardList)
+***REMOVED***
+                if (b.ID == p_BoardID)
+***REMOVED***
+                    m_Board = b;
+                    m_Board.ColumnList  = new List<Columns>();
+                    break;
+***REMOVED***
 ***REMOVED***
 
-        [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
-        public IActionResult Create( string p_BoardName)
+
+            var columnList = m_context.Columns.ToList();
+            foreach (Columns c in columnList)
 ***REMOVED***
-            Boards board = (Boards)TempData["board"];
-            m_context.Boards.Add(board);
+                if (c.BoardID == m_Board.ID)
+***REMOVED***
+                    m_Board.ColumnList.Add(c);
+                    c.ParentBoard = m_Board;
+***REMOVED***
+***REMOVED***
+            
+            return View("Show", m_Board);
+***REMOVED***
+
+        [Route("[Action]")]
+        public IActionResult Create()
+***REMOVED***
+            string boardName = (string) TempData["BoardName"];
+            //int boardID = (int) TempData["BoardID"];
+            m_Board = new Boards(boardName);
+            
+            m_context.Boards.Add(m_Board);
             m_context.SaveChanges();
-            return View("Show", board);
+            return View("Show", m_Board);
 ***REMOVED***
         
 ***REMOVED***

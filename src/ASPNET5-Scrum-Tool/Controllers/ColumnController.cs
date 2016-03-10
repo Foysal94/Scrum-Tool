@@ -46,7 +46,7 @@ using Microsoft.Data.Entity.Scaffolding.Metadata;
         [HttpPost]
         public ViewComponentResult AddColumn(Columns model)
 ***REMOVED***
-            Columns tempColumn = new Columns(model.Name, model.ID + 1, model.BoardID); // The model got passed the last column ID
+            Columns tempColumn = new Columns(model.Name, model.BoardID); // The model got passed the last column ID
             m_context.Columns.Add(tempColumn);
             m_context.SaveChanges();
             return ViewComponent("Panel_Lists", tempColumn);

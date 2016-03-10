@@ -21,7 +21,7 @@ using System.ComponentModel.DataAnnotations;
         public int BoardID ***REMOVED*** get ***REMOVED*** return m_BoardID; ***REMOVED*** set ***REMOVED*** m_BoardID = value; ***REMOVED*** ***REMOVED***
 
         public string ColumnName ***REMOVED*** get ***REMOVED***return m_ColumnName; ***REMOVED*** set ***REMOVED*** m_ColumnName = value; ***REMOVED*** ***REMOVED***
-        public DateTime DueDate ***REMOVED*** get ***REMOVED*** return m_DueDate; ***REMOVED***set ***REMOVED*** m_DueDate = value; ***REMOVED*** ***REMOVED***
+        //public DateTime? DueDate ***REMOVED*** get ***REMOVED*** return m_DueDate; ***REMOVED***set ***REMOVED*** m_DueDate = value; ***REMOVED*** ***REMOVED***
         public string TaskContent ***REMOVED*** get ***REMOVED***return m_TaskContent;***REMOVED*** set ***REMOVED*** m_TaskContent = value; ***REMOVED*** ***REMOVED***
 
         public Columns ParentColumn ***REMOVED*** get ***REMOVED***return m_ParentColumn;***REMOVED*** set ***REMOVED*** m_ParentColumn = value; ***REMOVED*** ***REMOVED***

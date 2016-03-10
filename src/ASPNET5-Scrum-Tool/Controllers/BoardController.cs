@@ -30,17 +30,19 @@ using Newtonsoft.Json;
 ***REMOVED***
 
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
-        public IActionResult Load(string p_BoardName, Boards p_model)
+        public IActionResult Load(string p_BoardName)
 ***REMOVED***
-            return View("Show", p_model);
+            Boards board = (Boards)TempData["board"];
+            return View("Show", board);
 ***REMOVED***
 
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
-        public IActionResult Create( string p_BoardName, Boards p_model)
+        public IActionResult Create( string p_BoardName)
 ***REMOVED***
-            m_context.Boards.Add(p_model);
+            Boards board = (Boards)TempData["board"];
+            m_context.Boards.Add(board);
             m_context.SaveChanges();
-            return View("Show", p_model);
+            return View("Show", board);
 ***REMOVED***
         
 ***REMOVED***

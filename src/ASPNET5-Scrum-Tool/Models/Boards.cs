@@ -18,7 +18,7 @@ using Microsoft.AspNet.Mvc;
         [Key]
         public int ID ***REMOVED*** get ***REMOVED***return m_ID;***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
 
-        public DateTime CreationDate  ***REMOVED*** get ***REMOVED*** return m_CreationDate; ***REMOVED*** set ***REMOVED*** m_CreationDate = value; ***REMOVED*** ***REMOVED***
+       // public DateTime? CreationDate  ***REMOVED*** get ***REMOVED*** return m_CreationDate; ***REMOVED*** set ***REMOVED*** m_CreationDate = value; ***REMOVED*** ***REMOVED***
 
         public string Name ***REMOVED*** get ***REMOVED*** return m_BoardName; ***REMOVED*** set ***REMOVED*** m_BoardName = value; ***REMOVED*** ***REMOVED***
 

@@ -8,7 +8,7 @@ using Microsoft.Data.Entity.Migrations;
 namespace ASPNET5ScrumTool.Migrations
 ***REMOVED***
     [DbContext(typeof(ScrumToolDB))]
-    [Migration("20160308144402_InitalMigration")]
+    [Migration("20160309224439_InitalMigration")]
     partial class InitalMigration
 ***REMOVED***
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,8 +21,6 @@ namespace ASPNET5ScrumTool.Migrations
 ***REMOVED***
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime?>("CreationDate");
 
                     b.Property<string>("Name");
 
@@ -39,6 +37,8 @@ namespace ASPNET5ScrumTool.Migrations
                     b.Property<string>("ColumnName")
                         .IsRequired();
 
+                    b.Property<string>("Name");
+
                     b.HasKey("ID");
 ***REMOVED***);
 
@@ -50,8 +50,6 @@ namespace ASPNET5ScrumTool.Migrations
                     b.Property<int>("BoardID");
 
                     b.Property<string>("ColumnName");
-
-                    b.Property<DateTime?>("DueDate");
 
                     b.Property<string>("TaskContent");
 

@@ -35,14 +35,16 @@ using Microsoft.Data.Entity;
 ***REMOVED***
                 if (boardModel.Name == model.Name)
 ***REMOVED***
+                    TempData["board"] = boardModel;
                     found = true;
-                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardName = model.Name, p_model = model ***REMOVED***);
+                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardName = model.Name***REMOVED***);
 ***REMOVED***
 ***REMOVED***
-
-            return RedirectToAction("Create", "Board", new ***REMOVED*** p_BoardName = model.Name, p_model = model***REMOVED*** );
+            model.ID = boards.Count + 1;
+            TempData["board"] = model;
+            return RedirectToAction("Create", "Board", new ***REMOVED*** p_BoardName = model.Name***REMOVED*** );
 ***REMOVED***
-
+        
 
 ***REMOVED***
 ***REMOVED***

@@ -15,8 +15,7 @@ namespace ASPNET5ScrumTool.Migrations
 ***REMOVED***
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CreationDate = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: true)
 ***REMOVED***,
                 constraints: table =>
 ***REMOVED***
@@ -30,6 +29,7 @@ namespace ASPNET5ScrumTool.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     BoardID = table.Column<int>(nullable: false),
                     ColumnName = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true)
 ***REMOVED***,
                 constraints: table =>
 ***REMOVED***
@@ -50,7 +50,6 @@ namespace ASPNET5ScrumTool.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     BoardID = table.Column<int>(nullable: false),
                     ColumnName = table.Column<string>(nullable: true),
-                    DueDate = table.Column<DateTime>(nullable: true),
                     TaskContent = table.Column<string>(nullable: true)
 ***REMOVED***,
                 constraints: table =>

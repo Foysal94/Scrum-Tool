@@ -8,6 +8,7 @@ using Microsoft.AspNet.Mvc;
 
 ***REMOVED***.Controllers
 ***REMOVED***
+    [Route("[controller]")]
     public class TaskController : Controller
 ***REMOVED***
         private ScrumToolDB m_context;
@@ -21,8 +22,9 @@ using Microsoft.AspNet.Mvc;
         [HttpPost]
         public ViewComponentResult AddNewTask(Tasks model)
 ***REMOVED***
-            Tasks tempTask = new Tasks(model.ID + 1,model.BoardID, model.ColumnName, model.TaskContent); // Adding one to the ID because the model has the last task ID.
+            Tasks tempTask = new Tasks(model.BoardID, model.ColumnName, model.TaskContent); // Adding one to the ID because the model has the last task ID.
             m_context.Tasks.Add(tempTask);
+            m_context.SaveChanges();
 
             return ViewComponent("Task", tempTask);
 ***REMOVED***

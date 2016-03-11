@@ -24,12 +24,12 @@ using System.ComponentModel.DataAnnotations;
         //public DateTime? DueDate ***REMOVED*** get ***REMOVED*** return m_DueDate; ***REMOVED***set ***REMOVED*** m_DueDate = value; ***REMOVED*** ***REMOVED***
         public string TaskContent ***REMOVED*** get ***REMOVED***return m_TaskContent;***REMOVED*** set ***REMOVED*** m_TaskContent = value; ***REMOVED*** ***REMOVED***
 
-        public Columns ParentColumn ***REMOVED*** get ***REMOVED***return m_ParentColumn;***REMOVED*** set ***REMOVED*** m_ParentColumn = value; ***REMOVED*** ***REMOVED***
+        //public Columns ParentColumn ***REMOVED*** get ***REMOVED***return m_ParentColumn;***REMOVED*** set ***REMOVED*** m_ParentColumn = value; ***REMOVED*** ***REMOVED***
 
-        public Tasks(int p_ID, int p_BoardID, string p_ColumnName, string p_TaskContent)
+        public Tasks( int p_BoardID, string p_ColumnName, string p_TaskContent)
 ***REMOVED***
             m_BoardID = p_BoardID;
-            m_ID = p_ID;
+            m_ColumnName = p_ColumnName;
             m_TaskContent = p_TaskContent;
 ***REMOVED***
 

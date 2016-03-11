@@ -4,7 +4,7 @@
 ***REMOVED***
     public class ScrumToolDB : DbContext
 ***REMOVED***
-
+        /*
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 ***REMOVED***
             modelBuilder.Entity<Boards>(entity =>
@@ -16,8 +16,10 @@
 ***REMOVED***
                 entity.HasMany(c => c.TasksList).WithOne(t => t.ParentColumn).HasForeignKey("ColumnName");
 ***REMOVED***);
-***REMOVED***
 
+    
+***REMOVED***
+        */
         public DbSet<Boards> Boards ***REMOVED*** get; set; ***REMOVED***
 
         public DbSet<Columns> Columns ***REMOVED*** get; set; ***REMOVED***

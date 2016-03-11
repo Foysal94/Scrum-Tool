@@ -16,19 +16,7 @@ using Microsoft.AspNet.Mvc;
 
         public IViewComponentResult Invoke(Columns model)
 ***REMOVED***
-            var TaskList = m_context.Tasks.ToList();
-
-            foreach (Tasks t in TaskList)
-***REMOVED***
-                if (t.ColumnName == model.Name && t.BoardID == model.BoardID)
-***REMOVED***
-                    model.TasksList.Add(t);
-                    t.ParentColumn = model;
-***REMOVED***
-***REMOVED***
-            
             return View(model);
-            
 ***REMOVED***
 
         /*

@@ -15,6 +15,7 @@ using Microsoft.Data.Entity.Scaffolding.Metadata;
     public class ColumnController : Controller
 ***REMOVED***
         private ScrumToolDB m_context;
+        private int m_ColumnNameIncrement;
 
         public ColumnController(ScrumToolDB p_context)
 ***REMOVED***
@@ -36,6 +37,7 @@ using Microsoft.Data.Entity.Scaffolding.Metadata;
                     //m_context.Columns.Update(c)
                     c.Name = p_NewColumnName;
                     m_context.SaveChanges();
+                    break;
 ***REMOVED***
 ***REMOVED***
 
@@ -47,8 +49,10 @@ using Microsoft.Data.Entity.Scaffolding.Metadata;
         public ViewComponentResult AddColumn(Columns model)
 ***REMOVED***
             Columns tempColumn = new Columns(model.Name, model.BoardID); // The model got passed the last column ID
+            
             m_context.Columns.Add(tempColumn);
             m_context.SaveChanges();
+            tempColumn.TasksList = new List<Tasks>();
             return ViewComponent("Panel_Lists", tempColumn);
 ***REMOVED***
         

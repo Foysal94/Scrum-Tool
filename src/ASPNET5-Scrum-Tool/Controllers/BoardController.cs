@@ -47,12 +47,21 @@ using Newtonsoft.Json;
 
 
             var columnList = m_context.Columns.ToList();
+            var taskList = m_context.Tasks.ToList();
             foreach (Columns c in columnList)
 ***REMOVED***
                 if (c.BoardID == m_Board.ID)
 ***REMOVED***
+                    c.TasksList = new List<Tasks>();
+                    foreach (Tasks t in taskList)
+***REMOVED***
+                        if (t.ColumnName == c.Name)
+***REMOVED***
+                            c.TasksList.Add(t);
+***REMOVED***
+***REMOVED***
                     m_Board.ColumnList.Add(c);
-                    c.ParentBoard = m_Board;
+                    //c.ParentBoard = m_Board;
 ***REMOVED***
 ***REMOVED***
             

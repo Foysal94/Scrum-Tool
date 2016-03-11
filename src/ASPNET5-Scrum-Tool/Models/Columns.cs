@@ -24,7 +24,7 @@ using Microsoft.AspNet.Mvc;
 
         public List<Tasks> TasksList ***REMOVED*** get ***REMOVED***return m_TasksList;***REMOVED*** set ***REMOVED*** m_TasksList = value; ***REMOVED*** ***REMOVED***
   
-        public Boards ParentBoard ***REMOVED*** get ***REMOVED***return m_board;***REMOVED*** set ***REMOVED*** m_board = value; ***REMOVED*** ***REMOVED***
+        //public Boards ParentBoard ***REMOVED*** get ***REMOVED***return m_board;***REMOVED*** set ***REMOVED*** m_board = value; ***REMOVED*** ***REMOVED***
 
 
         public Columns(string p_Name, int p_BoardID)

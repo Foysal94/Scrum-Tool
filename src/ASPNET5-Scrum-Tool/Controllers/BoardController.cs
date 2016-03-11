@@ -66,13 +66,19 @@ using Newtonsoft.Json;
 ***REMOVED***
             
             return View("Show", m_Board);
+            
 ***REMOVED***
 
-        [Route("[Action]")]
-        public IActionResult Create()
+        [Route("[Action]/***REMOVED***p_BoardID***REMOVED***")]
+        public IActionResult Create(int p_BoardID)
 ***REMOVED***
             string boardName = (string) TempData["BoardName"];
             //int boardID = (int) TempData["BoardID"];
+            var boards = m_context.Boards.ToList();
+            if (boards.Count == p_BoardID)
+***REMOVED***
+                return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardID = boards.Count ***REMOVED***);
+***REMOVED***
             m_Board = new Boards(boardName);
             
             m_context.Boards.Add(m_Board);

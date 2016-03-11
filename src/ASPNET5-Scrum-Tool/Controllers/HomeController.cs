@@ -42,7 +42,7 @@ using Microsoft.Data.Entity;
             //model.ID = boards.Count + 1;
             TempData["BoardName"] = model.Name;
             //TempData["BoardID"] = model.ID;
-            return RedirectToAction("Create", "Board" );
+            return RedirectToAction("Create", "Board", new ***REMOVED*** p_BoardID = boards.Count + 1***REMOVED*** );
 ***REMOVED***
         
 

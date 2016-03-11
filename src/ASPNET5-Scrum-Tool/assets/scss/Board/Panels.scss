@@ -18,8 +18,11 @@ $task-font-color: #000000;
        cursor:pointer;
        background-color: $logo-color;
        text-align: center;
+
+       .panel-title ***REMOVED***
+           position:relative;
    ***REMOVED***
-    
+   ***REMOVED***
     
   .panel-body ***REMOVED***
       background-color: $panel-body-color;
@@ -51,15 +54,6 @@ $task-font-color: #000000;
 
     &:hover ***REMOVED***
         background-color: #a3c2c2 !important;
-        cursor:pointer;
-***REMOVED***
-
-    .EditPen ***REMOVED***
-        float:right;
-        position:absolute;
-        left:100%;
-        bottom:100%;
-        margin: 0 0 -48px -29px; //Change these numbers to move the pen about in the corner
         cursor:pointer;
 ***REMOVED***
    

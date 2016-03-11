@@ -22,7 +22,6 @@ using Microsoft.Data.Entity.Scaffolding.Metadata;
             m_context = p_context;
 ***REMOVED***
 
-        
         [Route("[Action]")]
         [HttpPost]
         public void ChangeColumnName(string p_OldColumnName, string p_NewColumnName, int p_BoardID)
@@ -55,7 +54,22 @@ using Microsoft.Data.Entity.Scaffolding.Metadata;
             tempColumn.TasksList = new List<Tasks>();
             return ViewComponent("Panel_Lists", tempColumn);
 ***REMOVED***
-        
 
+        [Route("[Action]")]
+        [HttpPost]
+        public void Delete(int p_ColumnID)
+***REMOVED***
+            var columnList = m_context.Columns.ToList();
+
+            foreach (Columns c in columnList)
+***REMOVED***
+                if (c.ID == p_ColumnID)
+***REMOVED***
+                    m_context.Columns.Remove(c);
+                    m_context.SaveChanges();
+                    break;
+***REMOVED***
+***REMOVED***
+***REMOVED***
 ***REMOVED***
 ***REMOVED***

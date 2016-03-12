@@ -51,6 +51,22 @@ using Microsoft.AspNet.Mvc;
 
 
 ***REMOVED***
-        
+
+        [Route("[Action]")]
+        [HttpPost]
+        public void Delete(int p_TaskID)
+***REMOVED***
+            var taskList = m_context.Tasks.ToList();
+
+            foreach (Tasks t in taskList)
+***REMOVED***
+                if (t.ID == p_TaskID)
+***REMOVED***
+                    m_context.Tasks.Remove(t);
+                    m_context.SaveChanges();
+                    break;
+***REMOVED***
+***REMOVED***
+***REMOVED***
 ***REMOVED***
 ***REMOVED***

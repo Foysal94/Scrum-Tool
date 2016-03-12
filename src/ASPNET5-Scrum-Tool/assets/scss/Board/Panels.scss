@@ -46,6 +46,14 @@ $task-font-color: #000000;
     color: $task-font-color;
     @include WrapLinkText();
     position:relative;
+ ***REMOVED***
+
+.AddTask:hover, .AddTask:visited, .AddTask:link ***REMOVED***
+       text-decoration: none;
+***REMOVED***
+
+.ActiveTask ***REMOVED***
+
     &:hover, &:visited, &:link ***REMOVED***
        text-decoration: none;
        color: $task-font-color;
@@ -56,9 +64,4 @@ $task-font-color: #000000;
         background-color: #a3c2c2 !important;
         cursor:pointer;
 ***REMOVED***
-   
- ***REMOVED***
-
-.AddTask:hover, .AddTask:visited, .AddTask:link ***REMOVED***
-       text-decoration: none;
 ***REMOVED***

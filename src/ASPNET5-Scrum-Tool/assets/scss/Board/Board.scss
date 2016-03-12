@@ -26,19 +26,33 @@
 ***REMOVED***
 ***REMOVED***
 
-.EditPen, .EditArrow ***REMOVED***
+.EditArrow ***REMOVED***
+
+***REMOVED***
+
+.EditTask ***REMOVED***
+     margin: -50px 0 0 270px; //Change these numbers to move the pen about in the corner, top,right,bottom,left
+     position:absolute;
+     cursor:pointer;
+***REMOVED***
+
+
+.Hidden ***REMOVED***
+    visibility:hidden;
+***REMOVED***
+
+.caret ***REMOVED***
+    display:block;
     float:right;
-    position:absolute;
-    left:100%;
-    bottom:100%;
-    cursor:pointer;
+    border-left: 8.5px solid transparent;
+    border-right: 8.5px solid transparent;
+    border-top: 8.5px solid #000000;
+   
+
 ***REMOVED***
 
-.EditPen ***REMOVED***
-     margin: 0 0 -48px -29px; //Change these numbers to move the pen about in the corner
+.TaskCaret ***REMOVED***
+    border-left: 8.5px solid transparent;
+    border-right: 8.5px solid transparent;
+    border-top: 8.5px solid #000000;
 ***REMOVED***
-
-.dropdown-toggle***REMOVED***
- 
-***REMOVED***
-

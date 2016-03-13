@@ -25,5 +25,7 @@
         public DbSet<Columns> Columns ***REMOVED*** get; set; ***REMOVED***
 
         public DbSet<Tasks> Tasks ***REMOVED*** get; set; ***REMOVED***
+
+        public DbSet<Labels> Labels ***REMOVED*** get; set; ***REMOVED*** 
 ***REMOVED***
 ***REMOVED***

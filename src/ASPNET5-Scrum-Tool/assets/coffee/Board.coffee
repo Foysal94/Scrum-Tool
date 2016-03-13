@@ -21,7 +21,31 @@ TaskForm = "
 TaskDragOptions = ***REMOVED***
                     delay: 300                                                                                                      
                     revert:true
-  ***REMOVED***                                         
+  ***REMOVED***
+
+TaskDropOptions = ***REMOVED*** 
+                    accept: (element) ->
+                         if element.hasClass('ColorLabel')
+                            return true
+                         return false
+                         
+                    drop: (event, ui) ->
+                             task = $(this);
+                             taskID = $(task).attr 'id'
+                             label = $(ui)
+                             labelColour = $(label).find('a').html();
+                             
+                             $.ajax 
+                                url: '/Task/AddLabel'
+                                type: 'POST'
+                                data: ***REMOVED***p_TaskID: taskID, p_LabelColour: labelColour ***REMOVED***
+                                success: (data) ->
+                                        alert 'Label was added successfully'
+                                error: (error) ->
+                                    alert "no good "+JSON.stringify(error);
+  ***REMOVED***
+
+                                                                                  
 
 BoardDropOptions = ***REMOVED***
                     accept: (element) ->

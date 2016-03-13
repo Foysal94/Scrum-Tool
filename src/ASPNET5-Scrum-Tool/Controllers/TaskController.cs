@@ -1,6 +1,7 @@
 ﻿***REMOVED***
 ***REMOVED***
 ***REMOVED***
+using System.Security.AccessControl;
 ***REMOVED***
 using Microsoft.AspNet.Mvc;
 ***REMOVED***
@@ -72,6 +73,15 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
 
         [Route("[Action]")]
+        [HttpPost]
+        public void AddLabel(int p_TaskID, string p_LabelColour)
+***REMOVED***
+            Labels tempLabel = new Labels(p_TaskID,p_LabelColour);
+            m_context.Labels.Add(tempLabel);
+            m_context.SaveChanges();
+***REMOVED***
+
+        [Route("[Action]")]
         [HttpGet]
         public IActionResult Information(int p_TaskID)
 ***REMOVED***
@@ -83,10 +93,7 @@ using Microsoft.AspNet.Mvc;
                     m_Task = t;
                     break;
 ***REMOVED***
-***REMOVED***
-       
-            
-
+***REMOVED***     
             return PartialView("_Information", m_Task);
 ***REMOVED***
 

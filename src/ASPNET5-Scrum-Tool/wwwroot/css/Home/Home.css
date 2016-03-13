@@ -113,6 +113,9 @@
   to ***REMOVED***
     transform: rotate(30deg); ***REMOVED*** ***REMOVED***
 
+.Hidden ***REMOVED***
+  visibility: hidden; ***REMOVED***
+
 #InitalButton ***REMOVED***
   position: relative;
   margin-top: 10%; ***REMOVED***

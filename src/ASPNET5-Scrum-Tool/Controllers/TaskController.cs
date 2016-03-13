@@ -12,9 +12,11 @@ using Microsoft.AspNet.Mvc;
     public class TaskController : Controller
 ***REMOVED***
         private ScrumToolDB m_context;
+        private Tasks m_Task;
         public TaskController(ScrumToolDB p_context)
 ***REMOVED***
             m_context = p_context;
+            m_Task = null;
 ***REMOVED***
 
 
@@ -22,11 +24,11 @@ using Microsoft.AspNet.Mvc;
         [HttpPost]
         public ViewComponentResult AddNewTask(Tasks model)
 ***REMOVED***
-            Tasks tempTask = new Tasks(model.BoardID, model.ColumnName, model.TaskContent); // Adding one to the ID because the model has the last task ID.
-            m_context.Tasks.Add(tempTask);
+            m_Task = new Tasks(model.BoardID, model.ColumnName, model.TaskContent); // Adding one to the ID because the model has the last task ID.
+            m_context.Tasks.Add(m_Task);
             m_context.SaveChanges();
 
-            return ViewComponent("Task", tempTask);
+            return ViewComponent("Task", m_Task);
 ***REMOVED***
 
         [Route("[Action]")]
@@ -34,20 +36,20 @@ using Microsoft.AspNet.Mvc;
         public ViewComponentResult MovedTask(string p_ColumnName, int p_TaskID)
 ***REMOVED***
             var tasks = m_context.Tasks.ToList();
-            Tasks tempTask = null;
+            
             foreach (Tasks t in tasks)
 ***REMOVED***
                 if (t.ID == p_TaskID)
 ***REMOVED***
                     t.ColumnName = p_ColumnName;
-                    tempTask = t;
+                    m_Task = t;
                     m_context.SaveChanges();
                     
                     break;
 ***REMOVED***
 ***REMOVED***
 
-            return ViewComponent("Task", tempTask);
+            return ViewComponent("Task", m_Task);
 
 
 ***REMOVED***
@@ -68,5 +70,26 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
+
+        [Route("[Action]")]
+        [HttpGet]
+        public IActionResult Information(int p_TaskID)
+***REMOVED***
+            var taskList = m_context.Tasks.ToList();
+            foreach (Tasks t in taskList)
+***REMOVED***
+                if (t.ID == p_TaskID)
+***REMOVED***
+                    m_Task = t;
+                    break;
+***REMOVED***
+***REMOVED***
+       
+            
+
+            return PartialView("_Information", m_Task);
+***REMOVED***
+
+
 ***REMOVED***
 ***REMOVED***

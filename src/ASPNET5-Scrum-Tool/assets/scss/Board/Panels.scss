@@ -54,13 +54,13 @@ $task-font-color: #000000;
 
 .ActiveTask ***REMOVED***
 
-    &:hover, &:visited, &:link ***REMOVED***
+    a:hover, a:visited, a:link ***REMOVED***
        text-decoration: none;
        color: $task-font-color;
        position:relative;
  ***REMOVED***
 
-    &:hover ***REMOVED***
+    a:hover ***REMOVED***
         background-color: #a3c2c2 !important;
         cursor:pointer;
 ***REMOVED***

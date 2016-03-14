@@ -95,6 +95,30 @@ using Newtonsoft.Json;
             m_context.SaveChanges();
             return View("Show", m_Board);
 ***REMOVED***
-        
+
+
+        [Route("[Action]")]
+        [HttpGet]
+        public IActionResult ColumnNameChangeForm()
+***REMOVED***
+           // ViewData["ColumnName"] = p_InitalColumnName;
+            return PartialView("_ColumnNameChangeForm");
+***REMOVED***
+
+        [Route("[Action]")]
+        [HttpGet]
+        public IActionResult AddColumnForm()
+***REMOVED***
+            // ViewData["ColumnName"] = p_InitalColumnName;
+            return PartialView("_AddColumnForm");
+***REMOVED***
+
+        [Route("[Action]")]
+        [HttpGet]
+        public IActionResult AddTaskForm()
+***REMOVED***
+            // ViewData["ColumnName"] = p_InitalColumnName;
+            return PartialView("_AddTaskForm");
+***REMOVED***
 ***REMOVED***
 ***REMOVED***

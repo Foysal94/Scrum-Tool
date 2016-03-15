@@ -1,4 +1,22 @@
-﻿
-h1 ***REMOVED***
+﻿@import '../Shared/base';
+
+
+.ui-dialog-title, .ui-dialog-titlebar ***REMOVED***
+    background-color: $panel-body-color;
+***REMOVED***
+#TaskWindow***REMOVED***
 	color:red;
+***REMOVED***
+
+.ui-dialog ***REMOVED***
+    background-color: $panel-body-color;
+***REMOVED***
+
+.ui-dialog,.ui-dialog,.ui-widget, .ui-widget-content, .ui-corner-all, 
+.ui-resizable  ***REMOVED***
+    background: $panel-body-color;
+
+***REMOVED***​
+#TaskColumnName ***REMOVED***
+    font-size:12px;
 ***REMOVED***

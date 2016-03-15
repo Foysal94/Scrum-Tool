@@ -1,18 +1,13 @@
 ﻿@model Tasks
 
-@section  css ***REMOVED***
-    <link rel="stylesheet" href="~/css/Task/Task.css" />
-***REMOVED***
+<div class="TaskWindow">
+    <h5 id='TaskContent'>
+        @Model.TaskContent
+        <a id='TaskColumnName'>in list @Model.ColumnName</a>
+    </h5>
 
-@section scripts ***REMOVED***
-    <script src='~/js/Task.js'> </script>
-***REMOVED***
-<h2>
-    @Model.TaskContent
-    <p>in list @Model.ColumnName</p>
-</h2>
+    <a>Edit Task Content....</a>
 
-<a>Edit Task Content....</a>
-
-<h3>Labels</h3>
+    <h3>Labels</h3>
+</div>
 

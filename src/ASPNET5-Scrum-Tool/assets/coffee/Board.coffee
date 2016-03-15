@@ -5,27 +5,26 @@ m_BoardID = $('.BoardNameHeading').attr 'id'
   
 TaskDragOptions = ***REMOVED***
                     delay: 300                                                                                                      
-                    revert:true
-                    
-                        
+                    revert:true 
   ***REMOVED***
 
 TaskDropOptions = ***REMOVED*** 
                     accept: (element) ->
-                         if element.hasClass('ColorLabel')
+                         if element.hasClass('ColourLabel')
                             return true
                          return false
                          
                     drop: (event, ui) ->
                              task = $(this);
-                             taskID = $(task).attr 'id'
-                             label = $(ui)
-                             labelColour = $(label).find('a').html();
+                             taskID = $(task).find('.Task').attr 'id'
+                             label = $(ui.draggable)
+                             labelColour = $(label).attr 'id'
+                             colour = labelColour.slice(0,-5)
                              
                              $.ajax 
                                 url: '/Task/AddLabel'
                                 type: 'POST'
-                                data: ***REMOVED***p_TaskID: taskID, p_LabelColour: labelColour ***REMOVED***
+                                data: ***REMOVED***p_TaskID: taskID, p_LabelColour: colour ***REMOVED***
                                 success: (data) ->
                                         alert 'Label was added successfully'
                                 error: (error) ->
@@ -64,7 +63,8 @@ BoardDropOptions = ***REMOVED***
                         
  ***REMOVED***
                         
-$('.TaskParentDiv').draggable TaskDragOptions      
+$('.TaskParentDiv').draggable TaskDragOptions 
+$('.TaskParentDiv').droppable TaskDropOptions           
 
 $('.BoardColumn').droppable BoardDropOptions
 
@@ -267,6 +267,7 @@ SubmitTaskForm = () ->
             success: (data) ->
                 $('.TaskContent').replaceWith () ->
                     $(data).draggable TaskDragOptions
+                    $(data).droppable TaskDropOptions
                 $('.TaskFormSubmit').replaceWith('<a class="AddTask"> Add a task.... </a>')
             error : (error) ->
                  alert "no good "+JSON.stringify(error);

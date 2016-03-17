@@ -37,7 +37,7 @@ using Microsoft.AspNet.Mvc;
         public ViewComponentResult MovedTask(string p_ColumnName, int p_TaskID)
 ***REMOVED***
             var tasks = m_context.Tasks.ToList();
-            
+
             foreach (Tasks t in tasks)
 ***REMOVED***
                 if (t.ID == p_TaskID)
@@ -45,7 +45,7 @@ using Microsoft.AspNet.Mvc;
                     t.ColumnName = p_ColumnName;
                     m_Task = t;
                     m_context.SaveChanges();
-                    
+
                     break;
 ***REMOVED***
 ***REMOVED***
@@ -76,7 +76,7 @@ using Microsoft.AspNet.Mvc;
         [HttpPost]
         public void AddLabel(int p_TaskID, string p_LabelColour)
 ***REMOVED***
-            Labels tempLabel = new Labels(p_TaskID,p_LabelColour);
+            Labels tempLabel = new Labels(p_TaskID, p_LabelColour);
             m_context.Labels.Add(tempLabel);
             m_context.SaveChanges();
 ***REMOVED***
@@ -86,18 +86,27 @@ using Microsoft.AspNet.Mvc;
         public IActionResult Information(int p_TaskID)
 ***REMOVED***
             var taskList = m_context.Tasks.ToList();
+            var labelList = m_context.Labels.ToList();
             foreach (Tasks t in taskList)
 ***REMOVED***
                 if (t.ID == p_TaskID)
 ***REMOVED***
+                    t.LabelList = new List<Labels>();
+                    foreach (Labels label in labelList)
+***REMOVED***
+                        if (t.ID == label.TaskID)
+***REMOVED***
+                            t.LabelList.Add(label);
+***REMOVED***
+***REMOVED***
                     m_Task = t;
                     break;
 ***REMOVED***
-***REMOVED***     
+***REMOVED***
             return PartialView("_Information", m_Task);
 ***REMOVED***
 
-       
+
 
 
 ***REMOVED***

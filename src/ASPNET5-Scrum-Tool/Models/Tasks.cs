@@ -27,11 +27,7 @@ using System.ComponentModel.DataAnnotations;
 
         public List<Labels> LabelList ***REMOVED*** get ***REMOVED*** return m_LabelList; ***REMOVED*** set ***REMOVED*** m_LabelList = value; ***REMOVED*** ***REMOVED***
 
-
-
-
         //public Columns ParentColumn ***REMOVED*** get ***REMOVED***return m_ParentColumn;***REMOVED*** set ***REMOVED*** m_ParentColumn = value; ***REMOVED*** ***REMOVED***
-       
 
         public Tasks(int p_BoardID, string p_ColumnName, string p_TaskContent)
 ***REMOVED***

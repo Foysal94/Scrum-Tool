@@ -1,22 +1,32 @@
 ﻿@import '../Shared/base';
+@import 'Dialog.scss';
 
+ .TaskWindow ***REMOVED***
+      margin-left:20px;
+ ***REMOVED***
 
-.ui-dialog-title, .ui-dialog-titlebar ***REMOVED***
-    background-color: $panel-body-color;
+ .TaskContent ***REMOVED***
+     
+        border: 3px solid $logo-color ;
+        border-radius: 15px ;
+        padding-left:30px;
+        padding-right:80%;
+        font-size:20px;
+        width:100%;
 ***REMOVED***
-#TaskWindow***REMOVED***
-	color:red;
+
+.EditTaskContent ***REMOVED***
+    display:block;
 ***REMOVED***
 
-.ui-dialog ***REMOVED***
-    background-color: $panel-body-color;
+.EditTaskContent, .TaskContent, .TaskAddLabel***REMOVED***
+
+    &:hover, &:visited, &:link ***REMOVED***
+        text-decoration:none;
+        cursor:pointer;
+***REMOVED***
 ***REMOVED***
 
-.ui-dialog,.ui-dialog,.ui-widget, .ui-widget-content, .ui-corner-all, 
-.ui-resizable  ***REMOVED***
-    background: $panel-body-color;
-
-***REMOVED***​
-#TaskColumnName ***REMOVED***
-    font-size:12px;
+.EditTaskContent, .TaskAddLabel ***REMOVED***
+        margin-top:20px;
 ***REMOVED***

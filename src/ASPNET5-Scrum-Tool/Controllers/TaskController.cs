@@ -51,8 +51,6 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
 
             return ViewComponent("Task", m_Task);
-
-
 ***REMOVED***
 
         [Route("[Action]")]

@@ -34,6 +34,7 @@ TaskDropOptions = ***REMOVED***
                                 success: (data) ->
                                         alert 'Label was added successfully'
                                 error: (error) ->
+                                    alert 'Error dropping label, TaskDropOptions'
                                     alert "no good "+JSON.stringify(error);
   ***REMOVED***
 

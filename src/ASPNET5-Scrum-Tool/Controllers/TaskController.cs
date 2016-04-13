@@ -14,6 +14,7 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
         private ScrumToolDB m_context;
         private Tasks m_Task;
+
         public TaskController(ScrumToolDB p_context)
 ***REMOVED***
             m_context = p_context;
@@ -30,6 +31,58 @@ using Microsoft.AspNet.Mvc;
             m_context.SaveChanges();
 
             return ViewComponent("Task", m_Task);
+***REMOVED***
+
+
+        [Route("[Action]")]
+        [HttpPost]
+        public void Delete(int p_TaskID)
+***REMOVED***
+            var taskList = m_context.Tasks.ToList();
+
+            foreach (Tasks t in taskList)
+***REMOVED***
+                if (t.ID == p_TaskID)
+***REMOVED***
+                    m_context.Tasks.Remove(t);
+                    m_context.SaveChanges();
+                    break;
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+        [Route("[Action]")]
+        [HttpPost]
+        public void UpdateContent(int p_TaskID, string p_NewTaskContent)
+***REMOVED***
+            var tasks = m_context.Tasks.ToList();
+
+            foreach (Tasks t in tasks)
+***REMOVED***
+                if (t.ID == p_TaskID)
+***REMOVED***
+                    t.TaskContent = p_NewTaskContent;
+                    m_context.SaveChanges();
+                    break;
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+        [Route("[Action]")]
+        [HttpPost]
+        public string GetTaskContent(int p_TaskID)
+***REMOVED***
+            var tasks = m_context.Tasks.ToList();
+
+            foreach (Tasks t in tasks)
+***REMOVED***
+                if (t.ID == p_TaskID)
+***REMOVED***
+                    return t.TaskContent;
+***REMOVED***
+***REMOVED***
+
+            return "Error, no content found";
 ***REMOVED***
 
         [Route("[Action]")]
@@ -51,23 +104,6 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
 
             return ViewComponent("Task", m_Task);
-***REMOVED***
-
-        [Route("[Action]")]
-        [HttpPost]
-        public void Delete(int p_TaskID)
-***REMOVED***
-            var taskList = m_context.Tasks.ToList();
-
-            foreach (Tasks t in taskList)
-***REMOVED***
-                if (t.ID == p_TaskID)
-***REMOVED***
-                    m_context.Tasks.Remove(t);
-                    m_context.SaveChanges();
-                    break;
-***REMOVED***
-***REMOVED***
 ***REMOVED***
 
         [Route("[Action]")]
@@ -95,6 +131,13 @@ using Microsoft.AspNet.Mvc;
             return PartialView("_Information", m_Task);
 ***REMOVED***
 
+
+        [Route("[Action]")]
+        [HttpGet]
+        public IActionResult EditTaskForm(int p_TaskID)
+***REMOVED***
+            return PartialView("_EditTaskForm");
+***REMOVED***
 
 
 

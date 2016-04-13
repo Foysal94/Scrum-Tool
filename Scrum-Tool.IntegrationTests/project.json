@@ -1,0 +1,28 @@
+﻿***REMOVED***
+  "version": "1.0.0-*",
+  "description": "Scrum-Tool.IntegrationTests Class Library",
+  "authors": [ "Foysal" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+
+  "dependencies": ***REMOVED***
+    "ASPNET5-Scrum-Tool": "1.0.0",
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-rc1-build204",
+    "Microsoft.AspNet.TestHost": "1.0.0-rc1-final",
+    "EntityFramework.InMemory": "7.0.0-rc1-final",
+    "GenFu": "1.0.4"
+  ***REMOVED***,
+    "commands": ***REMOVED***
+      "test": "xunit.runner.dnx"
+***REMOVED***,
+
+  "frameworks": ***REMOVED***
+    "dnx451": ***REMOVED*** ***REMOVED***,
+    "dnxcore50": ***REMOVED*** ***REMOVED***
+  ***REMOVED***
+
+
+***REMOVED***

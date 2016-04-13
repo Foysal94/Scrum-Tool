@@ -161,11 +161,5 @@ input, select, textarea ***REMOVED***
   .carousel-caption ***REMOVED***
     z-index: 10 !important; ***REMOVED*** ***REMOVED***
 
-/*
 .dropdown ***REMOVED***
-    .btn ***REMOVED***
-        background:red ;
-
-***REMOVED***
-***REMOVED***
-*/
+  margin-top: 30px; ***REMOVED***

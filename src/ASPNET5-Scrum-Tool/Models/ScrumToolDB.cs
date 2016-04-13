@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Entity;
+using Microsoft.Data.Entity.Infrastructure;
 
 ***REMOVED***.Models
 ***REMOVED***
@@ -20,6 +21,11 @@
     
 ***REMOVED***
         */
+
+        public ScrumToolDB(DbContextOptions options) : base(options)
+***REMOVED***
+            
+***REMOVED***
         public DbSet<Boards> Boards ***REMOVED*** get; set; ***REMOVED***
 
         public DbSet<Columns> Columns ***REMOVED*** get; set; ***REMOVED***

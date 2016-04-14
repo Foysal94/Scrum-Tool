@@ -10,7 +10,7 @@ using Microsoft.AspNet.Mvc;
 using Microsoft.Data.Entity;
 using Xunit;
 
-namespace Scrum_Tool.IntegrationTests
+namespace Scrum_Tool.UnitTests
 ***REMOVED***
     public class HomeControllerTests : Setup
 ***REMOVED***

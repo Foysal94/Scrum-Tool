@@ -16,7 +16,7 @@ Project("***REMOVED***8BB2217D-0F2D-49D1-97BC-3654ED321F3B***REMOVED***") = "ASP
 EndProject
 Project("***REMOVED***2150E333-8FDC-42A3-9474-1A3956D46DE8***REMOVED***") = "test", "test", "***REMOVED***4FE7CCBB-BF0D-49F5-8CE7-96B0D89976C6***REMOVED***"
 EndProject
-Project("***REMOVED***8BB2217D-0F2D-49D1-97BC-3654ED321F3B***REMOVED***") = "Scrum-Tool.IntegrationTests", "Scrum-Tool.IntegrationTests\Scrum-Tool.IntegrationTests.xproj", "***REMOVED***F7415613-9D73-4CEF-98A3-244170FC5F37***REMOVED***"
+Project("***REMOVED***8BB2217D-0F2D-49D1-97BC-3654ED321F3B***REMOVED***") = "Scrum-Tool.UnitTests", "Scrum-Tool.IntegrationTests\Scrum-Tool.UnitTests.xproj", "***REMOVED***F7415613-9D73-4CEF-98A3-244170FC5F37***REMOVED***"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

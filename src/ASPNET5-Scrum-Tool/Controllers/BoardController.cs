@@ -1,6 +1,7 @@
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
+using System.Text;
 ***REMOVED***
 ***REMOVED***
 using Microsoft.AspNet.Mvc;
@@ -88,7 +89,15 @@ using Newtonsoft.Json;
         [Route("[Action]/***REMOVED***p_BoardID***REMOVED***")]
         public IActionResult Create(int p_BoardID)
 ***REMOVED***
-            string boardName = (string) TempData["BoardName"];
+            string boardName = "";
+            try
+***REMOVED***
+                 boardName = (string) TempData["BoardName"];
+***REMOVED***
+            catch (Exception e)
+***REMOVED***
+                
+***REMOVED***
             //int boardID = (int) TempData["BoardID"];
             var boards = m_context.Boards.ToList();
             if (boards.Count == p_BoardID)

@@ -28,15 +28,18 @@ using Microsoft.Data.Entity;
         [HttpPost]
         public IActionResult SumbitBoardForm(Boards model)
 ***REMOVED***
-            var query = from board in m_context.Boards where board.Name.Equals(model.Name) select board;
+            if (!ModelState.IsValid) //not valid
+***REMOVED***
+                return RedirectToAction("Index");
+***REMOVED***
+
+            //var query = from board in m_context.Boards where board.Name.Equals(model.Name) select board;
             var boards = m_context.Boards.ToList();
             foreach (var boardModel in boards)
 ***REMOVED***
                 if (boardModel.Name == model.Name)
 ***REMOVED***
-                    TempData["BoardName"] = boardModel.Name;
-                    TempData["BoardID"] = boardModel.ID;
-                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardID = boardModel.ID***REMOVED***);
+                    return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardID = boardModel.ID***REMOVED***); // Board Found
 ***REMOVED***
 ***REMOVED***
             //model.ID = boards.Count + 1;

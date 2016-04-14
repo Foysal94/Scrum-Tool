@@ -25,6 +25,7 @@ using Newtonsoft.Json;
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
         public IActionResult Index(string p_BoardName)
 ***REMOVED***
+             
             m_Board.Name = p_BoardName;
             ViewData["BoardName"] = m_Board.Name;
             return View(m_Board);
@@ -43,6 +44,11 @@ using Newtonsoft.Json;
                     m_Board.ColumnList  = new List<Columns>();
                     break;
 ***REMOVED***
+***REMOVED***
+
+            if (m_Board == null)
+***REMOVED***
+                return HttpNotFound();
 ***REMOVED***
 
 

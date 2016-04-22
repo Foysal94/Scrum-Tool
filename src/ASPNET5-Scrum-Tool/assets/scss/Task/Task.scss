@@ -6,14 +6,12 @@
  ***REMOVED***
 
  .TaskContent ***REMOVED***
-     
-       /* border: 3px solid $logo-color ;
-        border-radius: 15px ; */
-       white-space: pre-wrap;
-        padding-left:30px;
-        padding-right:80%;
-        font-size:20px;
+        font-size:22px;
         width:100%;
+        p ***REMOVED***
+            font-size:12px;
+            display:inline;
+***REMOVED***
 ***REMOVED***
 
 .EditTaskButton ***REMOVED***
@@ -43,9 +41,21 @@
 ***REMOVED***
 
 .NewTaskContent ***REMOVED***
-  
+  border:1px solid #999999;
+  width:100%;
   margin:5px 0;
   padding:3px;
-  resize: none; 
+***REMOVED***
 
+.TaskLabelList ***REMOVED***
+    li ***REMOVED***
+        div ***REMOVED***
+            display:inline;
+            button ***REMOVED***
+                display:inline;
+***REMOVED***
+***REMOVED***
+        
+***REMOVED***
+  
 ***REMOVED***

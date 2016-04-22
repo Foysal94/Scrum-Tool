@@ -1,8 +1,4 @@
 ﻿***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-using Microsoft.Data.Entity.Migrations.Operations;
 using ASPNET5_Scrum_Tool.Controllers;
 ***REMOVED***
 using FluentAssertions;

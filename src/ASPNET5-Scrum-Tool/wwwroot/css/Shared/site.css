@@ -147,7 +147,7 @@ body ***REMOVED***
   padding-right: 15px; ***REMOVED***
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
-input, select, textarea ***REMOVED***
+input, select ***REMOVED***
   max-width: 280px; ***REMOVED***
 
 /* Carousel */

@@ -1,8 +1,4 @@
 ﻿***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-using System.Xml.Schema;
 using ASPNET5_Scrum_Tool.Controllers;
 ***REMOVED***
 using FluentAssertions;

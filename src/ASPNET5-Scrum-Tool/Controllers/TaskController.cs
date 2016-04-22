@@ -133,6 +133,25 @@ using Microsoft.AspNet.Mvc;
 
 
         [Route("[Action]")]
+        [HttpPost]
+        public void UpdateDate(int p_TaskID, string p_Date)
+***REMOVED***
+            var tasks = m_context.Tasks.ToList();
+            DateTime dateTime = DateTime.Parse(p_Date);
+
+            foreach (Tasks t in tasks)
+***REMOVED***
+                if (t.ID == p_TaskID)
+***REMOVED***
+                    t.DueDate = dateTime.Date;
+                    m_context.SaveChanges();
+                    break;
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+
+        [Route("[Action]")]
         [HttpGet]
         public IActionResult EditTaskForm(int p_TaskID)
 ***REMOVED***

@@ -1,5 +1,6 @@
 ﻿***REMOVED***
 ***REMOVED***
+using System.ComponentModel.DataAnnotations;
 ***REMOVED***
 using System.Security.AccessControl;
 ***REMOVED***
@@ -16,8 +17,11 @@ using System.Security.AccessControl;
 
         public int ID ***REMOVED*** get ***REMOVED*** return m_ID; ***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
         public int TaskID ***REMOVED*** get ***REMOVED*** return m_TaskID; ***REMOVED*** set ***REMOVED*** m_TaskID = value; ***REMOVED*** ***REMOVED***
+
+        [DataType(DataType.Date)]
         public DateTime CreationDate ***REMOVED*** get ***REMOVED*** return m_CreationDate; ***REMOVED*** set ***REMOVED*** m_CreationDate = value; ***REMOVED*** ***REMOVED***
-        public string Name ***REMOVED*** get; set; ***REMOVED***
+
+        public string Name ***REMOVED*** get ***REMOVED***return m_Name;***REMOVED*** set ***REMOVED*** m_Name = value; ***REMOVED*** ***REMOVED***
         public string Content ***REMOVED*** get ***REMOVED*** return m_Content;***REMOVED*** set ***REMOVED*** m_Content = value; ***REMOVED*** ***REMOVED***
 
         public Comments(string p_Name, string p_Content, int p_TaskID)

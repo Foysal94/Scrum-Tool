@@ -48,7 +48,7 @@ using Microsoft.Data.Entity.Scaffolding.Metadata;
         public ViewComponentResult AddColumn(Columns model)
 ***REMOVED***
             Columns tempColumn = new Columns(model.Name, model.BoardID); // The model got passed the last column ID
-            
+
             m_context.Columns.Add(tempColumn);
             m_context.SaveChanges();
             tempColumn.TasksList = new List<Tasks>();
@@ -72,6 +72,25 @@ using Microsoft.Data.Entity.Scaffolding.Metadata;
 ***REMOVED***
 ***REMOVED***
 
+        [Route("[Action]")]
+        [HttpGet]
+        public string GetColumnHeader(int p_ColumnID)
+***REMOVED***
+            var columnList = m_context.Columns.ToList();
+            string name = "";
+            int boardID = 0;
+            foreach (Columns c in columnList)
+***REMOVED***
+                if (c.ID == p_ColumnID)
+***REMOVED***
+                    name = c.Name;
+                    boardID = c.BoardID;
+***REMOVED***
+***REMOVED***
+
+
+            return "";
+***REMOVED***
 
 ***REMOVED***
 ***REMOVED***

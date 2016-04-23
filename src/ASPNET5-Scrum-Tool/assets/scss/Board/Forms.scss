@@ -1,8 +1,17 @@
-﻿
+﻿@import '../Shared/base';
 // CSS to change the form for when changing the panel name;
-.ColumnTitleSubmit, .TaskFormSubmit ***REMOVED***
-    display:block;
-    color: #000000;
+ @mixin CustomButton ***REMOVED***
+     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+     border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+     border: 1px solid $form-button-color;
+     cursor: pointer;
+     color: #fff;
+     background-color:$form-button-color;
+     text-shadow: 1px 1px $form-button-color;
 ***REMOVED***
 
 .NewColumnName, .TaskContent ***REMOVED***
@@ -10,11 +19,45 @@
     color: #000000;
 ***REMOVED***
 
-.ColumnTitleSumbit ***REMOVED***
-    display:block;
-
-***REMOVED***
-
 .NewColumnName ***REMOVED***
     width:100%;
 ***REMOVED***
+
+.FormButtons ***REMOVED***
+    margin-top:10px;
+***REMOVED***
+
+ .AddColumnSubmit ***REMOVED***
+    @include CustomButton;
+    padding: 10px 10px 10px ;
+***REMOVED***
+
+.AddColumnCancel ***REMOVED***
+    @include CustomButton;
+    display:inline-block;
+    padding: 10px 10px 10px ;
+    
+***REMOVED***
+
+.ColumnTitleSubmit ***REMOVED***
+    @include CustomButton;
+    padding: 10px 10px 10px ;
+***REMOVED***
+
+.ColumnTitleCancel ***REMOVED***
+    @include CustomButton;
+    display:inline-block;
+    padding: 10px 10px 10px ;
+***REMOVED***
+
+.TaskFormSubmit ***REMOVED***
+    @include CustomButton;
+    padding: 10px 10px 10px ;
+***REMOVED***
+
+.TaskFormCancel ***REMOVED***
+    @include CustomButton;
+    display:inline-block;
+    padding: 10px 10px 10px ;
+***REMOVED***
+

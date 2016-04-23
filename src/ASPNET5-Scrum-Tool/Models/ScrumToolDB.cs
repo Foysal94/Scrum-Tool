@@ -33,5 +33,8 @@ using Microsoft.Data.Entity.Infrastructure;
         public DbSet<Tasks> Tasks ***REMOVED*** get; set; ***REMOVED***
 
         public DbSet<Labels> Labels ***REMOVED*** get; set; ***REMOVED*** 
+        
+        public DbSet<Comments> Comments ***REMOVED*** get; set; ***REMOVED*** 
+
 ***REMOVED***
 ***REMOVED***

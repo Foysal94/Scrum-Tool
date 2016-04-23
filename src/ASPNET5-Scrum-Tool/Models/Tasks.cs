@@ -14,7 +14,8 @@ using System.ComponentModel.DataAnnotations;
         private int m_BoardID;
         private string m_ColumnName;
         private Columns m_ParentColumn;
-        private List<Models.Labels> m_LabelList; 
+        private List<Models.Labels> m_LabelList;
+        private List<Comments> m_CommentList;
 
         [Key]
         public int ID ***REMOVED*** get ***REMOVED***return m_ID;***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
@@ -29,6 +30,7 @@ using System.ComponentModel.DataAnnotations;
 
         public string TaskContent ***REMOVED*** get ***REMOVED***return m_TaskContent;***REMOVED*** set ***REMOVED*** m_TaskContent = value; ***REMOVED*** ***REMOVED***
         public List<Labels> LabelList ***REMOVED*** get ***REMOVED*** return m_LabelList; ***REMOVED*** set ***REMOVED*** m_LabelList = value; ***REMOVED*** ***REMOVED***
+        public List<Comments> CommentList ***REMOVED*** get ***REMOVED*** return m_CommentList; ***REMOVED*** set ***REMOVED*** m_CommentList = value; ***REMOVED*** ***REMOVED***
 
         //public Columns ParentColumn ***REMOVED*** get ***REMOVED***return m_ParentColumn;***REMOVED*** set ***REMOVED*** m_ParentColumn = value; ***REMOVED*** ***REMOVED***
 

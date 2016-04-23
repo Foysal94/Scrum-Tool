@@ -56,6 +56,7 @@ using Newtonsoft.Json;
             var columnList = m_context.Columns.ToList();
             var taskList = m_context.Tasks.ToList();
             var labelList = m_context.Labels.ToList();
+            var commentList = m_context.Comments.ToList();
             foreach (Columns c in columnList)
 ***REMOVED***
                 if (c.BoardID == m_Board.ID)
@@ -65,12 +66,23 @@ using Newtonsoft.Json;
 ***REMOVED***
                         if (t.ColumnName == c.Name)
 ***REMOVED***
+***REMOVED***
                             t.LabelList = new List<Labels>();
+                            t.CommentList = new List<Comments>();
                             foreach (Labels label in labelList)
 ***REMOVED***
                                 if (t.ID == label.TaskID)
 ***REMOVED***
                                     t.LabelList.Add(label);
+***REMOVED***
+***REMOVED***
+
+                            foreach (var comment in commentList)
+***REMOVED***
+                                if (t.ID == comment.TaskID)
+***REMOVED***
+                                    t.CommentList.Add(comment);
+***REMOVED***
 ***REMOVED***
 ***REMOVED***
 

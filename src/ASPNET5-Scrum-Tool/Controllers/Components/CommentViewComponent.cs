@@ -12,7 +12,7 @@ using Microsoft.AspNet.Mvc;
 
         public IViewComponentResult Invoke(Comments model)
 ***REMOVED***
-            return View("Label", model);
+            return View("Comment", model);
 ***REMOVED***
 
         /*

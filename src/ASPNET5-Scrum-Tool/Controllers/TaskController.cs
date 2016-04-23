@@ -112,6 +112,7 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
             var taskList = m_context.Tasks.ToList();
             var labelList = m_context.Labels.ToList();
+            var commentList = m_context.Comments.ToList();
             foreach (Tasks t in taskList)
 ***REMOVED***
                 if (t.ID == p_TaskID)
@@ -123,6 +124,16 @@ using Microsoft.AspNet.Mvc;
 ***REMOVED***
                             t.LabelList.Add(label);
 ***REMOVED***
+***REMOVED***
+
+                    t.CommentList = new List<Comments>();
+                    foreach (Comments comment in commentList)
+***REMOVED***
+                        if (t.ID == comment.TaskID)
+***REMOVED***
+                            t.CommentList.Add(comment);
+***REMOVED***
+
 ***REMOVED***
                     m_Task = t;
                     break;

@@ -52,13 +52,6 @@
     "**.xproj",
     "**.user",
     "**.vspscc"
-  ],
-  "scripts": ***REMOVED***
-    "prepublish": [
-      "npm install",
-      "bower install",
-      "gulp clean",
-      "gulp min"
-    ]
-  ***REMOVED***
+  ]
+  
 ***REMOVED***

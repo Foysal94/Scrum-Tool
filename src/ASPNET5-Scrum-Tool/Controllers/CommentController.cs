@@ -25,7 +25,6 @@ using Microsoft.AspNet.Mvc;
             Comments tempComment = new Comments(p_Name, p_Content, p_TaskID);
             m_context.Comments.Add(tempComment);
             m_context.SaveChanges();
-            
             return View();
 ***REMOVED***
 ***REMOVED***

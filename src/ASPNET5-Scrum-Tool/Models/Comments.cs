@@ -29,6 +29,7 @@ using System.Security.AccessControl;
             m_Name = p_Name;
             m_Content = p_Content;
             m_TaskID = p_TaskID;
+            m_CreationDate = DateTime.Now;
 ***REMOVED***
 
         public Comments() ***REMOVED*** ***REMOVED***

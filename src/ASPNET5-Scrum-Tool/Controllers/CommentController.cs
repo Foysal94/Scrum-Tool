@@ -27,5 +27,22 @@ using Microsoft.AspNet.Mvc;
             m_context.SaveChanges();
             return ViewComponent("Comment", tempComment);
 ***REMOVED***
+
+        [Route("[Action]")]
+        [HttpPost]
+        public void Delete(int p_CommentID)
+***REMOVED***
+            var commentList = m_context.Comments.ToList();
+
+            foreach (Comments c in commentList)
+***REMOVED***
+                if (c.ID == p_CommentID)
+***REMOVED***
+                    m_context.Comments.Remove(c);
+                    m_context.SaveChanges();
+                    break;
+***REMOVED***
+***REMOVED***
+***REMOVED***
 ***REMOVED***
 ***REMOVED***

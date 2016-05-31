@@ -17,6 +17,14 @@
   .panel-body ***REMOVED***
       background-color: $panel-body-color;
       min-height: 30%;
+      ul ***REMOVED***
+            margin:0;
+            padding:0;
+          li ***REMOVED***
+              list-style-type: none;
+  ***REMOVED***
+  ***REMOVED***
+
   ***REMOVED***
     
 ***REMOVED***
@@ -30,9 +38,15 @@
     @include TaskCSS
  ***REMOVED***
 
-.AddTask:hover, .AddTask:visited, .AddTask:link ***REMOVED***
+ .AddTask ***REMOVED***
+     color: $logo-color;
+      &:hover, &:visited, &:link***REMOVED***
        text-decoration: none;
-***REMOVED***
+       cursor:pointer;
+       color: $logo-color;
+  ***REMOVED***
+ ***REMOVED***
+
 
 .ActiveTask ***REMOVED***
 
@@ -47,4 +61,6 @@
         cursor:pointer;
 ***REMOVED***
 ***REMOVED***
+
+
 

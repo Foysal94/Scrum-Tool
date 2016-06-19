@@ -26,8 +26,9 @@
     "EntityFramework.Commands": "7.0.0-rc1-final",
 
     "Microsoft.AspNet.Session": "1.0.0-*",
-    "Microsoft.Extensions.Caching.Memory": "1.0.0-rc1-final"
-
+    "Microsoft.Extensions.Caching.Memory": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
+    "Microsoft.NETCore.Platforms" : "1.0.1-beta-23516"
 
   ***REMOVED***,
 
@@ -37,8 +38,14 @@
   ***REMOVED***,
 
   "frameworks": ***REMOVED***
-    "dnx451": ***REMOVED******REMOVED***,
-    "dnxcore50": ***REMOVED******REMOVED***
+   
+    "dnxcore50": ***REMOVED***
+      "dependencies": ***REMOVED***
+        "System.Runtime": "4.0.21-*",
+          "System.Net.Security": "4.0.0-beta-23516"
+  ***REMOVED***
+***REMOVED***
+
   ***REMOVED***,
 
   "exclude": [

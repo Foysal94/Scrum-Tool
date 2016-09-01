@@ -36,10 +36,34 @@
     "Microsoft.NETCore.Platforms": "1.0.1-beta-23516"
 
   ***REMOVED***,
-
-  "commands": ***REMOVED***
-    "web": "Microsoft.AspNet.Server.Kestrel",
-    "ef": "EntityFramework.Commands"
+  
+  "tools": ***REMOVED***
+    "Microsoft.AspNetCore.Razor.Tools": ***REMOVED***
+      "version": "1.0.0-preview1-final",
+      "imports": "portable-net45+win8+dnxcore50"
+***REMOVED***,
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": ***REMOVED***
+      "version": "1.0.0-preview1-final",
+      "imports": "portable-net45+win8+dnxcore50"
+***REMOVED***,
+    "Microsoft.EntityFrameworkCore.Tools": ***REMOVED***
+      "version": "1.0.0-preview1-final",
+      "imports": [
+        "portable-net45+win8+dnxcore50",
+        "portable-net45+win8"
+      ]
+***REMOVED***,
+    "Microsoft.Extensions.SecretManager.Tools": ***REMOVED***
+      "version": "1.0.0-preview1-final",
+      "imports": "portable-net45+win8+dnxcore50"
+***REMOVED***,
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools": ***REMOVED***
+      "version": "1.0.0-preview1-final",
+      "imports": [
+        "portable-net45+win8+dnxcore50",
+        "portable-net45+win8"
+      ]
+***REMOVED***
   ***REMOVED***,
 
   "frameworks": ***REMOVED***
@@ -50,19 +74,20 @@
         "portable-net45+win8"
       ]
 ***REMOVED***
-***REMOVED***,
+  ***REMOVED***,
 
-  "exclude": [
-    "wwwroot",
-    "node_modules",
-    "bower_components"
-  ],
-  "publishExclude": [
-    "node_modules",
-    "bower_components",
-    "**.xproj",
-    "**.user",
-    "**.vspscc"
-  ]
-  
+  "publishOptions": ***REMOVED***
+    "include": [
+      "wwwroot",
+      "Views",
+      "appsettings.json",
+      "web.config"
+    ],
+    "exclude": [
+      "wwwroot",
+      "node_modules",
+      "bower_components"
+    ]
+  ***REMOVED***
+
 ***REMOVED***

@@ -6,16 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
     public class NavBar_Buttons : ViewComponent 
 ***REMOVED***
-        public IViewComponentResult Invoke()
+        public async Task<IViewComponentResult> InvokeAsync()
 ***REMOVED***
-            return View();
+            return View("Default");
 ***REMOVED***
-
-        /*
-        public Task<IViewComponentResult> InvokeAsync()
-***REMOVED***
-            return View();
-***REMOVED***
-        */
+        
 ***REMOVED***
 ***REMOVED***

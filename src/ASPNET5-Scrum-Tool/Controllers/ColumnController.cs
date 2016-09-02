@@ -2,7 +2,7 @@
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Scaffolding.Metadata;

@@ -5,7 +5,7 @@ using System.Data.SqlTypes;
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.Entity;
 
 ***REMOVED***.Controllers

@@ -4,8 +4,8 @@
 using System.Text;
 ***REMOVED***
 ***REMOVED***
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.ModelBinding.Validation;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 ***REMOVED***
 using Newtonsoft.Json;
 

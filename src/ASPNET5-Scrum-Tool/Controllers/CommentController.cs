@@ -3,7 +3,7 @@
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 ***REMOVED***.Controllers
 ***REMOVED***

@@ -3,7 +3,7 @@
 ***REMOVED***
 using System.Security.AccessControl;
 ***REMOVED***
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
 
 ***REMOVED***.Controllers

@@ -3,7 +3,7 @@
 using System.ComponentModel.DataAnnotations;
 ***REMOVED***
 ***REMOVED***
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 ***REMOVED***.Models
 ***REMOVED***

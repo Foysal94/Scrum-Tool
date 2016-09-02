@@ -49,7 +49,7 @@ using Newtonsoft.Json;
 
             if (m_Board == null)
 ***REMOVED***
-                return HttpNotFound();
+                return NotFound();
 ***REMOVED***
 
 

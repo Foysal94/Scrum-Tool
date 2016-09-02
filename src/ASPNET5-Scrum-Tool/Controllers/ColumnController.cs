@@ -4,8 +4,8 @@
 ***REMOVED***
 using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
-using Microsoft.Data.Entity;
-using Microsoft.Data.Entity.Scaffolding.Metadata;
+***REMOVED***
+using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 

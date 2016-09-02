@@ -1,7 +1,7 @@
 ***REMOVED***
 ***REMOVED***
-using Microsoft.Data.Entity.Migrations;
-using Microsoft.Data.Entity.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ASPNET5ScrumTool.Migrations
 ***REMOVED***

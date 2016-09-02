@@ -5,7 +5,7 @@ using System.Security.AccessControl;
 ***REMOVED***
 using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
-using Microsoft.Data.Entity;
+***REMOVED***
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 

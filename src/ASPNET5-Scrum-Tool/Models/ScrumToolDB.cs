@@ -22,7 +22,8 @@ using Microsoft.Data.Entity.Infrastructure;
 ***REMOVED***
         */
 
-        public ScrumToolDB(DbContextOptions options) : base(options)
+        public ScrumToolDB(DbContextOptions<ScrumToolDB> options) 
+            : base(options)
 ***REMOVED***
             
 ***REMOVED***

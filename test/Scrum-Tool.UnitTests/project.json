@@ -24,7 +24,10 @@
                 "Microsoft.NETCore.App": ***REMOVED***
                     "type": "platform",
                     "version": "1.0.0"
-***REMOVED***
+***REMOVED***,
+					 "moq.netcore": "4.4.0-beta8",
+       			 "System.Diagnostics.TraceSource": "4.0.0-rc2-24027",
+					 "FluentAssertions": "4.13.1"
 ***REMOVED***,
 				"imports": [
 					"dotnet5.6",

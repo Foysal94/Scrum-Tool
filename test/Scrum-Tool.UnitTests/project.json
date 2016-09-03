@@ -5,16 +5,25 @@
   "tags": [ "" ],
   "projectUrl": "",
   "licenseUrl": "",
-
+  "testRunner": "xunit",
+  
   "dependencies": ***REMOVED***
-
+	  "xunit": "2.2.0-beta2-build3300",
+	  "dotnet-test-xunit": "2.2.0-preview2-build1029"
   ***REMOVED***,
   "commands": ***REMOVED***
 
   ***REMOVED***,
 
   "frameworks": ***REMOVED***
-
+		"netcoreapp1.0": ***REMOVED***
+            "dependencies": ***REMOVED***
+                "Microsoft.NETCore.App": ***REMOVED***
+                    "type": "platform",
+                    "version": "1.0.0"
+***REMOVED***
+***REMOVED***
+***REMOVED***
   ***REMOVED***
 
 

@@ -7,13 +7,13 @@ using Xunit;
 
 namespace Scrum_Tool.UnitTests
 ***REMOVED***
-	[Collection("ScrumToolDB Collection")]
-	public class ScrumToolDBFixture
+	
+	public class ScrumToolDBFixture 
 	***REMOVED***
 		private ScrumToolDB m_ScrumToolDB;
-		private const int m_FirstBoardID = 0;
-		private const int m_FirstTaskID = 0;
-		private const string m_FirstColumnName = "TestColumn0";
+		private const int m_FirstBoardID = 1;
+		private const int m_FirstTaskID = 1;
+		private const string m_FirstColumnName = "TestColumn1";
 		public ScrumToolDB ScrumToolDB ***REMOVED*** get ***REMOVED*** return m_ScrumToolDB;***REMOVED*** ***REMOVED***
 		public int FirstBoardID ***REMOVED*** get ***REMOVED***return m_FirstBoardID;***REMOVED*** ***REMOVED***
 		public int FirstTaskID ***REMOVED*** get ***REMOVED***return m_FirstTaskID;***REMOVED*** ***REMOVED***
@@ -66,8 +66,8 @@ namespace Scrum_Tool.UnitTests
 			List<Columns> columns = new List<Columns>()
 			***REMOVED***
 				new Columns(m_FirstColumnName, m_FirstBoardID),
-				new Columns("TestColumn1", m_FirstBoardID),
-				new Columns("TestColumn2", m_FirstBoardID), 
+				new Columns("TestColumn2", m_FirstBoardID),
+				new Columns("TestColumn3", m_FirstBoardID), 
 			***REMOVED***;
 
 			return columns.AsQueryable();
@@ -79,7 +79,7 @@ namespace Scrum_Tool.UnitTests
 				new Tasks(m_FirstBoardID, m_FirstColumnName, "TaskContent1"),
 				new Tasks(m_FirstBoardID, m_FirstColumnName, "TaskContent2"),
 				new Tasks(m_FirstBoardID, m_FirstColumnName, "TaskContent3"),
-			***REMOVED***
+			***REMOVED***;
 
 			return tasks.AsQueryable();
 		***REMOVED***

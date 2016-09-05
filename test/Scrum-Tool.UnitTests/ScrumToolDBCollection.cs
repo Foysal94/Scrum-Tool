@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Scrum_Tool.UnitTests
 ***REMOVED***
-	[CollectionDefinition("Database collection")]
+	[CollectionDefinition("ScrumToolDB Collection")]
 	public class ScrumToolDBCollection : ICollectionFixture<ScrumToolDBFixture>
 	***REMOVED***
 		// This class has no code, and is never created. Its purpose is simply

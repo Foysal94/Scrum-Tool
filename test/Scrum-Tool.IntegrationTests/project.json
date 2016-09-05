@@ -6,6 +6,10 @@
   "projectUrl": "",
   "licenseUrl": "",
 
+  "buildOptions": ***REMOVED***
+    "debugType": "portable"
+  ***REMOVED***,
+
   "dependencies": ***REMOVED***
 
   ***REMOVED***,

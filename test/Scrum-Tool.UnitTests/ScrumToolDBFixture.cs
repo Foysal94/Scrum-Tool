@@ -17,7 +17,7 @@ namespace Scrum_Tool.UnitTests
 		public ScrumToolDB ScrumToolDB ***REMOVED*** get ***REMOVED*** return m_ScrumToolDB;***REMOVED*** ***REMOVED***
 		public int FirstBoardID ***REMOVED*** get ***REMOVED***return m_FirstBoardID;***REMOVED*** ***REMOVED***
 		public int FirstTaskID ***REMOVED*** get ***REMOVED***return m_FirstTaskID;***REMOVED*** ***REMOVED***
-		public string ColumnName ***REMOVED*** get ***REMOVED***return m_FirstColumnName;***REMOVED*** ***REMOVED***
+		public string FirstColumnName ***REMOVED*** get ***REMOVED***return m_FirstColumnName;***REMOVED*** ***REMOVED***
 		
 		public ScrumToolDBFixture() 
 		***REMOVED***

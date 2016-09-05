@@ -89,7 +89,7 @@ using Microsoft.AspNetCore.Mvc;
 
         [Route("[Action]")]
         [HttpPost]
-        public ViewComponentResult MovedTask(string p_ColumnName, int p_TaskID)
+        public ViewComponentResult MovedTask(string p_NewColumnName, int p_NewColumnID, int p_TaskID)
 ***REMOVED***
             var tasks = m_context.Tasks.ToList();
 
@@ -97,10 +97,10 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
                 if (t.ID == p_TaskID)
 ***REMOVED***
-                    t.ColumnName = p_ColumnName;
+                    t.ColumnName = p_NewColumnName;
+                    t.ColumnID = p_NewColumnID;
                     m_Task = t;
                     m_context.SaveChanges();
-
                     break;
 ***REMOVED***
 ***REMOVED***

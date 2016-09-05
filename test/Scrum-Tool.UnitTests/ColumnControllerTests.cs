@@ -1,8 +1,8 @@
 ﻿***REMOVED***
 ***REMOVED***
 ***REMOVED***
-using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
+using Microsoft.AspNetCore.Mvc;
 using ASPNET5_Scrum_Tool.Controllers;
 ***REMOVED***
 using FluentAssertions;
@@ -13,47 +13,36 @@ using GenFu;
 namespace Scrum_Tool.UnitTests
 ***REMOVED***
 
-    public interface ITestRespository<T> 
-***REMOVED***
-        void Add(T model);
-        void Remove(T model);
-        void Edit(T model);
-        void Delete(T model);
-        T FindById(int id);
-        T FindObject(T model);
-        void ReturnCount();
-        IQueryable<T> ReturnAll();
-        void Save();
-
-***REMOVED***
-    
     public class ColumnControllerTests 
 ***REMOVED***
-        private const int m_BoardID = 0;
+		  private const int m_BoardID = 0;
 		  private ScrumToolDB m_ScrumToolDB;
 		  private ColumnController m_ColumnController;
-        public ColumnControllerTests() 
-***REMOVED***
-			  var dbOptions = CreateFakeDatabaseOptions();
-			  m_ScrumToolDB = new ScrumToolDB(dbOptions);
-			  m_ColumnController = new ColumnController(m_ScrumToolDB);
-***REMOVED***
 
-        private IQueryable<Columns> GenerateMockData() 
+		  private IQueryable<Columns> GenerateTestData() 
+  ***REMOVED***
 ***REMOVED***
             int id = 0;
             int numberOfColumns = 3;
             string Name = "TestColumn";
-
+            
             A.Configure<Columns>()
-                .Fill(c => c.ID,
-                     () => ***REMOVED*** return id++; ***REMOVED***)
-                .Fill(c => c.Name, () => ***REMOVED*** return $"***REMOVED***Name***REMOVED******REMOVED***id++***REMOVED***"; ***REMOVED***)
-                .Fill(c => c.BoardID, m_BoardID);
-
+                .Fill(c => c.ID,() => ***REMOVED*** return id++; ***REMOVED***)
+                .Fill(c => c.Name, () => ***REMOVED*** return $"***REMOVED***Name***REMOVED******REMOVED***id***REMOVED***"; ***REMOVED***)
+                .Fill(c => c.BoardID,() => ***REMOVED*** return m_BoardID; ***REMOVED***);
             var columns = A.ListOf<Columns>(numberOfColumns);
             return columns.AsQueryable();
 ***REMOVED***
+
+              List<Columns> columns = new List<Columns>()
+  ***REMOVED***
+                  new Columns("TestColumn0", m_BoardID) ***REMOVED***ID = 0***REMOVED***,
+                  new Columns("TestColumn1", m_BoardID) ***REMOVED***ID = 1***REMOVED***,
+                  new Columns("TestColumn2", m_BoardID) ***REMOVED***ID = 2***REMOVED***,
+  ***REMOVED***;
+
+              return columns.AsQueryable();
+  ***REMOVED***
 
         private DbContextOptions<ScrumToolDB> CreateFakeDatabaseOptions() 
 		  ***REMOVED***
@@ -71,6 +60,20 @@ namespace Scrum_Tool.UnitTests
 
             return builder.Options;
 		  ***REMOVED***
+
+        public ColumnControllerTests() 
+***REMOVED***
+			  var dbOptions = CreateFakeDatabaseOptions();
+			  var testColumnList = GenerateTestData();
+
+			  m_ScrumToolDB = new ScrumToolDB(dbOptions);
+			  m_ScrumToolDB.Columns.AddRange(testColumnList);
+			  m_ColumnController = new ColumnController(m_ScrumToolDB);
+***REMOVED***
+
+
+
+
 
 ***REMOVED***
 ***REMOVED***

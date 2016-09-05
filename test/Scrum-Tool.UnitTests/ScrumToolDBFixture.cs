@@ -12,10 +12,12 @@ namespace Scrum_Tool.UnitTests
 	***REMOVED***
 		private ScrumToolDB m_ScrumToolDB;
 		private const int m_FirstBoardID = 1;
+		private const int m_FirstColumnID = 1;
 		private const int m_FirstTaskID = 1;
 		private const string m_FirstColumnName = "TestColumn1";
 		public ScrumToolDB ScrumToolDB ***REMOVED*** get ***REMOVED*** return m_ScrumToolDB;***REMOVED*** ***REMOVED***
 		public int FirstBoardID ***REMOVED*** get ***REMOVED***return m_FirstBoardID;***REMOVED*** ***REMOVED***
+		public int FirstColumnID ***REMOVED*** get ***REMOVED***return m_FirstColumnID;***REMOVED*** ***REMOVED***
 		public int FirstTaskID ***REMOVED*** get ***REMOVED***return m_FirstTaskID;***REMOVED*** ***REMOVED***
 		public string FirstColumnName ***REMOVED*** get ***REMOVED***return m_FirstColumnName;***REMOVED*** ***REMOVED***
 		
@@ -80,9 +82,9 @@ namespace Scrum_Tool.UnitTests
 		***REMOVED***
 			List<Tasks> tasks = new List<Tasks>()
 			***REMOVED***
-				new Tasks(m_FirstBoardID, m_FirstColumnName, "TaskContent1"),
-				new Tasks(m_FirstBoardID, m_FirstColumnName, "TaskContent2"),
-				new Tasks(m_FirstBoardID, m_FirstColumnName, "TaskContent3"),
+				new Tasks(m_FirstBoardID, m_FirstColumnID, m_FirstColumnName, "TaskContent1"),
+				new Tasks(m_FirstBoardID, m_FirstColumnID, m_FirstColumnName, "TaskContent2"),
+				new Tasks(m_FirstBoardID, m_FirstColumnID, m_FirstColumnName, "TaskContent3"),
 			***REMOVED***;
 
 			return tasks.AsQueryable();

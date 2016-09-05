@@ -28,7 +28,7 @@ using Microsoft.AspNetCore.Mvc;
         [HttpPost]
         public ViewComponentResult AddNewTask(Tasks model)
 ***REMOVED***
-            m_Task = new Tasks(model.BoardID, model.ColumnName, model.TaskContent);
+            m_Task = new Tasks(model.BoardID, model.ColumnID, model.ColumnName, model.TaskContent);
             m_context.Add(m_Task);
             m_context.SaveChanges();
 

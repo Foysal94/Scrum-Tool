@@ -2,28 +2,28 @@
 // http://codepen.io/Savantos/pen/mHIpt
 @import url(http://fonts.googleapis.com/css?family=Nunito:300);
 
-#rollOverText ***REMOVED*** 
+#rollOverText { 
     text-align: center;   
-***REMOVED***
+}
 
-#rollArrow  ***REMOVED*** 
+#rollArrow  { 
     font-size: 36px; 
     font-weight: 100; 
     line-height: 75px; 
-***REMOVED***
+}
 
-#rollArrow, #rollOverText ***REMOVED***
+#rollArrow, #rollOverText {
      font-family: "Nunito", sans-serif; font-size: 24px; 
-***REMOVED***
+}
 
 //http://codepen.io/gilcrmeli/pen/sdGLn
 @import url(http://fonts.googleapis.com/css?family=Sansita+One);
 
-#button ***REMOVED***
+#button {
   background-color:#fff;
-***REMOVED***
+}
 
-#curved-green-button ***REMOVED***
+#curved-green-button {
   position: relative;
   background-color:#ccffcc;
   color: #000000;
@@ -54,10 +54,10 @@
   border-radius: 40px 100px 100px 100px;
   padding: 20px;
   
-   :active ***REMOVED***
+   :active {
         box-shadow: 0px 3px 0px #33CC33, 0px 3px 6px rgba(0,0,0,.9);
         position: relative;
         top: 10px;
-***REMOVED***
-***REMOVED***
+    }
+}
 

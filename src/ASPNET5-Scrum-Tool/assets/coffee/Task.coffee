@@ -17,7 +17,7 @@ DeleteLabelLink = () ->
         $.ajax
             url: '/Label/Delete'
             type: 'POST'
-            data: ***REMOVED***p_LabelID: labelID***REMOVED***
+            data: {p_LabelID: labelID}
             success: (data) ->
                   alert 'Label was added successfully'
                   labelParent_li.remove()
@@ -35,7 +35,7 @@ AddLabelClick = () ->
         $.ajax 
               url: '/Label/TaskAddLabel'
               type: 'POST'
-              data: ***REMOVED***p_TaskID: taskID, p_LabelColour: colour ***REMOVED***
+              data: {p_TaskID: taskID, p_LabelColour: colour }
               success: (data) ->
                          alert 'Label was added successfully'
                          $('.LabelListDiv').find('ul').append data
@@ -65,7 +65,7 @@ EditTaskClick = () ->
           $.ajax 
               url: '/Task/UpdateContent'
               type: 'POST'
-              data: ***REMOVED*** p_TaskID : taskID, p_NewTaskContent: taskContent ***REMOVED***
+              data: { p_TaskID : taskID, p_NewTaskContent: taskContent }
               success: () ->
                     column =  $('.ActiveTask').parent().parent()
                     columnName = $(column).find('.panel-title').html()
@@ -84,7 +84,7 @@ EditTaskClick = () ->
         $.ajax 
               url: '/Task/GetTaskContent'
               type: 'POST'
-              data: ***REMOVED*** p_TaskID : taskID ***REMOVED***
+              data: { p_TaskID : taskID }
               success: (data) ->
                     $('.EditTaskForm').replaceWith  '<a class="TaskContent"></a>'
                     $('.TaskContent').text data
@@ -103,7 +103,7 @@ AddCommentSubmitButton = () ->
             $.ajax 
                 url: '/Comment/Create'
                 type: 'POST'
-                data: ***REMOVED*** p_TaskID: taskID, p_Name: name, p_Content: content ***REMOVED***
+                data: { p_TaskID: taskID, p_Name: name, p_Content: content }
                 success: (data) -> 
                     $('.CommentsDiv').find('.CommentForm').prev data
                 error: (error) ->
@@ -122,7 +122,7 @@ ChangeDateButtonClick = () ->
                         $.ajax 
                             url: '/Task/UpdateDate'
                             type: 'POST'
-                            data: ***REMOVED*** p_TaskID : taskID, p_Date:dateAsString***REMOVED***
+                            data: { p_TaskID : taskID, p_Date:dateAsString}
                             success: (data) ->
                                        $('.Date').html("Date: "+ dateAsString)
                             error: (error) ->
@@ -139,7 +139,7 @@ DeleteComment = () ->
         $.ajax
             url: '/Comment/Delete',
             type: 'POST',
-            data: ***REMOVED***p_CommentID: commentID***REMOVED***,
+            data: {p_CommentID: commentID},
             success: (data) ->              
                      $(comment ).remove()
             error : (error) ->

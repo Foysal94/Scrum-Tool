@@ -1,15 +1,15 @@
-***REMOVED***
-***REMOVED***
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-***REMOVED***.Controllers.Components
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Controllers.Components
+{
     public class NavBar_Buttons : ViewComponent 
-    ***REMOVED***
+    {
         public async Task<IViewComponentResult> InvokeAsync()
-        ***REMOVED***
+        {
             return View("Default");
-***REMOVED***
+        }
         
-***REMOVED***
-***REMOVED***
+    }
+}

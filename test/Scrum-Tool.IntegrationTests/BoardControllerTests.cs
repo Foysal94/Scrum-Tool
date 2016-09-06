@@ -1,24 +1,24 @@
-﻿***REMOVED***
-***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
-***REMOVED***
+using System.Threading.Tasks;
 using ASPNET5_Scrum_Tool;
 using ASPNET5_Scrum_Tool.Controllers;
-***REMOVED***
+using ASPNET5_Scrum_Tool.Models;
 using Microsoft.AspNet.TestHost;
 using Microsoft.Data.Entity;
 using Xunit;
 
 namespace Scrum_Tool.IntegrationTests
-***REMOVED***
+{
     public class BoardControllerTests :Setup
-    ***REMOVED***
+    {
         private BoardController m_BoardController;
         private ScrumToolDB m_Context;
 
         public BoardControllerTests()
-        ***REMOVED***
+        {
             // Arrange
             var db = new DbContextOptionsBuilder();
             db.UseInMemoryDatabase();
@@ -27,17 +27,17 @@ namespace Scrum_Tool.IntegrationTests
             m_BoardController= new BoardController(m_Context);
 
             m_Server = new TestServer(TestServer.CreateBuilder()
-  ***REMOVED***);
+                .UseStartup<Startup>());
              m_Client = m_Server.CreateClient();
 
-***REMOVED***
+        }
 
         [Fact]
         public void ReturnLoadBoard()
-        ***REMOVED***
+        {
             var response = m_Client.GetAsync("/Board/Load/1");
 
-***REMOVED***
+        }
         
-***REMOVED***
-***REMOVED***
+    }
+}

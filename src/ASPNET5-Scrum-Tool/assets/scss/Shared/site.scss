@@ -5,46 +5,46 @@
 
 
 // Site CSS
-body ***REMOVED***
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     background: $background-color;
     //font-family: "Coming Soon"
     color: white;
-***REMOVED***
+}
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
-.body-content ***REMOVED***
+.body-content {
     padding-left: 15px;
     padding-right: 15px;
-***REMOVED***
+}
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
-input, select ***REMOVED***
+input, select {
     max-width: 280px;
-***REMOVED***
+}
 
 /* Carousel */
-.carousel-caption ***REMOVED***
+.carousel-caption {
     z-index: 10 !important;
     
-    p ***REMOVED***
+    p {
         font-size: 20px;
         line-height: 1.4;
-***REMOVED***
- ***REMOVED***
+    }
+ }
 
-@media (min-width: 768px) ***REMOVED***
-    .carousel-caption ***REMOVED***
+@media (min-width: 768px) {
+    .carousel-caption {
         z-index: 10 !important;
-***REMOVED***
-***REMOVED***
+    }
+}
 
 
-.dropdown ***REMOVED***
+.dropdown {
     margin-top:30px;
-***REMOVED***
+}
 
 
 

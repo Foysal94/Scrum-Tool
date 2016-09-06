@@ -1,13 +1,13 @@
-﻿***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-***REMOVED***
-***REMOVED***
+using System.Linq;
+using System.Threading.Tasks;
 
-***REMOVED***.Models
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Models
+{
     public class Tasks
-    ***REMOVED***
+    {
         private DateTime m_DueDate;
         private string m_TaskContent;
         private int m_ID;
@@ -19,35 +19,35 @@ using System.ComponentModel.DataAnnotations;
         private List<Comments> m_CommentList;
 
         [Key]
-        public int ID ***REMOVED*** get ***REMOVED***return m_ID;***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
+        public int ID { get {return m_ID;} set { m_ID = value; } }
 
-        public int BoardID ***REMOVED*** get ***REMOVED*** return m_BoardID; ***REMOVED*** set ***REMOVED*** m_BoardID = value; ***REMOVED*** ***REMOVED***
+        public int BoardID { get { return m_BoardID; } set { m_BoardID = value; } }
 
-        public string ColumnName ***REMOVED*** get ***REMOVED***return m_ColumnName; ***REMOVED*** set ***REMOVED*** m_ColumnName = value; ***REMOVED*** ***REMOVED***
-        public int ColumnID ***REMOVED*** get ***REMOVED***return m_ColumnID;***REMOVED*** set ***REMOVED***m_ColumnID = value;***REMOVED*** ***REMOVED***
+        public string ColumnName { get {return m_ColumnName; } set { m_ColumnName = value; } }
+        public int ColumnID { get {return m_ColumnID;} set {m_ColumnID = value;} }
 
         [DataType(DataType.Date)]
-        public DateTime DueDate ***REMOVED*** get ***REMOVED*** return m_DueDate; ***REMOVED***set ***REMOVED*** m_DueDate = value; ***REMOVED*** ***REMOVED***
+        public DateTime DueDate { get { return m_DueDate; }set { m_DueDate = value; } }
 
-        public string TaskContent ***REMOVED*** get ***REMOVED***return m_TaskContent;***REMOVED*** set ***REMOVED*** m_TaskContent = value; ***REMOVED*** ***REMOVED***
-        public List<Labels> LabelList ***REMOVED*** get ***REMOVED*** return m_LabelList; ***REMOVED*** set ***REMOVED*** m_LabelList = value; ***REMOVED*** ***REMOVED***
-        public List<Comments> CommentList ***REMOVED*** get ***REMOVED*** return m_CommentList; ***REMOVED*** set ***REMOVED*** m_CommentList = value; ***REMOVED*** ***REMOVED***
+        public string TaskContent { get {return m_TaskContent;} set { m_TaskContent = value; } }
+        public List<Labels> LabelList { get { return m_LabelList; } set { m_LabelList = value; } }
+        public List<Comments> CommentList { get { return m_CommentList; } set { m_CommentList = value; } }
 
-        //public Columns ParentColumn ***REMOVED*** get ***REMOVED***return m_ParentColumn;***REMOVED*** set ***REMOVED*** m_ParentColumn = value; ***REMOVED*** ***REMOVED***
+        //public Columns ParentColumn { get {return m_ParentColumn;} set { m_ParentColumn = value; } }
 
         public Tasks(int p_BoardID, int p_ColumnID,string p_ColumnName, string p_TaskContent)
-        ***REMOVED***
+        {
             m_BoardID = p_BoardID;
             m_ColumnID = p_ColumnID;
             m_ColumnName = p_ColumnName;
             m_TaskContent = p_TaskContent;
             m_DueDate = DateTime.Now.AddDays(1);
-***REMOVED***
+        }
 
         public Tasks()
-        ***REMOVED***
+        {
             
-***REMOVED***
+        }
 
-***REMOVED***
-***REMOVED***
+    }
+}

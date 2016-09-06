@@ -1,41 +1,41 @@
-﻿***REMOVED***
-***REMOVED***
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
-***REMOVED***.Models
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Models
+{
     public class ScrumToolDB : DbContext
-    ***REMOVED***
+    {
         /*
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        ***REMOVED***
+        {
             modelBuilder.Entity<Boards>(entity =>
-            ***REMOVED***
+            {
                 entity.HasMany(b => b.ColumnList).WithOne(c => c.ParentBoard).HasForeignKey("BoardID");
-    ***REMOVED***);
+            });
 
             modelBuilder.Entity<Columns>(entity =>
-            ***REMOVED***
+            {
                 entity.HasMany(c => c.TasksList).WithOne(t => t.ParentColumn).HasForeignKey("ColumnName");
-    ***REMOVED***);
+            });
 
     
-***REMOVED***
+        }
         */
 
         public ScrumToolDB(DbContextOptions<ScrumToolDB> options) 
             : base(options)
-        ***REMOVED***
+        {
             
-***REMOVED***
-        public DbSet<Boards> Boards ***REMOVED*** get; set; ***REMOVED***
+        }
+        public DbSet<Boards> Boards { get; set; }
 
-        public DbSet<Columns> Columns ***REMOVED*** get; set; ***REMOVED***
+        public DbSet<Columns> Columns { get; set; }
 
-        public DbSet<Tasks> Tasks ***REMOVED*** get; set; ***REMOVED***
+        public DbSet<Tasks> Tasks { get; set; }
 
-        public DbSet<Labels> Labels ***REMOVED*** get; set; ***REMOVED*** 
+        public DbSet<Labels> Labels { get; set; } 
         
-        public DbSet<Comments> Comments ***REMOVED*** get; set; ***REMOVED*** 
+        public DbSet<Comments> Comments { get; set; } 
 
-***REMOVED***
-***REMOVED***
+    }
+}

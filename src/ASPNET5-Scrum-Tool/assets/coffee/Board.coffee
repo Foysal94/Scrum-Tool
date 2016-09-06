@@ -9,12 +9,12 @@ LoadLabels = () ->
            color = $(button).html()
            $(button).css('background',color)
   
-TaskDragOptions = ***REMOVED***
+TaskDragOptions = {
                     delay: 300                                                                                                      
                     revert:true 
-          ***REMOVED***
+                  }
 
-TaskDropOptions = ***REMOVED*** 
+TaskDropOptions = { 
                     accept: (element) ->
                          if element.hasClass('ColourLabel')
                             return true
@@ -31,20 +31,20 @@ TaskDropOptions = ***REMOVED***
                              $.ajax 
                                 url: '/Label/Add'
                                 type: 'POST'
-                                data: ***REMOVED***p_TaskID: taskID, p_LabelColour: colour ***REMOVED***
+                                data: {p_TaskID: taskID, p_LabelColour: colour }
                                 success: (data) ->
                                         alert 'Label was added successfully'
                                 error: (error) ->
                                     alert 'Error dropping label, TaskDropOptions'
                                     alert "no good "+JSON.stringify(error);
-          ***REMOVED***
+                  }
 
 
-TaskSortOptions = ***REMOVED*** 
+TaskSortOptions = { 
     
-***REMOVED***                                                                                                                                                             
+}                                                                                                                                                             
 
-BoardDropOptions = ***REMOVED***
+BoardDropOptions = {
                     accept: (element) ->
                               #'this' is the column
                               if element.hasClass('ActiveTask')
@@ -64,7 +64,7 @@ BoardDropOptions = ***REMOVED***
                             $.ajax 
                                 url: '/Task/MovedTask'
                                 type: 'POST'
-                                data: ***REMOVED***p_ColumnName: newColumnName,  p_TaskID: taskID ***REMOVED***
+                                data: {p_ColumnName: newColumnName,  p_TaskID: taskID }
                                 success: (data) ->
                                       $(selectedTaskDiv).remove()
                                       $(column).find('.AddTask').before () ->
@@ -73,7 +73,7 @@ BoardDropOptions = ***REMOVED***
                                 error : (error) ->
                                      alert "no good "+JSON.stringify(error);
                         
-             ***REMOVED***
+                     }
                         
 $('.TaskParentDiv').draggable TaskDragOptions 
 $('.TaskParentDiv').droppable TaskDropOptions           
@@ -118,7 +118,7 @@ ActiveTaskClick = () ->
             url: '/Task/Information/',
             type: 'GET',
             dataType: 'html'
-            data: ***REMOVED***p_TaskID: taskID***REMOVED***,
+            data: {p_TaskID: taskID},
             success: (data) ->              
                      #alert 'data is' + data
                      dialog = data
@@ -181,7 +181,7 @@ SubmitColumNameChange = () ->
         $.ajax
             url: '/Column/ChangeColumnName',
             type: 'POST',
-            data: ***REMOVED***p_OldColumnName : oldColumnName, p_NewColumnName : newColumnName,  p_BoardID: m_BoardID ***REMOVED***,
+            data: {p_OldColumnName : oldColumnName, p_NewColumnName : newColumnName,  p_BoardID: m_BoardID },
             success: (data) ->              
                      panelHeading = $('.ColumnNameForm').parent();
                      $('.ColumnNameForm').replaceWith "<h3 class='panel-title'> </h3>"
@@ -219,7 +219,7 @@ DeleteColumnLinkClick = () ->
         $.ajax
             url: '/Column/Delete',
             type: 'POST',
-            data: ***REMOVED***p_ColumnID: columnID***REMOVED***,
+            data: {p_ColumnID: columnID},
             success: (data) ->              
                      $(column).remove()
                      
@@ -235,7 +235,7 @@ DeleteTaskLinkClick = () ->
      $.ajax
          url: '/Task/Delete',
          type: 'POST',
-         data: ***REMOVED***p_TaskID: taskID***REMOVED***,
+         data: {p_TaskID: taskID},
          success: (data) ->              
                      $(task).parent().remove() #Get hold of parentDivTask and Remove that
                      
@@ -271,7 +271,7 @@ SubmitAddColumn = () ->
          $.ajax
             url:'/Column/AddColumn',
             type: 'POST',
-            data: ***REMOVED***Name: newColumnName, BoardID: m_BoardID ***REMOVED***,
+            data: {Name: newColumnName, BoardID: m_BoardID },
             
             success: (data) ->
                 $('.AddColumnForm').after '<a id="AddColumnButton">Add a List</a>'
@@ -315,7 +315,7 @@ SubmitTaskForm = () ->
           $.ajax
             url: '/Task/AddNewTask'
             type: 'POST'
-            data: ***REMOVED*** BoardID: m_BoardID, ColumnName: selectedColumnName, TaskContent: taskContent***REMOVED***
+            data: { BoardID: m_BoardID, ColumnName: selectedColumnName, TaskContent: taskContent}
             success: (data) ->
                 $('.AddTaskForm').after '<a class="AddTask"> Add a task.... </a>'
                 $('.AddTaskForm').replaceWith () ->

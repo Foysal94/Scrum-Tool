@@ -1,29 +1,29 @@
-﻿***REMOVED***
-***REMOVED***
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-***REMOVED***
+using ASPNET5_Scrum_Tool.Models;
 
-***REMOVED***.Controllers.Components
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Controllers.Components
+{
     public class Panel_ListsViewComponent : ViewComponent
-    ***REMOVED***
+    {
         private ScrumToolDB m_context;
 
         public Panel_ListsViewComponent(ScrumToolDB p_context)
-        ***REMOVED***
+        {
             m_context = p_context;
-***REMOVED***
+        }
 
         public IViewComponentResult Invoke(Columns model)
-        ***REMOVED***
+        {
             return View(model);
-***REMOVED***
+        }
 
         /*
         public Task<IViewComponentResult> InvokeAsync()
-        ***REMOVED***
+        {
             return View();
-***REMOVED***
+        }
         */
-***REMOVED***
-***REMOVED***
+    }
+}

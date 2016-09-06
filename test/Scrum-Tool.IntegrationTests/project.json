@@ -1,4 +1,4 @@
-﻿***REMOVED***
+﻿{
   "version": "1.0.0-*",
   "description": "Scrum-Tool.IntegrationTests Class Library",
   "authors": [ "Foysal" ],
@@ -6,26 +6,26 @@
   "projectUrl": "",
   "licenseUrl": "",
 
-  "buildOptions": ***REMOVED***
+  "buildOptions": {
     "debugType": "portable"
-  ***REMOVED***,
+  },
 
-  "dependencies": ***REMOVED***
+  "dependencies": {
 
-  ***REMOVED***,
-  "commands": ***REMOVED***
+  },
+  "commands": {
 
-  ***REMOVED***,
+  },
 
-  "frameworks": ***REMOVED***
-    "netcoreapp1.0": ***REMOVED***
+  "frameworks": {
+    "netcoreapp1.0": {
 			"imports": [
 				"dotnet5.6",
 				"dnxcore50",
 				"portable-net45+win8"
 			]
-		***REMOVED***
-  ***REMOVED***
+		}
+  }
 
 
-***REMOVED***
+}

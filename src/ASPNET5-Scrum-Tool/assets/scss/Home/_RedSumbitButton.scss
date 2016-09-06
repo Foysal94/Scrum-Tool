@@ -11,15 +11,15 @@ $background: #303036;
 
 // Red Sumbit Button CSS
 
-* ***REMOVED***
+* {
 	box-sizing: border-box;
-***REMOVED***
+}
 
-.boardFormSubmit ***REMOVED***
+.boardFormSubmit {
     text-decoration: none;
-***REMOVED***
+}
 
-.boardFormSubmit ***REMOVED***
+.boardFormSubmit {
 	display: inline-block;
 	font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -31,7 +31,7 @@ $background: #303036;
 	color: white;
 	transition: .2s;
 	 &:before,
-	 &:after ***REMOVED***
+	 &:after {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -45,110 +45,110 @@ $background: #303036;
 		text-align: center;
 		
 		transition: .2s;
-	***REMOVED***
-	 &:before ***REMOVED***
+	}
+	 &:before {
 		background: $button-tint;
-	***REMOVED***
-	 &:hover ***REMOVED***
+	}
+	 &:hover {
 		background: darken($button-colour, 10%);
-	***REMOVED***
+	}
 	 &:active,
-	 &:focus ***REMOVED***
+	 &:focus {
 		background: darken($button-colour, 30%);
 		outline: none;
-	***REMOVED***
-***REMOVED***
+	}
+}
 
-.boardFormSubmit ***REMOVED***
+.boardFormSubmit {
 	min-width: 15em;
-***REMOVED***
+}
 
-.arrow ***REMOVED***
+.arrow {
 	background: #FE5F55;
-	 &:hover ***REMOVED***
+	 &:hover {
 		background: darken(#FE5F55, 10%);
-	***REMOVED***
+	}
 	 &:active,
-	 &:focus ***REMOVED***
+	 &:focus {
 		background: darken(#FE5F55, 30%);
-	***REMOVED***
-	 &:after ***REMOVED***
+	}
+	 &:after {
 		content: "\F054";
-	***REMOVED***
-	 &:hover:after ***REMOVED***
+	}
+	 &:hover:after {
 		-webkit-animation: bounceright .3s alternate ease infinite;
 		animation: bounceright .3s alternate ease infinite;
-	***REMOVED***
-***REMOVED***
+	}
+}
 
-.phone ***REMOVED*** 
+.phone { 
 	background: #139675;
-	 &:hover ***REMOVED***
+	 &:hover {
 		background: darken(#139675, 10%);
-	***REMOVED***
+	}
 	 &:active,
-	 &:focus ***REMOVED***
+	 &:focus {
 		background: darken(#139675, 20%);
-	***REMOVED***
-	 &:after ***REMOVED***
+	}
+	 &:after {
 		content: "\F095";
-	***REMOVED***
-	 &:hover:after ***REMOVED***
+	}
+	 &:hover:after {
 		-webkit-animation: wiggle .05s alternate ease infinite;
 		animation: wiggle .05s alternate ease infinite;
-	***REMOVED***
-***REMOVED***
+	}
+}
 
-.email ***REMOVED***
+.email {
 	background: #C673B3;
-	 &:hover ***REMOVED***
+	 &:hover {
 		background: darken(#C673B3, 10%);
-	***REMOVED***
+	}
 	 &:active,
-	 &:focus ***REMOVED***
+	 &:focus {
 		background: darken(#C673B3, 20%);
-	***REMOVED***
-	 &:after ***REMOVED***
+	}
+	 &:after {
 		content: "\F0E0";
-	***REMOVED***
-	 &:hover:after ***REMOVED***
+	}
+	 &:hover:after {
 		-webkit-animation: none;
 		-webkit-transform: skew(-20deg);
 		animation: none;
 		transform: skew(-20deg);
 		text-indent: .1em;
-	***REMOVED***
-***REMOVED***
+	}
+}
 
-.search ***REMOVED***
-	 &:after ***REMOVED***
+.search {
+	 &:after {
 		content:"\f002";
-	***REMOVED***
-	 &:hover:after ***REMOVED***
+	}
+	 &:hover:after {
 		-webkit-animation: none;
 		-webkit-transform: scale(1.4);
 		animation: none;
 		transform: scale(1.4);
-	***REMOVED***
-***REMOVED***
+	}
+}
 
 
-@-webkit-keyframes bounceright ***REMOVED***
-	from ***REMOVED*** -webkit-transform: translateX(0); ***REMOVED***
-	to   ***REMOVED*** -webkit-transform: translateX(3px); ***REMOVED***
-***REMOVED***
+@-webkit-keyframes bounceright {
+	from { -webkit-transform: translateX(0); }
+	to   { -webkit-transform: translateX(3px); }
+}
 
-@-webkit-keyframes wiggle ***REMOVED***
-	from ***REMOVED*** -webkit-transform: rotate(0deg); ***REMOVED***
-	to   ***REMOVED*** -webkit-transform: rotate(30deg); ***REMOVED***
-***REMOVED***
+@-webkit-keyframes wiggle {
+	from { -webkit-transform: rotate(0deg); }
+	to   { -webkit-transform: rotate(30deg); }
+}
 
-@keyframes bounceright ***REMOVED***
-	from ***REMOVED*** transform: translateX(0); ***REMOVED***
-	to   ***REMOVED*** transform: translateX(3px); ***REMOVED***
-***REMOVED***
+@keyframes bounceright {
+	from { transform: translateX(0); }
+	to   { transform: translateX(3px); }
+}
 
-@keyframes wiggle ***REMOVED***
-	from ***REMOVED*** transform: rotate(0deg); ***REMOVED***
-	to   ***REMOVED*** transform: rotate(30deg); ***REMOVED***
-***REMOVED***
+@keyframes wiggle {
+	from { transform: rotate(0deg); }
+	to   { transform: rotate(30deg); }
+}

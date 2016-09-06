@@ -13,19 +13,19 @@ using Newtonsoft.Json;
 ***REMOVED***
     [Route("[controller]")]
     public class BoardController : Controller
-***REMOVED***
+    ***REMOVED***
         //Logger<BoardController> logger;
         public Boards m_Board;
         private ScrumToolDB m_context;
         public BoardController(ScrumToolDB p_context)
-***REMOVED***
+        ***REMOVED***
             m_Board = null;
             m_context = p_context;
 ***REMOVED***
         
         [Route("[Action]/***REMOVED***p_BoardName***REMOVED***")]
         public IActionResult Index(string p_BoardName)
-***REMOVED***
+        ***REMOVED***
              
             m_Board.Name = p_BoardName;
             ViewData["BoardName"] = m_Board.Name;
@@ -34,23 +34,23 @@ using Newtonsoft.Json;
 
         [Route("[Action]/***REMOVED***p_BoardID***REMOVED***")]
         public IActionResult Load(int p_BoardID)
-***REMOVED***
+        ***REMOVED***
             var boardList = m_context.Boards.ToList();
 
             foreach (Boards b in boardList)
-***REMOVED***
+            ***REMOVED***
                 if (b.ID == p_BoardID)
-***REMOVED***
+                ***REMOVED***
                     m_Board = b;
                     m_Board.ColumnList  = new List<Columns>();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 
             if (m_Board == null)
-***REMOVED***
+            ***REMOVED***
                 return NotFound();
-***REMOVED***
+    ***REMOVED***
 
 
             var columnList = m_context.Columns.ToList();
@@ -58,41 +58,41 @@ using Newtonsoft.Json;
             var labelList = m_context.Labels.ToList();
             var commentList = m_context.Comments.ToList();
             foreach (Columns c in columnList)
-***REMOVED***
+            ***REMOVED***
                 if (c.BoardID == m_Board.ID)
-***REMOVED***
+                ***REMOVED***
                     c.TasksList = new List<Tasks>();
                     foreach (Tasks t in taskList)
-***REMOVED***
+                    ***REMOVED***
                         if (t.ColumnName == c.Name)
-***REMOVED***
-***REMOVED***
+                        ***REMOVED***
+                ***REMOVED***
                             t.LabelList = new List<Labels>();
                             t.CommentList = new List<Comments>();
                             foreach (Labels label in labelList)
-***REMOVED***
+                            ***REMOVED***
                                 if (t.ID == label.TaskID)
-***REMOVED***
+                                ***REMOVED***
                                     t.LabelList.Add(label);
-***REMOVED***
-***REMOVED***
+                        ***REMOVED***
+                    ***REMOVED***
 
                             foreach (var comment in commentList)
-***REMOVED***
+                            ***REMOVED***
                                 if (t.ID == comment.TaskID)
-***REMOVED***
+                                ***REMOVED***
                                     t.CommentList.Add(comment);
-***REMOVED***
-***REMOVED***
-***REMOVED***
+                        ***REMOVED***
+                    ***REMOVED***
+                ***REMOVED***
 
                             c.TasksList.Add(t);
-***REMOVED***
-***REMOVED***
+                ***REMOVED***
+            ***REMOVED***
                     m_Board.ColumnList.Add(c);
                     //c.ParentBoard = m_Board;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
             
             return View("Show", m_Board);
             
@@ -100,22 +100,22 @@ using Newtonsoft.Json;
 
         [Route("[Action]/***REMOVED***p_BoardID***REMOVED***")]
         public IActionResult Create(int p_BoardID)
-***REMOVED***
+        ***REMOVED***
             string boardName = "";
             try
-***REMOVED***
+            ***REMOVED***
                  boardName = (string) TempData["BoardName"];
-***REMOVED***
+    ***REMOVED***
             catch (Exception e)
-***REMOVED***
+            ***REMOVED***
                 
-***REMOVED***
+    ***REMOVED***
             //int boardID = (int) TempData["BoardID"];
             var boards = m_context.Boards.ToList();
             if (boards.Count == p_BoardID)
-***REMOVED***
+            ***REMOVED***
                 return RedirectToAction("Load", "Board", new ***REMOVED*** p_BoardID = boards.Count ***REMOVED***);
-***REMOVED***
+    ***REMOVED***
             m_Board = new Boards(boardName);
             
             m_context.Boards.Add(m_Board);
@@ -127,7 +127,7 @@ using Newtonsoft.Json;
         [Route("[Action]")]
         [HttpGet]
         public IActionResult ColumnNameChangeForm()
-***REMOVED***
+        ***REMOVED***
            // ViewData["ColumnName"] = p_InitalColumnName;
             return PartialView("_ColumnNameChangeForm");
 ***REMOVED***
@@ -135,7 +135,7 @@ using Newtonsoft.Json;
         [Route("[Action]")]
         [HttpGet]
         public IActionResult AddColumnForm()
-***REMOVED***
+        ***REMOVED***
             // ViewData["ColumnName"] = p_InitalColumnName;
             return PartialView("_AddColumnForm");
 ***REMOVED***
@@ -143,7 +143,7 @@ using Newtonsoft.Json;
         [Route("[Action]")]
         [HttpGet]
         public IActionResult AddTaskForm()
-***REMOVED***
+        ***REMOVED***
             // ViewData["ColumnName"] = p_InitalColumnName;
             return PartialView("_AddTaskForm");
 ***REMOVED***

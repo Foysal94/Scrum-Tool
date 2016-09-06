@@ -9,11 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
     [Route("[Controller]")]
     public class CommentController : Controller
-***REMOVED***
+    ***REMOVED***
         private ScrumToolDB m_context;
         
         public CommentController(ScrumToolDB p_context)
-***REMOVED***
+        ***REMOVED***
             m_context = p_context;
 ***REMOVED***
 
@@ -21,7 +21,7 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpPost]
         public IActionResult Create(Comments p_Model)
-***REMOVED***
+        ***REMOVED***
             Comments tempComment = p_Model;
             m_context.Comments.Add(tempComment);
             m_context.SaveChanges();
@@ -31,18 +31,18 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpPost]
         public void Delete(int p_CommentID)
-***REMOVED***
+        ***REMOVED***
             var commentList = m_context.Comments.ToList();
 
             foreach (Comments c in commentList)
-***REMOVED***
+            ***REMOVED***
                 if (c.ID == p_CommentID)
-***REMOVED***
+                ***REMOVED***
                     m_context.Comments.Remove(c);
                     m_context.SaveChanges();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***

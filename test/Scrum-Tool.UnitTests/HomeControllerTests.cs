@@ -10,7 +10,7 @@ namespace Scrum_Tool.UnitTests
 ***REMOVED*** 
     [Collection("ScrumToolDB Collection")]
     public class HomeControllerTests 
-***REMOVED***
+    ***REMOVED***
         HomeController m_HomeController;
         private ScrumToolDBFixture m_ScrumToolDBFixture;
 		private ScrumToolDB m_ScrumToolDBContext;
@@ -24,7 +24,7 @@ namespace Scrum_Tool.UnitTests
 
         [Fact]
         public void Redirect_To_Create_If_Board_Does_Not_Exist()
-***REMOVED***
+        ***REMOVED***
             //Act
             Boards newBoard =  new Boards("New Board to Create");
             //Arrange
@@ -40,7 +40,7 @@ namespace Scrum_Tool.UnitTests
         
         [Fact]
         public void Redirect_To_Load_Action_If_Board_Exists()
-***REMOVED***
+        ***REMOVED***
             //Act
             Boards loadedBoard = m_ScrumToolDBContext.Boards.First();
             //Arrange

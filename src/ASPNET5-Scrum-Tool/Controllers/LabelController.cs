@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
     [Route("[Controller]")]
     public class LabelController : Controller
-***REMOVED***
+    ***REMOVED***
         private ScrumToolDB m_context;
         private Labels m_Label;
         public LabelController(ScrumToolDB p_context)
-***REMOVED***
+        ***REMOVED***
             m_context = p_context;
             m_Label = null;
 ***REMOVED***
@@ -22,24 +22,24 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpPost]
         public void Delete(int p_LabelID)
-***REMOVED***
+        ***REMOVED***
             var labelList = m_context.Labels.ToList();
 
             foreach (Labels label in labelList)
-***REMOVED***
+            ***REMOVED***
                 if (label.ID == p_LabelID)
-***REMOVED***
+                ***REMOVED***
                     m_context.Labels.Remove(label);
                     m_context.SaveChanges();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 ***REMOVED***
 
         [Route("[Action]")]
         [HttpPost]
         public void Add(Labels p_Model)
-***REMOVED***
+        ***REMOVED***
             m_Label = p_Model;
             m_context.Labels.Add(m_Label);
             m_context.SaveChanges();
@@ -48,7 +48,7 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpPost]
         public ViewComponentResult TaskAddLabel(int p_TaskID, string p_LabelColour)
-***REMOVED***
+        ***REMOVED***
             m_Label = new Labels(p_TaskID, p_LabelColour);
             m_context.Labels.Add(m_Label);
             m_context.SaveChanges();

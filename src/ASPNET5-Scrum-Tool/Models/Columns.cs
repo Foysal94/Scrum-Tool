@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
 
     public class Columns
-***REMOVED***
+    ***REMOVED***
         private string m_name;
         private int m_ID;
         private List<Tasks> m_TasksList;
@@ -28,7 +28,7 @@ using Microsoft.AspNetCore.Mvc;
 
 
         public Columns(string p_Name, int p_BoardID)
-***REMOVED***
+        ***REMOVED***
             m_name = p_Name;
             m_BoardID = p_BoardID;
             m_TasksList = new List<Tasks>();

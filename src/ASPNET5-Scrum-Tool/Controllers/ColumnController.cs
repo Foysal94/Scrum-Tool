@@ -13,32 +13,32 @@ using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 ***REMOVED***
     [Route("[Controller]")]
     public class ColumnController : Controller
-***REMOVED***
+    ***REMOVED***
         private ScrumToolDB m_context;
         private int m_ColumnNameIncrement;
 
         public ColumnController(ScrumToolDB p_context)
-***REMOVED***
+        ***REMOVED***
             m_context = p_context;
 ***REMOVED***
 
         [Route("[Action]")]
         [HttpPost]
         public void ChangeColumnName(string p_OldColumnName, string p_NewColumnName, int p_BoardID)
-***REMOVED***
+        ***REMOVED***
             var columns = m_context.Columns.ToList();
             //string query = "from column in m_context.Columns where column.Name.Equals(p_OldBoardName) select column";
 
             foreach (Columns c in columns)
-***REMOVED***
+            ***REMOVED***
                 if (c.Name == p_OldColumnName)
-***REMOVED***
+                ***REMOVED***
                     //m_context.Columns.Update(c)
                     c.Name = p_NewColumnName;
                     m_context.SaveChanges();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 
 
 ***REMOVED***
@@ -46,7 +46,7 @@ using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
         [Route("[Action]")]
         [HttpPost]
         public ViewComponentResult AddColumn(Columns model)
-***REMOVED***
+        ***REMOVED***
             Columns tempColumn = new Columns(model.Name, model.BoardID); // The model got passed the last column ID
 
             m_context.Columns.Add(tempColumn);
@@ -58,35 +58,35 @@ using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
         [Route("[Action]")]
         [HttpPost]
         public void Delete(int p_ColumnID)
-***REMOVED***
+        ***REMOVED***
             var columnList = m_context.Columns.ToList();
 
             foreach (Columns c in columnList)
-***REMOVED***
+            ***REMOVED***
                 if (c.ID == p_ColumnID)
-***REMOVED***
+                ***REMOVED***
                     m_context.Columns.Remove(c);
                     m_context.SaveChanges();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 ***REMOVED***
 
         [Route("[Action]")]
         [HttpGet]
         public string GetColumnHeader(int p_ColumnID)
-***REMOVED***
+        ***REMOVED***
             var columnList = m_context.Columns.ToList();
             string name = "";
             int boardID = 0;
             foreach (Columns c in columnList)
-***REMOVED***
+            ***REMOVED***
                 if (c.ID == p_ColumnID)
-***REMOVED***
+                ***REMOVED***
                     name = c.Name;
                     boardID = c.BoardID;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 
 
             return "";

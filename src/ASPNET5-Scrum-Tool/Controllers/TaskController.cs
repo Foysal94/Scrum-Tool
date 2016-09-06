@@ -13,12 +13,12 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***
     [Route("[controller]")]
     public class TaskController : Controller
-***REMOVED***
+    ***REMOVED***
         private ScrumToolDB m_context;
         private Tasks m_Task;
 
         public TaskController(ScrumToolDB p_context)
-***REMOVED***
+        ***REMOVED***
             m_context = p_context;
             m_Task = null;
 ***REMOVED***
@@ -27,7 +27,7 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpPost]
         public ViewComponentResult AddNewTask(Tasks model)
-***REMOVED***
+        ***REMOVED***
             m_Task = new Tasks(model.BoardID, model.ColumnID, model.ColumnName, model.TaskContent);
             m_context.Add(m_Task);
             m_context.SaveChanges();
@@ -39,50 +39,50 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpPost]
         public void Delete(int p_TaskID)
-***REMOVED***
+        ***REMOVED***
             var taskList = m_context.Tasks.ToList();
 
             foreach (Tasks t in taskList)
-***REMOVED***
+            ***REMOVED***
                 if (t.ID == p_TaskID)
-***REMOVED***
+                ***REMOVED***
                     m_context.Tasks.Remove(t);
                     m_context.SaveChanges();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 ***REMOVED***
 
         [Route("[Action]")]
         [HttpPost]
         public void UpdateContent(int p_TaskID, string p_NewTaskContent)
-***REMOVED***
+        ***REMOVED***
             var tasks = m_context.Tasks.ToList();
 
             foreach (Tasks t in tasks)
-***REMOVED***
+            ***REMOVED***
                 if (t.ID == p_TaskID)
-***REMOVED***
+                ***REMOVED***
                     t.TaskContent = p_NewTaskContent;
                     m_context.SaveChanges();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 ***REMOVED***
 
         [Route("[Action]")]
         [HttpPost]
         public string GetTaskContent(int p_TaskID)
-***REMOVED***
+        ***REMOVED***
             var tasks = m_context.Tasks.ToList();
 
             foreach (Tasks t in tasks)
-***REMOVED***
+            ***REMOVED***
                 if (t.ID == p_TaskID)
-***REMOVED***
+                ***REMOVED***
                     return t.TaskContent;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 
             return "Error, no content found";
 ***REMOVED***
@@ -90,20 +90,20 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpPost]
         public ViewComponentResult MovedTask(string p_NewColumnName, int p_NewColumnID, int p_TaskID)
-***REMOVED***
+        ***REMOVED***
             var tasks = m_context.Tasks.ToList();
 
             foreach (Tasks t in tasks)
-***REMOVED***
+            ***REMOVED***
                 if (t.ID == p_TaskID)
-***REMOVED***
+                ***REMOVED***
                     t.ColumnName = p_NewColumnName;
                     t.ColumnID = p_NewColumnID;
                     m_Task = t;
                     m_context.SaveChanges();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 
             return ViewComponent("Task", m_Task);
 ***REMOVED***
@@ -111,36 +111,36 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpGet]
         public IActionResult Information(int p_TaskID)
-***REMOVED***
+        ***REMOVED***
             var taskList = m_context.Tasks.ToList();
             var labelList = m_context.Labels.ToList();
             var commentList = m_context.Comments.ToList();
             foreach (Tasks t in taskList)
-***REMOVED***
+            ***REMOVED***
                 if (t.ID == p_TaskID)
-***REMOVED***
+                ***REMOVED***
                     t.LabelList = new List<Labels>();
                     foreach (Labels label in labelList)
-***REMOVED***
+                    ***REMOVED***
                         if (t.ID == label.TaskID)
-***REMOVED***
+                        ***REMOVED***
                             t.LabelList.Add(label);
-***REMOVED***
-***REMOVED***
+                ***REMOVED***
+            ***REMOVED***
 
                     t.CommentList = new List<Comments>();
                     foreach (Comments comment in commentList)
-***REMOVED***
+                    ***REMOVED***
                         if (t.ID == comment.TaskID)
-***REMOVED***
+                        ***REMOVED***
                             t.CommentList.Add(comment);
-***REMOVED***
+                ***REMOVED***
 
-***REMOVED***
+            ***REMOVED***
                     m_Task = t;
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
             return PartialView("_Information", m_Task);
 ***REMOVED***
 
@@ -148,26 +148,26 @@ using Microsoft.AspNetCore.Mvc;
         [Route("[Action]")]
         [HttpPost]
         public void UpdateDate(int p_TaskID, string p_Date)
-***REMOVED***
+        ***REMOVED***
             var tasks = m_context.Tasks.ToList();
             DateTime dateTime = DateTime.Parse(p_Date);
 
             foreach (Tasks t in tasks)
-***REMOVED***
+            ***REMOVED***
                 if (t.ID == p_TaskID)
-***REMOVED***
+                ***REMOVED***
                     t.DueDate = dateTime.Date;
                     m_context.SaveChanges();
                     break;
-***REMOVED***
-***REMOVED***
+        ***REMOVED***
+    ***REMOVED***
 ***REMOVED***
 
 
         [Route("[Action]")]
         [HttpGet]
         public IActionResult EditTaskForm(int p_TaskID)
-***REMOVED***
+        ***REMOVED***
             return PartialView("_EditTaskForm");
 ***REMOVED***
 

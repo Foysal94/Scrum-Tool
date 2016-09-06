@@ -13,12 +13,12 @@ using Xunit;
 namespace Scrum_Tool.IntegrationTests
 ***REMOVED***
     public class BoardControllerTests :Setup
-***REMOVED***
+    ***REMOVED***
         private BoardController m_BoardController;
         private ScrumToolDB m_Context;
 
         public BoardControllerTests()
-***REMOVED***
+        ***REMOVED***
             // Arrange
             var db = new DbContextOptionsBuilder();
             db.UseInMemoryDatabase();
@@ -34,7 +34,7 @@ namespace Scrum_Tool.IntegrationTests
 
         [Fact]
         public void ReturnLoadBoard()
-***REMOVED***
+        ***REMOVED***
             var response = m_Client.GetAsync("/Board/Load/1");
 
 ***REMOVED***

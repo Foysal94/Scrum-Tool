@@ -8,7 +8,7 @@ using System.Security.AccessControl;
 ***REMOVED***.Models
 ***REMOVED***
     public class Comments
-***REMOVED***
+    ***REMOVED***
         private int m_ID;
         private string m_Name;
         private int m_TaskID;
@@ -25,7 +25,7 @@ using System.Security.AccessControl;
         public string Content ***REMOVED*** get ***REMOVED*** return m_Content;***REMOVED*** set ***REMOVED*** m_Content = value; ***REMOVED*** ***REMOVED***
 
         public Comments(string p_Name, string p_Content, int p_TaskID)
-***REMOVED***
+        ***REMOVED***
             m_Name = p_Name;
             m_Content = p_Content;
             m_TaskID = p_TaskID;

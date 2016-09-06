@@ -6,22 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***.Controllers.Components
 ***REMOVED***
     public class Panel_ListsViewComponent : ViewComponent
-***REMOVED***
+    ***REMOVED***
         private ScrumToolDB m_context;
 
         public Panel_ListsViewComponent(ScrumToolDB p_context)
-***REMOVED***
+        ***REMOVED***
             m_context = p_context;
 ***REMOVED***
 
         public IViewComponentResult Invoke(Columns model)
-***REMOVED***
+        ***REMOVED***
             return View(model);
 ***REMOVED***
 
         /*
         public Task<IViewComponentResult> InvokeAsync()
-***REMOVED***
+        ***REMOVED***
             return View();
 ***REMOVED***
         */

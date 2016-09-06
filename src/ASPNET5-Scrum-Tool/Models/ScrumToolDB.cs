@@ -4,19 +4,19 @@
 ***REMOVED***.Models
 ***REMOVED***
     public class ScrumToolDB : DbContext
-***REMOVED***
+    ***REMOVED***
         /*
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-***REMOVED***
+        ***REMOVED***
             modelBuilder.Entity<Boards>(entity =>
-***REMOVED***
+            ***REMOVED***
                 entity.HasMany(b => b.ColumnList).WithOne(c => c.ParentBoard).HasForeignKey("BoardID");
-***REMOVED***);
+    ***REMOVED***);
 
             modelBuilder.Entity<Columns>(entity =>
-***REMOVED***
+            ***REMOVED***
                 entity.HasMany(c => c.TasksList).WithOne(t => t.ParentColumn).HasForeignKey("ColumnName");
-***REMOVED***);
+    ***REMOVED***);
 
     
 ***REMOVED***
@@ -24,7 +24,7 @@
 
         public ScrumToolDB(DbContextOptions<ScrumToolDB> options) 
             : base(options)
-***REMOVED***
+        ***REMOVED***
             
 ***REMOVED***
         public DbSet<Boards> Boards ***REMOVED*** get; set; ***REMOVED***

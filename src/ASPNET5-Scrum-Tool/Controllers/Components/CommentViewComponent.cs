@@ -8,16 +8,16 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***.Controllers.Components
 ***REMOVED***
     public class CommentViewComponent : ViewComponent
-***REMOVED***
+    ***REMOVED***
 
         public IViewComponentResult Invoke(Comments model)
-***REMOVED***
+        ***REMOVED***
             return View("Comment", model);
 ***REMOVED***
 
         /*
         public Task<IViewComponentResult> InvokeAsync()
-***REMOVED***
+        ***REMOVED***
             return View();
 ***REMOVED***
         */

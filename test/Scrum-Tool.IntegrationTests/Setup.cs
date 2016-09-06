@@ -12,17 +12,17 @@ namespace Scrum_Tool.IntegrationTests
     // This project can output the Class library as a NuGet Package.
     // To enable this option, right-click on the project and select the Properties menu item. In the Build tab select "Produce outputs on build".
     public class Setup
-***REMOVED***
+    ***REMOVED***
         protected TestServer m_Server;
         protected HttpClient m_Client;
         protected ScrumToolDB m_Context;
 
         public Setup()
-***REMOVED***
+        ***REMOVED***
 ***REMOVED***
 
         public void CreateTestData(ScrumToolDB dbContext)
-***REMOVED***
+        ***REMOVED***
 
             // CreateBoards(dbContext);
             //CreateColumns(dbContext);
@@ -45,7 +45,7 @@ namespace Scrum_Tool.IntegrationTests
 ***REMOVED***
 
         public void CreateBoards(ScrumToolDB dbContext)
-***REMOVED***
+        ***REMOVED***
             int id = 0;
             string Name = "HelloWorld";
 
@@ -67,7 +67,7 @@ namespace Scrum_Tool.IntegrationTests
 ***REMOVED***
 
         private void CreateColumns(ScrumToolDB dbContext)
-***REMOVED***
+        ***REMOVED***
             int id = 0;
             string Name = "Something";
 
@@ -89,7 +89,7 @@ namespace Scrum_Tool.IntegrationTests
 ***REMOVED***
 
         private void CreateTasks(ScrumToolDB dbContext)
-***REMOVED***
+        ***REMOVED***
             int id = 0;
             string content = "Something To Do Tomorrow";
 

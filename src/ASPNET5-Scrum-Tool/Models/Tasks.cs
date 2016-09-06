@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 ***REMOVED***.Models
 ***REMOVED***
     public class Tasks
-***REMOVED***
+    ***REMOVED***
         private DateTime m_DueDate;
         private string m_TaskContent;
         private int m_ID;
@@ -36,7 +36,7 @@ using System.ComponentModel.DataAnnotations;
         //public Columns ParentColumn ***REMOVED*** get ***REMOVED***return m_ParentColumn;***REMOVED*** set ***REMOVED*** m_ParentColumn = value; ***REMOVED*** ***REMOVED***
 
         public Tasks(int p_BoardID, int p_ColumnID,string p_ColumnName, string p_TaskContent)
-***REMOVED***
+        ***REMOVED***
             m_BoardID = p_BoardID;
             m_ColumnID = p_ColumnID;
             m_ColumnName = p_ColumnName;
@@ -45,7 +45,7 @@ using System.ComponentModel.DataAnnotations;
 ***REMOVED***
 
         public Tasks()
-***REMOVED***
+        ***REMOVED***
             
 ***REMOVED***
 

@@ -10,15 +10,15 @@ namespace ASPNET5ScrumTool.Migrations
     [DbContext(typeof(ScrumToolDB))]
     [Migration("20160423143656_InitalMigration")]
     partial class InitalMigration
-***REMOVED***
+    ***REMOVED***
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
-***REMOVED***
+        ***REMOVED***
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Boards", b =>
-***REMOVED***
+                ***REMOVED***
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
@@ -27,10 +27,10 @@ namespace ASPNET5ScrumTool.Migrations
                     b.Property<string>("Name");
 
                     b.HasKey("ID");
-***REMOVED***);
+        ***REMOVED***);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Columns", b =>
-***REMOVED***
+                ***REMOVED***
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
@@ -41,10 +41,10 @@ namespace ASPNET5ScrumTool.Migrations
                     b.Property<string>("Name");
 
                     b.HasKey("ID");
-***REMOVED***);
+        ***REMOVED***);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Comments", b =>
-***REMOVED***
+                ***REMOVED***
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
@@ -59,10 +59,10 @@ namespace ASPNET5ScrumTool.Migrations
                     b.Property<int?>("TasksID");
 
                     b.HasKey("ID");
-***REMOVED***);
+        ***REMOVED***);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Labels", b =>
-***REMOVED***
+                ***REMOVED***
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
@@ -73,10 +73,10 @@ namespace ASPNET5ScrumTool.Migrations
                     b.Property<int?>("TasksID");
 
                     b.HasKey("ID");
-***REMOVED***);
+        ***REMOVED***);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Tasks", b =>
-***REMOVED***
+                ***REMOVED***
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
@@ -91,35 +91,35 @@ namespace ASPNET5ScrumTool.Migrations
                     b.Property<string>("TaskContent");
 
                     b.HasKey("ID");
-***REMOVED***);
+        ***REMOVED***);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Columns", b =>
-***REMOVED***
+                ***REMOVED***
                     b.HasOne("ASPNET5_Scrum_Tool.Models.Boards")
                         .WithMany()
                         .HasForeignKey("BoardsID");
-***REMOVED***);
+        ***REMOVED***);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Comments", b =>
-***REMOVED***
+                ***REMOVED***
                     b.HasOne("ASPNET5_Scrum_Tool.Models.Tasks")
                         .WithMany()
                         .HasForeignKey("TasksID");
-***REMOVED***);
+        ***REMOVED***);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Labels", b =>
-***REMOVED***
+                ***REMOVED***
                     b.HasOne("ASPNET5_Scrum_Tool.Models.Tasks")
                         .WithMany()
                         .HasForeignKey("TasksID");
-***REMOVED***);
+        ***REMOVED***);
 
             modelBuilder.Entity("ASPNET5_Scrum_Tool.Models.Tasks", b =>
-***REMOVED***
+                ***REMOVED***
                     b.HasOne("ASPNET5_Scrum_Tool.Models.Columns")
                         .WithMany()
                         .HasForeignKey("ColumnsID");
-***REMOVED***);
+        ***REMOVED***);
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***

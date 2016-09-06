@@ -12,7 +12,7 @@ LoadLabels = () ->
 TaskDragOptions = ***REMOVED***
                     delay: 300                                                                                                      
                     revert:true 
-  ***REMOVED***
+          ***REMOVED***
 
 TaskDropOptions = ***REMOVED*** 
                     accept: (element) ->
@@ -37,7 +37,7 @@ TaskDropOptions = ***REMOVED***
                                 error: (error) ->
                                     alert 'Error dropping label, TaskDropOptions'
                                     alert "no good "+JSON.stringify(error);
-  ***REMOVED***
+          ***REMOVED***
 
 
 TaskSortOptions = ***REMOVED*** 
@@ -73,7 +73,7 @@ BoardDropOptions = ***REMOVED***
                                 error : (error) ->
                                      alert "no good "+JSON.stringify(error);
                         
- ***REMOVED***
+             ***REMOVED***
                         
 $('.TaskParentDiv').draggable TaskDragOptions 
 $('.TaskParentDiv').droppable TaskDropOptions           

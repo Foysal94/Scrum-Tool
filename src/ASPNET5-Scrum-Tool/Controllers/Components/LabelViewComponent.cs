@@ -8,16 +8,16 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***.Controllers.Components
 ***REMOVED***
     public class LabelViewComponent : ViewComponent
-***REMOVED***
+    ***REMOVED***
 
         public IViewComponentResult Invoke(Labels model)
-***REMOVED***
+        ***REMOVED***
             return View("Label", model);
 ***REMOVED***
 
         /*
         public Task<IViewComponentResult> InvokeAsync()
-***REMOVED***
+        ***REMOVED***
             return View();
 ***REMOVED***
         */

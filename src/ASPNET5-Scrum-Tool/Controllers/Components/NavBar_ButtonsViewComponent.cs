@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***.Controllers.Components
 ***REMOVED***
     public class NavBar_Buttons : ViewComponent 
-***REMOVED***
+    ***REMOVED***
         public async Task<IViewComponentResult> InvokeAsync()
-***REMOVED***
+        ***REMOVED***
             return View("Default");
 ***REMOVED***
         

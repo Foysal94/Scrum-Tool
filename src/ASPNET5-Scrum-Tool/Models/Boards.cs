@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 ***REMOVED***.Models
 ***REMOVED***
     public class Boards
-***REMOVED***
+    ***REMOVED***
 
         private string m_BoardName;
         private List<Columns> m_ColumnList;
@@ -26,14 +26,14 @@ using Microsoft.AspNetCore.Mvc;
         public List<Columns> ColumnList ***REMOVED*** get ***REMOVED*** return m_ColumnList; ***REMOVED*** set ***REMOVED*** m_ColumnList = value; ***REMOVED*** ***REMOVED***
 
         public Boards(string p_Name )
-***REMOVED***
+        ***REMOVED***
             m_BoardName = p_Name;
             m_ColumnList = new List<Columns>();
             m_CreationDate = DateTime.Now;
 ***REMOVED***
 
         public Boards(string p_Name, int p_ID)
-***REMOVED***
+        ***REMOVED***
             m_BoardName = p_Name;
             m_ID = p_ID;
             m_ColumnList = new List<Columns>();

@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 ***REMOVED***.Models
 ***REMOVED***
     public class Labels
-***REMOVED***
+    ***REMOVED***
         private int m_ID;
         private int m_TaskID;
         private string m_Colour;
@@ -19,7 +19,7 @@ using System.ComponentModel.DataAnnotations;
         public string Colour ***REMOVED*** get ***REMOVED*** return m_Colour;***REMOVED*** set ***REMOVED*** m_Colour = value; ***REMOVED*** ***REMOVED***
 
         public Labels(int p_TaskID, string p_Colour)
-***REMOVED***
+        ***REMOVED***
             m_TaskID = p_TaskID;
             m_Colour = p_Colour;
 ***REMOVED***

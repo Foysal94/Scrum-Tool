@@ -1,6 +1,6 @@
-﻿***REMOVED***
+﻿{
   "projects": [ "src", "test" ],
-  "sdk": ***REMOVED***
+  "sdk": {
     "version": "1.0.0-preview2-003121"
-  ***REMOVED***
-***REMOVED***
+  }
+}

@@ -1,80 +1,80 @@
 ﻿@import '../Shared/base';
 
-#MenuColumn***REMOVED***
+#MenuColumn{
     float:right;
     display:inline-block;
     border-left: 3px solid $logo-color;
     height:100%;
 
-    .btn ***REMOVED***
+    .btn {
         width:100%;
-***REMOVED***
+    }
 
     @include ListStyleNone;
 
    
-***REMOVED***
+}
 
-.ColourLabel ***REMOVED***
+.ColourLabel {
     text-align:center;
-    a***REMOVED***
+    a{
         color:black !important;
-***REMOVED***
-***REMOVED***
+    }
+}
 
 
-#BlueLabel ***REMOVED***
+#BlueLabel {
     background-color:blue;
-    a ***REMOVED***
+    a {
         color: blue;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-#PurpleLabel ***REMOVED***
+#PurpleLabel {
     background-color:purple;
-    a ***REMOVED***
+    a {
         color: purple;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-#GreenLabel ***REMOVED***
+#GreenLabel {
     background-color:green;
-    a ***REMOVED***
+    a {
        color: green;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-#RedLabel ***REMOVED***
+#RedLabel {
     background-color:red;
-    a ***REMOVED***
+    a {
       color: red;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-#YellowLabel ***REMOVED***
+#YellowLabel {
     background-color:yellow;
-    a ***REMOVED***
+    a {
         color: yellow;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-#OrangeLabel ***REMOVED***
+#OrangeLabel {
     background-color:orange;
-    a ***REMOVED***
+    a {
     color: orange;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-#LightBlueLabel ***REMOVED***
+#LightBlueLabel {
     background-color:LightBlue;
-    a ***REMOVED***
+    a {
         color: LightBlue;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-#PinkLabel ***REMOVED***
+#PinkLabel {
     background-color:Pink;
-    a ***REMOVED***
+    a {
         color: Pink;
-***REMOVED***
-***REMOVED***
+    }
+}

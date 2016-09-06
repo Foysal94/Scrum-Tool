@@ -1,25 +1,25 @@
-﻿***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ASPNET5_Scrum_Tool.Models;
 using Microsoft.AspNetCore.Mvc;
 
-***REMOVED***.Controllers.Components
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Controllers.Components
+{
     public class CommentViewComponent : ViewComponent
-***REMOVED***
+    {
 
         public IViewComponentResult Invoke(Comments model)
-***REMOVED***
+        {
             return View("Comment", model);
-***REMOVED***
+        }
 
         /*
         public Task<IViewComponentResult> InvokeAsync()
-***REMOVED***
+        {
             return View();
-***REMOVED***
+        }
         */
-***REMOVED***
-***REMOVED***
+    }
+}

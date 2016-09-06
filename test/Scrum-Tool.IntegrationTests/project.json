@@ -1,4 +1,4 @@
-﻿***REMOVED***
+﻿{
   "version": "1.0.0-*",
   "description": "Scrum-Tool.IntegrationTests Class Library",
   "authors": [ "Foysal" ],
@@ -6,16 +6,16 @@
   "projectUrl": "",
   "licenseUrl": "",
 
-  "dependencies": ***REMOVED***
+  "dependencies": {
 
-  ***REMOVED***,
-  "commands": ***REMOVED***
+  },
+  "commands": {
 
-  ***REMOVED***,
+  },
 
-  "frameworks": ***REMOVED***
+  "frameworks": {
 
-  ***REMOVED***
+  }
 
 
-***REMOVED***
+}

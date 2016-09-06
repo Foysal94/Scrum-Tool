@@ -1,66 +1,66 @@
 ﻿@import '../Shared/base';
 
-.panel-default ***REMOVED***
+.panel-default {
 
     margin-right:20px;
 
-   .panel-heading ***REMOVED***
+   .panel-heading {
        cursor:pointer;
        background-color: $logo-color;
        text-align: center;
 
-       .panel-title ***REMOVED***
+       .panel-title {
            position:relative;
-   ***REMOVED***
-   ***REMOVED***
+       }
+   }
     
-  .panel-body ***REMOVED***
+  .panel-body {
       background-color: $panel-body-color;
       min-height: 30%;
-      ul ***REMOVED***
+      ul {
             margin:0;
             padding:0;
-          li ***REMOVED***
+          li {
               list-style-type: none;
-  ***REMOVED***
-  ***REMOVED***
+          }
+      }
 
-  ***REMOVED***
+  }
     
-***REMOVED***
+}
 
 .ui-draggable-dragging
-***REMOVED***
+{
     cursor: grabbing !important;
-***REMOVED***
+}
 
- .Task ***REMOVED***
+ .Task {
     @include TaskCSS
- ***REMOVED***
+ }
 
- .AddTask ***REMOVED***
+ .AddTask {
      color: $logo-color;
-      &:hover, &:visited, &:link***REMOVED***
+      &:hover, &:visited, &:link{
        text-decoration: none;
        cursor:pointer;
        color: $logo-color;
-  ***REMOVED***
- ***REMOVED***
+      }
+ }
 
 
-.ActiveTask ***REMOVED***
+.ActiveTask {
 
-    a:hover, a:visited, a:link ***REMOVED***
+    a:hover, a:visited, a:link {
        text-decoration: none;
        color: $task-font-color;
        position:relative;
- ***REMOVED***
+     }
 
-    a:hover ***REMOVED***
+    a:hover {
         background-color: #a3c2c2 !important;
         cursor:pointer;
-***REMOVED***
-***REMOVED***
+    }
+}
 
 
 

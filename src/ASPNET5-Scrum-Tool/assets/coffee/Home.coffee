@@ -1,6 +1,6 @@
 OnWelcomeButtonClick = () ->
     $('#curved-green-button').on 'click', ->
-        $('#InitalButton').animate ***REMOVED***'left': '-1000px'***REMOVED***, 'slow'
+        $('#InitalButton').animate {'left': '-1000px'}, 'slow'
         
 FormBoardSumbit = ->
     $('.boardFormSubmit').on 'click', (event) ->

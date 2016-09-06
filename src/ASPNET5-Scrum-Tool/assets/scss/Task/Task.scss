@@ -1,77 +1,77 @@
 ﻿@import '../Shared/base';
 @import 'Dialog.scss';
 
- .TaskWindow ***REMOVED***
+ .TaskWindow {
       margin-left:20px;
- ***REMOVED***
+ }
 
- .TaskContent ***REMOVED***
+ .TaskContent {
         font-size:22px;
         width:100%;
-        p ***REMOVED***
+        p {
             font-size:12px;
             display:inline;
-***REMOVED***
-***REMOVED***
+        }
+}
 
-.EditTaskButton ***REMOVED***
+.EditTaskButton {
     display:block;
-***REMOVED***
+}
 
-.EditTaskButton, .TaskContent, .TaskAddLabel***REMOVED***
+.EditTaskButton, .TaskContent, .TaskAddLabel{
 
-    &:hover, &:visited, &:link ***REMOVED***
+    &:hover, &:visited, &:link {
         text-decoration:none;
         cursor:pointer;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-.EditTaskButton, .TaskAddLabel ***REMOVED***
+.EditTaskButton, .TaskAddLabel {
         margin-top:20px;
-***REMOVED***
+}
 
-.LabelListDiv ***REMOVED***
+.LabelListDiv {
      @include ListStyleNone;
-***REMOVED***
+}
 
-.EditTaskForm ***REMOVED***
-    input ***REMOVED***
+.EditTaskForm {
+    input {
         display:inline-block;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-.NewTaskContent ***REMOVED***
+.NewTaskContent {
   border:1px solid #999999;
   width:100%;
   margin:5px 0;
   padding:3px;
-***REMOVED***
+}
 
-.TaskLabelList ***REMOVED***
-    li ***REMOVED***
-        div ***REMOVED***
+.TaskLabelList {
+    li {
+        div {
             display:inline;
-            button ***REMOVED***
+            button {
                 display:inline;
-***REMOVED***
-***REMOVED***
+            }
+        }
         
-***REMOVED***
-***REMOVED***
+    }
+}
 
-.CommentsDiv ***REMOVED***
+.CommentsDiv {
 
-    .CommentTextArea ***REMOVED***
+    .CommentTextArea {
         width:100%;
         margin-bottom: 10px;
-***REMOVED***
-    .ColumnFormSubmit ***REMOVED***
+    }
+    .ColumnFormSubmit {
         display:block;
 
-***REMOVED***
-***REMOVED***
+    }
+}
 
-.Comment ***REMOVED***
+.Comment {
 
     margin: 20px 0 5px 0;
     border: 3px solid $logo-color;
@@ -80,35 +80,35 @@
     width: 100%;
     color: $task-font-color;
  
-    .CommentName ***REMOVED***
+    .CommentName {
 
-        .CommentContent ***REMOVED***
+        .CommentContent {
             display:inline;
             font-size:12px;
- ***REMOVED***
+         }
   
-***REMOVED***
+    }
 
-    .CommentDate ***REMOVED***
+    .CommentDate {
         font-size:12px;
         float:right;
         
-***REMOVED***
+    }
 
     
 
-***REMOVED***
+}
 
-.ActiveComment ***REMOVED***
-    &:hover ***REMOVED***
+.ActiveComment {
+    &:hover {
         background-color: #a3c2c2 !important;
         cursor:pointer;
-***REMOVED***
-***REMOVED***
+    }
+}
 
-.CommentOptions ***REMOVED***
+.CommentOptions {
      margin: 0 0 0 770px; //Change these numbers to move the pen about in the corner, top,right,bottom,left
      position:absolute;
      cursor:pointer;
-***REMOVED***
+}
 

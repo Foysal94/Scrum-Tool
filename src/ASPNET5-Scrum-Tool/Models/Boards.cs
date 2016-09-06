@@ -1,14 +1,14 @@
-﻿***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-***REMOVED***
-***REMOVED***
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-***REMOVED***.Models
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Models
+{
     public class Boards
-***REMOVED***
+    {
 
         private string m_BoardName;
         private List<Columns> m_ColumnList;
@@ -16,31 +16,31 @@ using Microsoft.AspNetCore.Mvc;
         private DateTime m_CreationDate;
 
         [Key]
-        public int ID ***REMOVED*** get ***REMOVED***return m_ID;***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
+        public int ID { get {return m_ID;} set { m_ID = value; } }
 
         [DataType(DataType.Date)]
-        public DateTime CreationDate  ***REMOVED*** get ***REMOVED*** return m_CreationDate; ***REMOVED*** set ***REMOVED*** m_CreationDate = value; ***REMOVED*** ***REMOVED***
+        public DateTime CreationDate  { get { return m_CreationDate; } set { m_CreationDate = value; } }
 
-        public string Name ***REMOVED*** get ***REMOVED*** return m_BoardName; ***REMOVED*** set ***REMOVED*** m_BoardName = value; ***REMOVED*** ***REMOVED***
+        public string Name { get { return m_BoardName; } set { m_BoardName = value; } }
 
-        public List<Columns> ColumnList ***REMOVED*** get ***REMOVED*** return m_ColumnList; ***REMOVED*** set ***REMOVED*** m_ColumnList = value; ***REMOVED*** ***REMOVED***
+        public List<Columns> ColumnList { get { return m_ColumnList; } set { m_ColumnList = value; } }
 
         public Boards(string p_Name )
-***REMOVED***
+        {
             m_BoardName = p_Name;
             m_ColumnList = new List<Columns>();
             m_CreationDate = DateTime.Now;
-***REMOVED***
+        }
 
         public Boards(string p_Name, int p_ID)
-***REMOVED***
+        {
             m_BoardName = p_Name;
             m_ID = p_ID;
             m_ColumnList = new List<Columns>();
             m_CreationDate = DateTime.Now;
-***REMOVED***
+        }
 
-        public Boards() ***REMOVED*** ***REMOVED***
+        public Boards() { }
 
-***REMOVED***
-***REMOVED***
+    }
+}

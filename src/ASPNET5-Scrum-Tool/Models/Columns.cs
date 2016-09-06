@@ -1,16 +1,16 @@
-﻿***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-***REMOVED***
+using System.Linq;
 using System.Security.AccessControl;
-***REMOVED***
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-***REMOVED***.Models
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Models
+{
 
     public class Columns
-***REMOVED***
+    {
         private string m_name;
         private int m_ID;
         private List<Tasks> m_TasksList;
@@ -18,22 +18,22 @@ using Microsoft.AspNetCore.Mvc;
         private Boards m_board;
 
         [Key]
-        public int ID ***REMOVED*** get ***REMOVED*** return m_ID; ***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
-        public int BoardID ***REMOVED*** get ***REMOVED*** return m_BoardID; ***REMOVED*** set ***REMOVED*** m_BoardID = value; ***REMOVED*** ***REMOVED***
-        public string Name ***REMOVED*** get ***REMOVED*** return m_name;***REMOVED*** set ***REMOVED*** m_name = value; ***REMOVED*** ***REMOVED***
+        public int ID { get { return m_ID; } set { m_ID = value; } }
+        public int BoardID { get { return m_BoardID; } set { m_BoardID = value; } }
+        public string Name { get { return m_name;} set { m_name = value; } }
 
-        public List<Tasks> TasksList ***REMOVED*** get ***REMOVED***return m_TasksList;***REMOVED*** set ***REMOVED*** m_TasksList = value; ***REMOVED*** ***REMOVED***
+        public List<Tasks> TasksList { get {return m_TasksList;} set { m_TasksList = value; } }
   
-        //public Boards ParentBoard ***REMOVED*** get ***REMOVED***return m_board;***REMOVED*** set ***REMOVED*** m_board = value; ***REMOVED*** ***REMOVED***
+        //public Boards ParentBoard { get {return m_board;} set { m_board = value; } }
 
 
         public Columns(string p_Name, int p_BoardID)
-***REMOVED***
+        {
             m_name = p_Name;
             m_BoardID = p_BoardID;
             m_TasksList = new List<Tasks>();
-***REMOVED***
+        }
 
-        public Columns() ***REMOVED*** ***REMOVED***
-***REMOVED***
-***REMOVED***
+        public Columns() { }
+    }
+}

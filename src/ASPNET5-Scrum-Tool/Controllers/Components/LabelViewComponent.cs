@@ -1,27 +1,27 @@
-﻿***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ASPNET5_Scrum_Tool.Models;
 using Microsoft.AspNetCore.Mvc;
 
-***REMOVED***.Controllers.Components
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Controllers.Components
+{
     public class LabelViewComponent : ViewComponent
-***REMOVED***
+    {
 
         public IViewComponentResult Invoke(Labels model)
-***REMOVED***
+        {
             return View("Label", model);
-***REMOVED***
+        }
 
         /*
         public Task<IViewComponentResult> InvokeAsync()
-***REMOVED***
+        {
             return View();
-***REMOVED***
+        }
         */
 
 
-***REMOVED***
-***REMOVED***
+    }
+}

@@ -1,29 +1,29 @@
-﻿***REMOVED***
-***REMOVED***
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-***REMOVED***
-***REMOVED***
+using System.Linq;
+using System.Threading.Tasks;
 
-***REMOVED***.Models
-***REMOVED***
+namespace ASPNET5_Scrum_Tool.Models
+{
     public class Labels
-***REMOVED***
+    {
         private int m_ID;
         private int m_TaskID;
         private string m_Colour;
 
-        public int ID ***REMOVED*** get ***REMOVED***return m_ID;***REMOVED*** set ***REMOVED*** m_ID = value; ***REMOVED*** ***REMOVED***
+        public int ID { get {return m_ID;} set { m_ID = value; } }
 
-        public int TaskID ***REMOVED*** get ***REMOVED*** return m_TaskID; ***REMOVED*** set ***REMOVED*** m_TaskID = value; ***REMOVED*** ***REMOVED***
+        public int TaskID { get { return m_TaskID; } set { m_TaskID = value; } }
 
-        public string Colour ***REMOVED*** get ***REMOVED*** return m_Colour;***REMOVED*** set ***REMOVED*** m_Colour = value; ***REMOVED*** ***REMOVED***
+        public string Colour { get { return m_Colour;} set { m_Colour = value; } }
 
         public Labels(int p_TaskID, string p_Colour)
-***REMOVED***
+        {
             m_TaskID = p_TaskID;
             m_Colour = p_Colour;
-***REMOVED***
+        }
 
-        public Labels() ***REMOVED*** ***REMOVED***
-***REMOVED***
-***REMOVED***
+        public Labels() { }
+    }
+}

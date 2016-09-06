@@ -36,19 +36,19 @@ gulp.task 'copy', ->
 
 gulp.task 'coffee-js', ->
     return gulp.src paths.coffee
-          .pipe(coffee(***REMOVED***bare: true***REMOVED***).on 'error', (gutil) -> gutil.log )
+          .pipe(coffee({bare: true}).on 'error', (gutil) -> gutil.log )
           .pipe gulp.dest paths.webroot + 'js/'
     
  gulp.task 'min:css', ['sass-css'], ->
    return gulp.src [paths.css, '!' + paths.webroot + 'css/**/*.min.css']
           .pipe cssmin()
-          .pipe rename ***REMOVED***suffix: '.min'***REMOVED***
+          .pipe rename {suffix: '.min'}
           .pipe gulp.dest paths.webroot + 'css/'
           
  gulp.task 'min:js', ['coffee-js'], ->
     return gulp.src [paths.js, '!' + paths.webroot + 'js/**/*.min.js']
            .pipe jsmin()
-           .pipe rename ***REMOVED***suffix: '.min'***REMOVED***
+           .pipe rename {suffix: '.min'}
            .pipe gulp.dest paths.webroot + 'js/'
  
  gulp.task 'watch', ['min:css', 'min:js'], ->

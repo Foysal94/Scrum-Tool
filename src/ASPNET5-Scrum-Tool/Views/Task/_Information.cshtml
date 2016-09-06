@@ -11,9 +11,9 @@
 
             <ul class="TaskLabelList">
                 @foreach (var label in Model.LabelList)
-***REMOVED***
+                {
                    @Component.Invoke("Label", label)
-***REMOVED***
+                }
                 
             </ul>
 
@@ -60,9 +60,9 @@
         -->
 
         @foreach (var comment in Model.CommentList)
-***REMOVED***
+        {
             @Component.Invoke("Comment", comment);
-***REMOVED***
+        }
 
 
 

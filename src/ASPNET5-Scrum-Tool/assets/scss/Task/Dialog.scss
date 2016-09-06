@@ -1,16 +1,16 @@
 ﻿@import '../Shared/base';
 
-.ui-dialog-title, .ui-dialog-titlebar ***REMOVED***
+.ui-dialog-title, .ui-dialog-titlebar {
     background-color: $panel-body-color;
-***REMOVED***
+}
 
 
-.ui-dialog ***REMOVED***
+.ui-dialog {
     background-color: $panel-body-color;
-***REMOVED***
+}
 
 .ui-dialog,.ui-dialog,.ui-widget, .ui-widget-content, .ui-corner-all, 
-.ui-resizable  ***REMOVED***
+.ui-resizable  {
     background: $panel-body-color;
 
-***REMOVED***
+}

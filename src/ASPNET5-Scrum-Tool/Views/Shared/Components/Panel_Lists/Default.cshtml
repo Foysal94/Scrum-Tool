@@ -21,16 +21,16 @@
 
     <div class="panel-body">
         @if (Model.TasksList.Count != 0)
-***REMOVED***
+        {
             
                 @foreach (var t in @Model.TasksList)
-***REMOVED***
+                {
 
                     @Component.Invoke("Task", t)
 
-***REMOVED***
+                }
          
-***REMOVED***
+        }
         <a class="AddTask"> Add a task.... </a>
 
     </div>
